@@ -7,14 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "UIXML.h"
 #import "BaseDataEntryCell.h"
 
 
 @interface SwitchDataEntryCell : BaseDataEntryCell {
 
-	UISwitch *switchField;
+	UISwitch *__UIXML_WEAK switchField;
 }
 
 //@property (nonatomic, retain) IBOutlet UILabel *textLabel;
-@property (nonatomic) IBOutlet UISwitch *switchField;
+@property (UIXML_WEAK,nonatomic) IBOutlet UISwitch *switchField;
 @end

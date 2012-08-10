@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "UIXML.h"
 
 // cell controls padding
 #define LABEL_CONTROL_PADDING 5
@@ -34,7 +34,7 @@
 
 }
 
-@property (nonatomic) NSString *dataKey;
+@property (nonatomic, UIXML_WEAK) NSString *dataKey;
 @property (nonatomic) BOOL enabled;
 
 -(id)init:(UIXMLFormViewController*)controller datakey:(NSString*)key label:(NSString*)label cellData:(NSDictionary*)cellData;

@@ -10,9 +10,9 @@
 #import "BaseDataEntryCell.h"
 
 @interface TextDataEntryCell : BaseDataEntryCell <UITextFieldDelegate> {
-	UITextField *textField;
+	UITextField *__UIXML_WEAK textField;
 }
 
-@property (nonatomic) IBOutlet UITextField *textField;
+@property (nonatomic, UIXML_WEAK) IBOutlet UITextField *textField;
 
 @end

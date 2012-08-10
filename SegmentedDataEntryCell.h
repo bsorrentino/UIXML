@@ -12,14 +12,14 @@
 @interface SegmentedDataEntryCell : BaseDataEntryCell {
 	
 @private	
-	UISegmentedControl *segmentedField;
-	NSArray *_segmentKeys;
+	UISegmentedControl *__UIXML_WEAK segmentedField;
+	NSArray *__UIXML_WEAK _segmentKeys;
 }
 
 -(void)valueChanged:(id)sender;
 
-@property (nonatomic) IBOutlet UILabel *textLabel;
-@property (nonatomic) IBOutlet UISegmentedControl *segmentedField;
+@property (UIXML_WEAK,nonatomic) IBOutlet UILabel *textLabel;
+@property (UIXML_WEAK,nonatomic) IBOutlet UISegmentedControl *segmentedField;
 
 @end
 

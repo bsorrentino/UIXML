@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UIXML.h"
 #import "UIXMLFormViewControllerDelegate.h"
 
 #define HEADER_IN_SECTION_LABEL_TAG 1
@@ -23,15 +24,15 @@
 		
 @private	
 	
-	NSString *__unsafe_unretained resource; 
+	NSString            *__UIXML_WEAK resource;
 	
-	BaseDataEntryCell *dataEntryCell;
-	UIView *_headerInSection;
+	BaseDataEntryCell   *__UIXML_WEAK dataEntryCell;
+	UIView              *__UIXML_WEAK _headerInSection;
 }
 
-@property (unsafe_unretained, nonatomic,readonly) NSString *resource;
-@property (nonatomic) IBOutlet BaseDataEntryCell *dataEntryCell;	
-@property (nonatomic) IBOutlet UIView *headerInSection;	
+@property (UIXML_WEAK, nonatomic,readonly) NSString *resource;
+@property (UIXML_WEAK, nonatomic) IBOutlet BaseDataEntryCell *dataEntryCell;
+@property (UIXML_WEAK, nonatomic) IBOutlet UIView *headerInSection;	
 
 
 - (id)initFromFile:(NSString*)resource registerNotification:(BOOL)registerNotification;
@@ -57,11 +58,11 @@
 @interface UIXMLFormViewControllerEx : UIXMLFormViewController {
 	
 	
-	id<UIXMLFormViewControllerDelegate> __unsafe_unretained delegate;
+	id<UIXMLFormViewControllerDelegate> __UIXML_WEAK delegate;
 	
 }
 
-@property (nonatomic,unsafe_unretained)  id<UIXMLFormViewControllerDelegate> delegate;
+@property (nonatomic,UIXML_WEAK)  id<UIXMLFormViewControllerDelegate> delegate;
 
 @end
 

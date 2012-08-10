@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F03208615D56A0F004F2EA4 /* UIXML.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F03208515D56A0F004F2EA4 /* UIXML.h */; };
 		5F052D9815CBEB5300330214 /* WaitMaskController.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F052D9615CBEB5300330214 /* WaitMaskController.h */; };
 		5F052D9915CBEB5300330214 /* WaitMaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F052D9715CBEB5300330214 /* WaitMaskController.m */; };
 		5F062F6B13774CBE00FAC388 /* PushWebViewEntryCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F062F6913774CBE00FAC388 /* PushWebViewEntryCell.h */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5F03208515D56A0F004F2EA4 /* UIXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIXML.h; sourceTree = "<group>"; };
 		5F052D9615CBEB5300330214 /* WaitMaskController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaitMaskController.h; sourceTree = "<group>"; };
 		5F052D9715CBEB5300330214 /* WaitMaskController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaitMaskController.m; sourceTree = "<group>"; };
 		5F062F6913774CBE00FAC388 /* PushWebViewEntryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushWebViewEntryCell.h; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				A01671DF12AE80A90056F855 /* UIXMLFormViewControllerDelegate.h */,
 				5FA7E2421296F2AD000F493B /* UIXMLFormViewController.h */,
 				5FA7E2431296F2AE000F493B /* UIXMLFormViewController.m */,
+				5F03208515D56A0F004F2EA4 /* UIXML.h */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 				5FF78F3A12E795A8008EA886 /* PushTextEntryCell.h in Headers */,
 				5F062F6B13774CBE00FAC388 /* PushWebViewEntryCell.h in Headers */,
 				5F052D9815CBEB5300330214 /* WaitMaskController.h in Headers */,
+				5F03208615D56A0F004F2EA4 /* UIXML.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +343,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_OBJCPP_ARC_ABI = YES;
 				COPY_PHASE_STRIP = NO;
 				DSTROOT = /tmp/UIXML.dst;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -358,6 +364,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_OBJCPP_ARC_ABI = YES;
 				DSTROOT = /tmp/UIXML.dst;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -373,6 +381,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_OBJCPP_ARC_ABI = YES;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
@@ -389,6 +399,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_OBJCPP_ARC_ABI = YES;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "UIXML.h"
 
 @interface WaitMaskController : NSObject<UIAlertViewDelegate> {
     
@@ -21,5 +21,5 @@
 - (void)maskWithCancelBlock:(NSString*)title cancelBlock:(void (^)(void))cancelBlock;
 - (void)unmask;
 
-@property (nonatomic) NSString *message;
+@property (UIXML_STRONG,nonatomic) NSString *message;
 @end

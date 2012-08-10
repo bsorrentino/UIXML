@@ -5,7 +5,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "UIXML.h"
 #import "PushControllerDataEntryCell.h"
 #import "WaitMaskController.h"
 
@@ -16,14 +16,14 @@
 @end
 
 @interface WebViewController : UIViewController<UIWebViewDelegate,UITextFieldDelegate> {
-	IBOutlet UIWebViewEx *webView;
+	IBOutlet UIWebViewEx *__UIXML_WEAK webView;
     
-    UIView *addressView;
-    id<BaseDataEntryCellDelegate> __unsafe_unretained delegate;
+    UIView *__UIXML_WEAK addressView;
+    id<BaseDataEntryCellDelegate> __UIXML_WEAK delegate;
     
 @private    
-    WaitMaskController *waitController_;
-    UITextField *txtURL_;
+    WaitMaskController * waitController_;
+    UITextField *__UIXML_WEAK txtURL_;
     UIBarButtonItem *editButton_;
     
     BOOL forceReload_;
@@ -31,16 +31,16 @@
 
 }
 
-@property (nonatomic) NSString *url;
+@property (UIXML_STRONG,nonatomic) NSString *url;
 
-@property (nonatomic) IBOutlet UIWebView *webView;
-@property (nonatomic) IBOutlet UIView *addressView;
-@property (nonatomic) IBOutlet UITextField *txtURL;
+@property (UIXML_WEAK,nonatomic) IBOutlet UIWebView *webView;
+@property (UIXML_WEAK,nonatomic) IBOutlet UIView *addressView;
+@property (UIXML_WEAK,nonatomic) IBOutlet UITextField *txtURL;
 
 
-@property (unsafe_unretained, nonatomic, readonly) WaitMaskController *waitController;
+@property (UIXML_STRONG, nonatomic, readonly) WaitMaskController *waitController;
 
-@property (nonatomic, unsafe_unretained) id<BaseDataEntryCellDelegate> delegate;
+@property (nonatomic, UIXML_WEAK) id<BaseDataEntryCellDelegate> delegate;
 
 
 @end
@@ -49,15 +49,15 @@
 @interface PushWebViewEntryCell : PushControllerDataEntryCell {
 	
 @private
-	WebViewController *viewController;
-    UITextField *textValue;
-    UILabel *textLabel_;
+	WebViewController *__UIXML_WEAK viewController;
+    UITextField *__UIXML_WEAK textValue;
+    UILabel *__UIXML_WEAK textLabel_;
     
 }
 
 //@property (nonatomic, retain) IBOutlet UILabel *textLabel;
-@property (nonatomic) IBOutlet UITextField *textValue;
-@property (nonatomic) IBOutlet WebViewController *viewController;
-@property (nonatomic) IBOutlet UILabel *textLabel;
+@property (UIXML_WEAK,nonatomic) IBOutlet UITextField *textValue;
+@property (UIXML_WEAK,nonatomic) IBOutlet WebViewController *viewController;
+@property (UIXML_WEAK,nonatomic) IBOutlet UILabel *textLabel;
 
 @end
