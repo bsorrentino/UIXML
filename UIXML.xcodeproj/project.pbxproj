@@ -36,11 +36,11 @@
 
 /* Begin PBXFileReference section */
 		5F03208515D56A0F004F2EA4 /* UIXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIXML.h; sourceTree = "<group>"; };
+		5F03209E15D57221004F2EA4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PushWebViewEntryCell.xib; sourceTree = "<group>"; };
 		5F052D9615CBEB5300330214 /* WaitMaskController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaitMaskController.h; sourceTree = "<group>"; };
 		5F052D9715CBEB5300330214 /* WaitMaskController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaitMaskController.m; sourceTree = "<group>"; };
 		5F062F6913774CBE00FAC388 /* PushWebViewEntryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushWebViewEntryCell.h; sourceTree = "<group>"; };
 		5F062F6A13774CBE00FAC388 /* PushWebViewEntryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushWebViewEntryCell.m; sourceTree = "<group>"; };
-		5F062F6D13774CC700FAC388 /* PushWebViewEntryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PushWebViewEntryCell.xib; sourceTree = "<group>"; };
 		5F30ABB01297F64900540544 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SwitchDataEntryCell.xib; sourceTree = "<group>"; };
 		5F30ABB21297F64900540544 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/TextDataEntryCell.xib; sourceTree = "<group>"; };
 		5F30ABCB1297F96700540544 /* SwitchDataEntryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwitchDataEntryCell.h; sourceTree = "<group>"; };
@@ -144,7 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				5F8BD84D13B2569400A33B0A /* back24x24.png */,
-				5F062F6D13774CC700FAC388 /* PushWebViewEntryCell.xib */,
+				5F03209F15D57221004F2EA4 /* PushWebViewEntryCell.xib */,
 				5F777C2E1359DC1D003AFC9E /* edit32x32.png */,
 				5F777C2F1359DC1D003AFC9E /* write32x32.png */,
 				5FF78F7A12E7A005008EA886 /* chevron.png */,
@@ -279,6 +279,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		5F03209F15D57221004F2EA4 /* PushWebViewEntryCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5F03209E15D57221004F2EA4 /* en */,
+			);
+			name = PushWebViewEntryCell.xib;
+			sourceTree = "<group>";
+		};
 		5F30ABAF1297F64900540544 /* SwitchDataEntryCell.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
