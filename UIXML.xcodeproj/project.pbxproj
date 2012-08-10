@@ -98,6 +98,7 @@
 		0867D691FE84028FC02AAC07 /* UIXML */ = {
 			isa = PBXGroup;
 			children = (
+				5FA7E2391296F228000F493B /* CustomCells */,
 				5F30ABAE1297F61500540544 /* Resources */,
 				08FB77AEFE84172EC02AAC07 /* Classes */,
 				32C88DFF0371C24200C91783 /* Other Sources */,
@@ -125,7 +126,6 @@
 				A01671DF12AE80A90056F855 /* UIXMLFormViewControllerDelegate.h */,
 				5FA7E2421296F2AD000F493B /* UIXMLFormViewController.h */,
 				5FA7E2431296F2AE000F493B /* UIXMLFormViewController.m */,
-				5FA7E2391296F228000F493B /* CustomCells */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
