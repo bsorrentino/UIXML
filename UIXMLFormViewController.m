@@ -68,6 +68,13 @@
 	return ;
 }
 
+-(void)loadFromArray:(NSArray *)array
+{
+    tableStructure = [array copy];
+
+	[self registerControEditingNotification];
+}
+
 -(NSString*)getStringInSection:(NSInteger)section {
 	
 	NSArray *sectionInfo = [tableStructure objectAtIndex:section];

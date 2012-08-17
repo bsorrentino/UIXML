@@ -38,7 +38,9 @@
 
 
 - (id)initFromFile:(NSString*)resource registerNotification:(BOOL)registerNotification;
+
 - (void)loadFromFile:(NSString*)resource;
+- (void)loadFromArray:(NSArray *)array;
 
 -(void)registerControEditingNotification;
 -(void)unregisterControEditingNotification;
