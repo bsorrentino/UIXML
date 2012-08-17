@@ -15,7 +15,7 @@
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		490877C7123A68BE00F83A95 /* TableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 490877C5123A68BE00F83A95 /* TableViewController.xib */; };
 		4927181D1257395E0004F22B /* table-structure.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4927181C1257395E0004F22B /* table-structure.plist */; };
-		5FB1855615DD05E5007E1404 /* libUIXML.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FB1855515DD05E5007E1404 /* libUIXML.a */; };
+		5F37C1F115DE3F0D00A3F7AE /* libUIXML.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F37C1EE15DE3E6800A3F7AE /* libUIXML.a */; };
 		5FC03895129747FB00EDC2F6 /* form-structure.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5FC03894129747FB00EDC2F6 /* form-structure.plist */; };
 		5FC0394012975E6500EDC2F6 /* FormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FC0393F12975E6500EDC2F6 /* FormViewController.m */; };
 		5FEA8E79142A878600C29208 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
@@ -35,6 +35,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		5F37C1ED15DE3E6800A3F7AE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5F37C1E615DE3E6700A3F7AE /* UIXML.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = UIXML;
+		};
+		5F37C1EF15DE3F0800A3F7AE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5F37C1E615DE3E6700A3F7AE /* UIXML.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = UIXML;
+		};
 		5FEA8E8A142A882100C29208 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
@@ -56,7 +70,7 @@
 		32CA4F630368D1EE00C91783 /* TableViewDataEntry_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewDataEntry_Prefix.pch; sourceTree = "<group>"; };
 		490877C5123A68BE00F83A95 /* TableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = TableViewController.xib; path = Classes/TableViewController.xib; sourceTree = "<group>"; };
 		4927181C1257395E0004F22B /* table-structure.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "table-structure.plist"; sourceTree = "<group>"; };
-		5FB1855515DD05E5007E1404 /* libUIXML.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libUIXML.a; path = "../../../APPLE/build/Release-iphoneos/libUIXML.a"; sourceTree = "<group>"; };
+		5F37C1E615DE3E6700A3F7AE /* UIXML.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = UIXML.xcodeproj; path = ../UIXML.xcodeproj; sourceTree = "<group>"; };
 		5FC03894129747FB00EDC2F6 /* form-structure.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "form-structure.plist"; sourceTree = "<group>"; };
 		5FC0393E12975E6500EDC2F6 /* FormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormViewController.h; sourceTree = "<group>"; };
 		5FC0393F12975E6500EDC2F6 /* FormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormViewController.m; sourceTree = "<group>"; };
@@ -83,7 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5FB1855615DD05E5007E1404 /* libUIXML.a in Frameworks */,
+				5F37C1F115DE3F0D00A3F7AE /* libUIXML.a in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
@@ -131,6 +145,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				5F37C1E615DE3E6700A3F7AE /* UIXML.xcodeproj */,
 				A0163AED141634AD0074E469 /* en */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
@@ -169,13 +184,20 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5FB1855515DD05E5007E1404 /* libUIXML.a */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				288765A40DF7441C002DB57D /* CoreGraphics.framework */,
 				A0DDC4F912D4C7C4002E78B6 /* CoreData.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5F37C1E715DE3E6700A3F7AE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5F37C1EE15DE3E6800A3F7AE /* libUIXML.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		5FEA8E7C142A878600C29208 /* TableViewDataEntryTests */ = {
@@ -220,6 +242,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				5F37C1F015DE3F0800A3F7AE /* PBXTargetDependency */,
 			);
 			name = TableViewDataEntry;
 			productName = TableViewDataEntry;
@@ -263,6 +286,12 @@
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 5F37C1E715DE3E6700A3F7AE /* Products */;
+					ProjectRef = 5F37C1E615DE3E6700A3F7AE /* UIXML.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				1D6058900D05DD3D006BFB54 /* TableViewDataEntry */,
@@ -270,6 +299,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		5F37C1EE15DE3E6800A3F7AE /* libUIXML.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libUIXML.a;
+			remoteRef = 5F37C1ED15DE3E6800A3F7AE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		1D60588D0D05DD3D006BFB54 /* Resources */ = {
@@ -339,6 +378,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		5F37C1F015DE3F0800A3F7AE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = UIXML;
+			targetProxy = 5F37C1EF15DE3F0800A3F7AE /* PBXContainerItemProxy */;
+		};
 		5FEA8E8B142A882100C29208 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 1D6058900D05DD3D006BFB54 /* TableViewDataEntry */;
@@ -380,7 +424,10 @@
 				HEADER_SEARCH_PATHS = ..;
 				INFOPLIST_FILE = "TableViewDataEntry-Info.plist";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PRODUCT_NAME = TableViewDataEntry;
 			};
 			name = Debug;
@@ -397,7 +444,10 @@
 				HEADER_SEARCH_PATHS = ..;
 				INFOPLIST_FILE = "TableViewDataEntry-Info.plist";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PRODUCT_NAME = TableViewDataEntry;
 				VALIDATE_PRODUCT = YES;
 			};

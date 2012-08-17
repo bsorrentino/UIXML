@@ -10,7 +10,7 @@
 
 @class BaseDataEntryCell;
 
-@protocol UIXMLFormViewControllerDelegate 
+@protocol UIXMLFormViewControllerDelegate<NSObject>
 
 -(void)cellControlDidEndEditing:(BaseDataEntryCell *)cell;
 

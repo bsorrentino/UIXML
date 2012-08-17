@@ -25,7 +25,7 @@
 @synthesize resource;
 @synthesize dataEntryCell;
 @synthesize headerInSection=_headerInSection;
-
+@synthesize nestedController;
 
 #pragma mark custom methods
 
@@ -47,9 +47,20 @@
 	if (tableStructure!=nil) {
 		return ;
 	}
+
+    
+    NSString *language = [[NSLocale preferredLanguages] objectAtIndex:0];
+    NSLog(@"default language [%@]", language );
+    
+    resource = [[NSBundle mainBundle] pathForResource:file
+                                                         ofType:nil
+                                                    inDirectory:[language stringByAppendingPathExtension:@"lproj"]];
 	
-	resource = [[NSBundle mainBundle] pathForResource:file ofType:nil];
-	
+    if (![[NSFileManager defaultManager] fileExistsAtPath:resource])
+    {
+        resource = [[NSBundle mainBundle] pathForResource:file ofType:nil];
+    }
+        
     tableStructure = [NSArray arrayWithContentsOfFile:resource];
 
 	[self registerControEditingNotification];
@@ -437,7 +448,7 @@
 @synthesize delegate;
 
 -(void)cellControlDidEndEditing:(BaseDataEntryCell *)cell {
-	if( delegate!=nil  ) {
+	if( delegate!=nil && [delegate respondsToSelector:@selector(cellControlDidEndEditing:cellData:)] ) {
 		[delegate cellControlDidEndEditing:cell];
 	}
 	
@@ -445,7 +456,7 @@
 
 -(void)cellControlDidInit:(BaseDataEntryCell *)cell cellData:(NSDictionary *)cellData{
 	
-	if( delegate!=nil ) {
+	if( delegate!=nil && [delegate respondsToSelector:@selector(cellControlDidInit:cellData:)]) {
 		[delegate cellControlDidInit:cell cellData:cellData];
 	}
 	
@@ -453,8 +464,7 @@
 
 -(void)cellControlDidLoad:(BaseDataEntryCell *)cell cellData:(NSDictionary *)cellData {
     
-	if( delegate!=nil ) {
-        NSLog(@"cellControlDidLoad");
+	if( delegate!=nil && [delegate respondsToSelector:@selector(cellControlDidLoad:cellData:)] ) {
 		[delegate cellControlDidLoad:cell cellData:cellData];
 	}
 }
