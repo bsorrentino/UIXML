@@ -17,6 +17,14 @@
 		5F37C21C15DE403500A3F7AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F37C20315DE403500A3F7AE /* Foundation.framework */; };
 		5F37C22415DE403500A3F7AE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5F37C22215DE403500A3F7AE /* InfoPlist.strings */; };
 		5F37C22715DE403500A3F7AE /* UIXMLSamplesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F37C22615DE403500A3F7AE /* UIXMLSamplesTests.m */; };
+		A026075F15DE921D009B2F72 /* PushTextEntryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A026075715DE921D009B2F72 /* PushTextEntryCell.xib */; };
+		A026076015DE921D009B2F72 /* PushDateEntryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A026075815DE921D009B2F72 /* PushDateEntryCell.xib */; };
+		A026076115DE921D009B2F72 /* PushWebViewEntryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A026075915DE921D009B2F72 /* PushWebViewEntryCell.xib */; };
+		A026076215DE921D009B2F72 /* DefaultHeaderInSection.xib in Resources */ = {isa = PBXBuildFile; fileRef = A026075A15DE921D009B2F72 /* DefaultHeaderInSection.xib */; };
+		A026076315DE921D009B2F72 /* MailDataEntryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A026075B15DE921D009B2F72 /* MailDataEntryCell.xib */; };
+		A026076415DE921D009B2F72 /* PushFormDataEntryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A026075C15DE921D009B2F72 /* PushFormDataEntryCell.xib */; };
+		A026076515DE921D009B2F72 /* SwitchDataEntryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A026075D15DE921D009B2F72 /* SwitchDataEntryCell.xib */; };
+		A026076615DE921D009B2F72 /* TextDataEntryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A026075E15DE921D009B2F72 /* TextDataEntryCell.xib */; };
 		A05C6B2E15DE403F00362113 /* FormData.m in Sources */ = {isa = PBXBuildFile; fileRef = A05C6B2315DE403F00362113 /* FormData.m */; };
 		A05C6B2F15DE403F00362113 /* FormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A05C6B2515DE403F00362113 /* FormViewController.m */; };
 		A05C6B3015DE403F00362113 /* ListDataEntryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A05C6B2715DE403F00362113 /* ListDataEntryCell.m */; };
@@ -32,14 +40,6 @@
 		A05C6B4215DE41FB00362113 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = A05C6B3D15DE41FB00362113 /* MainWindow.xib */; };
 		A05C6B5715DE434B00362113 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A05C6B5415DE434B00362113 /* Localizable.strings */; };
 		A082BB8515DE4689004C37BC /* RowSpanForm.plist in Resources */ = {isa = PBXBuildFile; fileRef = A082BB8315DE4689004C37BC /* RowSpanForm.plist */; };
-		A082BB9715DE47DE004C37BC /* PushTextEntryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A082BB8715DE47DE004C37BC /* PushTextEntryCell.xib */; };
-		A082BB9815DE47DE004C37BC /* PushWebViewEntryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A082BB8915DE47DE004C37BC /* PushWebViewEntryCell.xib */; };
-		A082BB9915DE47DE004C37BC /* DefaultHeaderInSection.xib in Resources */ = {isa = PBXBuildFile; fileRef = A082BB8B15DE47DE004C37BC /* DefaultHeaderInSection.xib */; };
-		A082BB9A15DE47DE004C37BC /* MailDataEntryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A082BB8D15DE47DE004C37BC /* MailDataEntryCell.xib */; };
-		A082BB9B15DE47DE004C37BC /* PushDateEntryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A082BB8F15DE47DE004C37BC /* PushDateEntryCell.xib */; };
-		A082BB9C15DE47DE004C37BC /* PushFormDataEntryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A082BB9115DE47DE004C37BC /* PushFormDataEntryCell.xib */; };
-		A082BB9D15DE47DE004C37BC /* SwitchDataEntryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A082BB9315DE47DE004C37BC /* SwitchDataEntryCell.xib */; };
-		A082BB9E15DE47DE004C37BC /* TextDataEntryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A082BB9515DE47DE004C37BC /* TextDataEntryCell.xib */; };
 		A0840A9415DE4450001C08EC /* libUIXML.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A0840A9015DE440D001C08EC /* libUIXML.a */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +82,14 @@
 		5F37C22315DE403500A3F7AE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5F37C22515DE403500A3F7AE /* UIXMLSamplesTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIXMLSamplesTests.h; sourceTree = "<group>"; };
 		5F37C22615DE403500A3F7AE /* UIXMLSamplesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIXMLSamplesTests.m; sourceTree = "<group>"; };
+		A026075715DE921D009B2F72 /* PushTextEntryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PushTextEntryCell.xib; path = ../PushTextEntryCell.xib; sourceTree = "<group>"; };
+		A026075815DE921D009B2F72 /* PushDateEntryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PushDateEntryCell.xib; path = ../PushDateEntryCell.xib; sourceTree = "<group>"; };
+		A026075915DE921D009B2F72 /* PushWebViewEntryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PushWebViewEntryCell.xib; path = ../PushWebViewEntryCell.xib; sourceTree = "<group>"; };
+		A026075A15DE921D009B2F72 /* DefaultHeaderInSection.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DefaultHeaderInSection.xib; path = ../DefaultHeaderInSection.xib; sourceTree = "<group>"; };
+		A026075B15DE921D009B2F72 /* MailDataEntryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MailDataEntryCell.xib; path = ../MailDataEntryCell.xib; sourceTree = "<group>"; };
+		A026075C15DE921D009B2F72 /* PushFormDataEntryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PushFormDataEntryCell.xib; path = ../PushFormDataEntryCell.xib; sourceTree = "<group>"; };
+		A026075D15DE921D009B2F72 /* SwitchDataEntryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SwitchDataEntryCell.xib; path = ../SwitchDataEntryCell.xib; sourceTree = "<group>"; };
+		A026075E15DE921D009B2F72 /* TextDataEntryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TextDataEntryCell.xib; path = ../TextDataEntryCell.xib; sourceTree = "<group>"; };
 		A05C6B2215DE403F00362113 /* FormData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormData.h; sourceTree = "<group>"; };
 		A05C6B2315DE403F00362113 /* FormData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormData.m; sourceTree = "<group>"; };
 		A05C6B2415DE403F00362113 /* FormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormViewController.h; sourceTree = "<group>"; };
@@ -102,14 +110,6 @@
 		A05C6B3D15DE41FB00362113 /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		A05C6B5515DE434B00362113 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = UIXMLSamples/en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A082BB8415DE4689004C37BC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = en; path = en.lproj/RowSpanForm.plist; sourceTree = "<group>"; };
-		A082BB8815DE47DE004C37BC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = ../en.lproj/PushTextEntryCell.xib; sourceTree = "<group>"; };
-		A082BB8A15DE47DE004C37BC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = ../en.lproj/PushWebViewEntryCell.xib; sourceTree = "<group>"; };
-		A082BB8C15DE47DE004C37BC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = ../en.lproj/DefaultHeaderInSection.xib; sourceTree = "<group>"; };
-		A082BB8E15DE47DE004C37BC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = ../en.lproj/MailDataEntryCell.xib; sourceTree = "<group>"; };
-		A082BB9015DE47DE004C37BC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = ../en.lproj/PushDateEntryCell.xib; sourceTree = "<group>"; };
-		A082BB9215DE47DE004C37BC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = ../en.lproj/PushFormDataEntryCell.xib; sourceTree = "<group>"; };
-		A082BB9415DE47DE004C37BC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = ../en.lproj/SwitchDataEntryCell.xib; sourceTree = "<group>"; };
-		A082BB9615DE47DE004C37BC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = ../en.lproj/TextDataEntryCell.xib; sourceTree = "<group>"; };
 		A0840A8515DE440C001C08EC /* UIXML.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = UIXML.xcodeproj; path = ../UIXML.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -239,14 +239,14 @@
 		A082BB8615DE47B5004C37BC /* UIXML */ = {
 			isa = PBXGroup;
 			children = (
-				A082BB8715DE47DE004C37BC /* PushTextEntryCell.xib */,
-				A082BB8915DE47DE004C37BC /* PushWebViewEntryCell.xib */,
-				A082BB8B15DE47DE004C37BC /* DefaultHeaderInSection.xib */,
-				A082BB8D15DE47DE004C37BC /* MailDataEntryCell.xib */,
-				A082BB8F15DE47DE004C37BC /* PushDateEntryCell.xib */,
-				A082BB9115DE47DE004C37BC /* PushFormDataEntryCell.xib */,
-				A082BB9315DE47DE004C37BC /* SwitchDataEntryCell.xib */,
-				A082BB9515DE47DE004C37BC /* TextDataEntryCell.xib */,
+				A026075715DE921D009B2F72 /* PushTextEntryCell.xib */,
+				A026075815DE921D009B2F72 /* PushDateEntryCell.xib */,
+				A026075915DE921D009B2F72 /* PushWebViewEntryCell.xib */,
+				A026075A15DE921D009B2F72 /* DefaultHeaderInSection.xib */,
+				A026075B15DE921D009B2F72 /* MailDataEntryCell.xib */,
+				A026075C15DE921D009B2F72 /* PushFormDataEntryCell.xib */,
+				A026075D15DE921D009B2F72 /* SwitchDataEntryCell.xib */,
+				A026075E15DE921D009B2F72 /* TextDataEntryCell.xib */,
 			);
 			name = UIXML;
 			sourceTree = "<group>";
@@ -359,14 +359,14 @@
 				A05C6B4215DE41FB00362113 /* MainWindow.xib in Resources */,
 				A05C6B5715DE434B00362113 /* Localizable.strings in Resources */,
 				A082BB8515DE4689004C37BC /* RowSpanForm.plist in Resources */,
-				A082BB9715DE47DE004C37BC /* PushTextEntryCell.xib in Resources */,
-				A082BB9815DE47DE004C37BC /* PushWebViewEntryCell.xib in Resources */,
-				A082BB9915DE47DE004C37BC /* DefaultHeaderInSection.xib in Resources */,
-				A082BB9A15DE47DE004C37BC /* MailDataEntryCell.xib in Resources */,
-				A082BB9B15DE47DE004C37BC /* PushDateEntryCell.xib in Resources */,
-				A082BB9C15DE47DE004C37BC /* PushFormDataEntryCell.xib in Resources */,
-				A082BB9D15DE47DE004C37BC /* SwitchDataEntryCell.xib in Resources */,
-				A082BB9E15DE47DE004C37BC /* TextDataEntryCell.xib in Resources */,
+				A026075F15DE921D009B2F72 /* PushTextEntryCell.xib in Resources */,
+				A026076015DE921D009B2F72 /* PushDateEntryCell.xib in Resources */,
+				A026076115DE921D009B2F72 /* PushWebViewEntryCell.xib in Resources */,
+				A026076215DE921D009B2F72 /* DefaultHeaderInSection.xib in Resources */,
+				A026076315DE921D009B2F72 /* MailDataEntryCell.xib in Resources */,
+				A026076415DE921D009B2F72 /* PushFormDataEntryCell.xib in Resources */,
+				A026076515DE921D009B2F72 /* SwitchDataEntryCell.xib in Resources */,
+				A026076615DE921D009B2F72 /* TextDataEntryCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,70 +464,6 @@
 				A082BB8415DE4689004C37BC /* en */,
 			);
 			name = RowSpanForm.plist;
-			sourceTree = "<group>";
-		};
-		A082BB8715DE47DE004C37BC /* PushTextEntryCell.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A082BB8815DE47DE004C37BC /* en */,
-			);
-			name = PushTextEntryCell.xib;
-			sourceTree = "<group>";
-		};
-		A082BB8915DE47DE004C37BC /* PushWebViewEntryCell.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A082BB8A15DE47DE004C37BC /* en */,
-			);
-			name = PushWebViewEntryCell.xib;
-			sourceTree = "<group>";
-		};
-		A082BB8B15DE47DE004C37BC /* DefaultHeaderInSection.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A082BB8C15DE47DE004C37BC /* en */,
-			);
-			name = DefaultHeaderInSection.xib;
-			sourceTree = "<group>";
-		};
-		A082BB8D15DE47DE004C37BC /* MailDataEntryCell.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A082BB8E15DE47DE004C37BC /* en */,
-			);
-			name = MailDataEntryCell.xib;
-			sourceTree = "<group>";
-		};
-		A082BB8F15DE47DE004C37BC /* PushDateEntryCell.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A082BB9015DE47DE004C37BC /* en */,
-			);
-			name = PushDateEntryCell.xib;
-			sourceTree = "<group>";
-		};
-		A082BB9115DE47DE004C37BC /* PushFormDataEntryCell.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A082BB9215DE47DE004C37BC /* en */,
-			);
-			name = PushFormDataEntryCell.xib;
-			sourceTree = "<group>";
-		};
-		A082BB9315DE47DE004C37BC /* SwitchDataEntryCell.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A082BB9415DE47DE004C37BC /* en */,
-			);
-			name = SwitchDataEntryCell.xib;
-			sourceTree = "<group>";
-		};
-		A082BB9515DE47DE004C37BC /* TextDataEntryCell.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A082BB9615DE47DE004C37BC /* en */,
-			);
-			name = TextDataEntryCell.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

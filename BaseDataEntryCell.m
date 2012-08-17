@@ -9,8 +9,9 @@
 #import "BaseDataEntryCell.h"
 #import "UIXMLFormViewController.h"	
 
-@interface BaseDataEntryCell(Private)
+@interface BaseDataEntryCell()
 
+-(BOOL)isLabelSupported;
 @end
 
 @implementation BaseDataEntryCell
@@ -18,6 +19,11 @@
 @synthesize dataKey;
 
 #pragma - private implementation
+
+-(BOOL)isLabelSupported
+{
+    return self.textLabel.text!=nil;
+}
 
 #pragma - public implementation
 
@@ -44,7 +50,8 @@
 
 
 -(BOOL)isStringEmpty:(NSString*)value {
-	return ( value==nil || [[value stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] length] == 0 );
+	return ( value==nil ||
+            [[value stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] length] == 0 );
 }
 
 
@@ -102,21 +109,25 @@
 - (void)layoutSubviews {
 	[super layoutSubviews];
 	
-    CGFloat size_percentage = .25;
-    CGFloat x = 10.0; // self.textLabel.frame.origin.x ;
+    if( [self isLabelSupported] ) {
+        CGFloat size_percentage = .25;
+        CGFloat x = 10.0; // self.textLabel.frame.origin.x ;
     
-	// The label size is the 35% of container
-	CGRect labelRect = CGRectMake(x, 
+        // The label size is the 35% of container
+        CGRect labelRect = CGRectMake(x,
 								  self.textLabel.frame.origin.y, 
 								  self.contentView.frame.size.width * size_percentage, 
 								  self.textLabel.frame.size.height);
-	[self.textLabel setFrame:labelRect];
+        [self.textLabel setFrame:labelRect];
+    }
 	
 }
 
 -(CGRect) getRectRelativeToLabel:(CGRect)controlFrame padding:(NSInteger)padding rpadding:(NSInteger)rpadding {
 
-	return CGRectMake(self.textLabel.frame.origin.x + self.textLabel.frame.size.width  + padding, 
+    if( [self isLabelSupported] ) return CGRectMake( padding, 0.0, padding-rpadding, 0.0 );
+    
+	return CGRectMake(  self.textLabel.frame.origin.x + self.textLabel.frame.size.width  + padding, 
 						controlFrame.origin.y, 
 						self.contentView.frame.size.width-(self.textLabel.frame.size.width + padding + self.textLabel.frame.origin.x)-rpadding, 
 						controlFrame.size.height);
