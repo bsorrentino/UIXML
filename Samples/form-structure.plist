@@ -10,6 +10,13 @@
 		<array>
 			<dict>
 				<key>DataKey</key>
+				<string>rospan</string>
+				<key>CellType</key>
+				<string>RowSpanDataEntryCell</string>
+			</dict>
+            <!--
+			<dict>
+				<key>DataKey</key>
 				<string>firstName</string>
 				<key>Label</key>
 				<string>Nome</string>
@@ -27,6 +34,7 @@
 				<key>placeholder</key>
 				<string>&lt;input cognome &gt;</string>
 			</dict>
+            -->
 			<dict>
 				<key>DataKey</key>
 				<string>email</string>
