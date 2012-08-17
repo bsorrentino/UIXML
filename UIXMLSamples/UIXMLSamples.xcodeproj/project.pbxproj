@@ -174,12 +174,12 @@
 		5F37C20715DE403500A3F7AE /* UIXMLSamples */ = {
 			isa = PBXGroup;
 			children = (
+				A05C6B3615DE415B00362113 /* RowSpanCell */,
 				A05C6B3915DE41FB00362113 /* form-structure.plist */,
 				A05C6B3A15DE41FB00362113 /* form1-structure.plist */,
 				A05C6B3B15DE41FB00362113 /* table-structure.plist */,
 				A05C6B3C15DE41FB00362113 /* GenderDataEntryCell.xib */,
 				A05C6B3D15DE41FB00362113 /* MainWindow.xib */,
-				A05C6B3615DE415B00362113 /* RowSpanCell */,
 				A05C6B2215DE403F00362113 /* FormData.h */,
 				A05C6B2315DE403F00362113 /* FormData.m */,
 				A05C6B2415DE403F00362113 /* FormViewController.h */,
