@@ -125,7 +125,7 @@
 
 -(CGRect) getRectRelativeToLabel:(CGRect)controlFrame padding:(NSInteger)padding rpadding:(NSInteger)rpadding {
 
-    if( [self isLabelSupported] ) return CGRectMake( padding, 0.0, padding-rpadding, 0.0 );
+    //if( [self isLabelSupported] ) return CGRectMake( padding, controlFrame.origin.y, 0.0, controlFrame.size.height );
     
 	return CGRectMake(  self.textLabel.frame.origin.x + self.textLabel.frame.size.width  + padding, 
 						controlFrame.origin.y, 
