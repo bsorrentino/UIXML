@@ -454,6 +454,7 @@
 -(void)cellControlDidLoad:(BaseDataEntryCell *)cell cellData:(NSDictionary *)cellData {
     
 	if( delegate!=nil ) {
+        NSLog(@"cellControlDidLoad");
 		[delegate cellControlDidLoad:cell cellData:cellData];
 	}
 }

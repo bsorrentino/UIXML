@@ -58,11 +58,11 @@
 @interface UIXMLFormViewControllerEx : UIXMLFormViewController {
 	
 	
-	id<UIXMLFormViewControllerDelegate> __UIXML_WEAK delegate;
+	id<UIXMLFormViewControllerDelegate> delegate;
 	
 }
 
-@property (nonatomic,UIXML_WEAK)  id<UIXMLFormViewControllerDelegate> delegate;
+@property (nonatomic,UIXML_STRONG)  id<UIXMLFormViewControllerDelegate> delegate;
 
 @end
 
