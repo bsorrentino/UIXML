@@ -10,7 +10,7 @@
 
 @class FormViewController;
 
-@interface TableViewDataEntryAppDelegate : NSObject <UIApplicationDelegate> {
+@interface UIXMLAppDelegate : NSObject <UIApplicationDelegate> {
     UIWindow *window;
     UINavigationController *viewController;
 }

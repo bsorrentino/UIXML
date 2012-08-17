@@ -1,16 +1,15 @@
 //
-//  TableViewDataEntryTests.m
-//  TableViewDataEntryTests
+//  UIXMLSamplesTests.m
+//  UIXMLSamplesTests
 //
-//  Created by softphone on 21/09/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Created by softphone on 17/08/12.
+//  Copyright (c) 2012 soulsoftware. All rights reserved.
 //
 
-#import "TableViewDataEntryTests.h"
+#import "UIXMLSamplesTests.h"
 #import "FormData.h"
 
-@implementation TableViewDataEntryTests
-
+@implementation UIXMLSamplesTests
 
 - (void)setUp
 {
@@ -27,8 +26,9 @@
 
 - (void)tearDown
 {
+#if !__has_feature(objc_arc)
     [d release];
-    
+#endif
     [super tearDown];
 }
 
@@ -43,7 +43,7 @@
     NSData *data = [NSPropertyListSerialization dataFromPropertyList:root format:NSPropertyListXMLFormat_v1_0 errorDescription:&errorDescription ];
     
     STAssertNotNil(data, @"dataFromPropertyList returned nil. error [%@[", errorDescription);
- 
+    
     
     BOOL expandTilde = YES;
     
@@ -66,14 +66,14 @@
     
     STAssertTrue(writeResult, @"write file [%@] failed! [%@]", outputPath, [error userInfo] );
     
-/*    
-    NSString *dataAsString = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
-    
-    NSLog(@"%@", dataAsString);
-    
-    [dataAsString release];
-*/
- }
+    /*
+     NSString *dataAsString = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
+     
+     NSLog(@"%@", dataAsString);
+     
+     [dataAsString release];
+     */
+}
 
 
 - (void)testArchiver
@@ -82,15 +82,15 @@
     
     
     NSMutableData *data = [NSMutableData data];
-
+    
     NSKeyedArchiver *archiver = [[NSKeyedArchiver alloc] initForWritingWithMutableData:data];
     
     
     [archiver encodeObject:d forKey:@"data"];
     [archiver finishEncoding];
-    
+#if !__has_feature(objc_arc)
     [archiver release];
-    
+#endif
     NSKeyedUnarchiver *unarchiver = [[NSKeyedUnarchiver alloc ] initForReadingWithData:data];
     
     FormData *d1 = [unarchiver decodeObjectForKey:@"data"];
@@ -104,9 +104,9 @@
     NSString *dataAsString = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
     
     NSLog(@"%@", dataAsString);
-    
+#if !__has_feature(objc_arc)
     [dataAsString release];
-    
+#endif
 }
 
 @end

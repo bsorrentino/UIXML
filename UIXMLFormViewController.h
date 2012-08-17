@@ -32,7 +32,9 @@
 
 @property (UIXML_WEAK, nonatomic,readonly) NSString *resource;
 @property (UIXML_WEAK, nonatomic) IBOutlet BaseDataEntryCell *dataEntryCell;
-@property (UIXML_WEAK, nonatomic) IBOutlet UIView *headerInSection;	
+@property (UIXML_WEAK, nonatomic) IBOutlet UIView *headerInSection;
+
+@property (UIXML_WEAK, nonatomic) UIXMLFormViewController *nestedController;
 
 
 - (id)initFromFile:(NSString*)resource registerNotification:(BOOL)registerNotification;

@@ -6,10 +6,10 @@
 //  Copyright Infit S.r.l 2010. All rights reserved.
 //
 
-#import "TableViewDataEntryAppDelegate.h"
+#import "UIXMLAppDelegate.h"
 #import "FormViewController.h"
 
-@implementation TableViewDataEntryAppDelegate
+@implementation UIXMLAppDelegate
 
 @synthesize window;
 @synthesize viewController;
@@ -80,9 +80,11 @@
 
 
 - (void)dealloc {
+#if !__has_feature(objc_arc)
     [viewController release];
     [window release];
     [super dealloc];
+#endif
 }
 
 
