@@ -10,11 +10,12 @@
 #define UIXML_UIXML_h
 
 #ifndef UIXML_STRONG
-#if __has_feature(objc_arc)
-#define UIXML_STRONG strong
-#else
-#define UIXML_STRONG retain
-#endif
+#   if __has_feature(objc_arc)
+#       define UIXML_STRONG strong
+#   else
+#       define UIXML_STRONG retain
+#   endif
+#   define __UIXML_STRONG
 #endif
 
 #ifndef UIXML_WEAK

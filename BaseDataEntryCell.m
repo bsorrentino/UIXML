@@ -35,7 +35,7 @@
     return self;
 }
 
-- (id) init:(UIXMLFormViewController*)controller datakey:(NSString*)key label:(NSString*)label cellData:(NSDictionary*)cellData {
+- (void) prepareToAppear:(UIXMLFormViewController*)controller datakey:(NSString*)key label:(NSString*)label cellData:(NSDictionary*)cellData {
 	self.selectionStyle = UITableViewCellSelectionStyleNone;
 	self.dataKey = key;
     
@@ -45,7 +45,6 @@
 
     }
 	
-	return self;
 }
 
 

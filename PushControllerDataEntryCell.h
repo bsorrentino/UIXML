@@ -14,10 +14,10 @@
 @interface PushControllerDataEntryCell : BaseDataEntryCell {
 
 @protected
-	UIXMLFormViewController *_owner;
+	UIXMLFormViewController *__UIXML_WEAK _owner;
 }
 
-@property (unsafe_unretained, readonly) UIXMLFormViewController *owner;
+@property (UIXML_WEAK, readonly) UIXMLFormViewController *owner;
 
 -(UIViewController *)viewController:(NSDictionary*)cellData;
 	

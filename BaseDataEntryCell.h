@@ -37,7 +37,7 @@
 @property (nonatomic, UIXML_WEAK) NSString *dataKey;
 @property (nonatomic) BOOL enabled;
 
--(id)init:(UIXMLFormViewController*)controller datakey:(NSString*)key label:(NSString*)label cellData:(NSDictionary*)cellData;
+-(void)prepareToAppear:(UIXMLFormViewController*)controller datakey:(NSString*)key label:(NSString*)label cellData:(NSDictionary*)cellData;
 
 // Imposta il valore del controllo gestito (TextField, ...)
 -(void) setControlValue:(id)value;

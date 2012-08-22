@@ -13,16 +13,6 @@
 
 @synthesize listViewController=listViewController_;
 
--(id)init:(UIXMLFormViewController*)controller datakey:(NSString*)key label:(NSString*)label cellData:(NSDictionary*)cellData
-{
-    if( self = [super init:controller datakey:key label:label cellData:cellData] ) {
-         //self.detailTextLabel.text = @"test1";
-    }
-    
-    return self;
-    
-}
-
 
 -(UIViewController *)viewController:(NSDictionary*)cellData {
     

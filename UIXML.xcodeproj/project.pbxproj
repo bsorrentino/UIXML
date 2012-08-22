@@ -101,7 +101,13 @@
 		0867D691FE84028FC02AAC07 /* UIXML */ = {
 			isa = PBXGroup;
 			children = (
-				5FA7E2391296F228000F493B /* CustomCells */,
+				A025092A15E53E15009F2C59 /* PushTextCell */,
+				A025092815E53D8A009F2C59 /* TextCell */,
+				A025092715E53D62009F2C59 /* SegmentedCell */,
+				A025092615E53D49009F2C59 /* SwitchCell */,
+				A025092915E53DE7009F2C59 /* PushFormCell */,
+				A025091D15E53C54009F2C59 /* PushDateCell */,
+				A025091C15E53B1C009F2C59 /* PushWebViewCell */,
 				5F30ABAE1297F61500540544 /* Resources */,
 				08FB77AEFE84172EC02AAC07 /* Classes */,
 				32C88DFF0371C24200C91783 /* Other Sources */,
@@ -124,6 +130,10 @@
 		08FB77AEFE84172EC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A01671D912AE80920056F855 /* PushControllerDataEntryCell.h */,
+				A01671DA12AE80920056F855 /* PushControllerDataEntryCell.m */,
+				5FA7E23A1296F264000F493B /* BaseDataEntryCell.h */,
+				5FA7E23B1296F264000F493B /* BaseDataEntryCell.m */,
 				5F052D9615CBEB5300330214 /* WaitMaskController.h */,
 				5F052D9715CBEB5300330214 /* WaitMaskController.m */,
 				A01671DF12AE80A90056F855 /* UIXMLFormViewControllerDelegate.h */,
@@ -144,46 +154,84 @@
 		5F30ABAE1297F61500540544 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				A026074E15DE918B009B2F72 /* confirm24x24.png */,
-				A026074F15DE918B009B2F72 /* PushTextEntryCell.xib */,
-				A026075015DE918B009B2F72 /* PushDateEntryCell.xib */,
-				A026075115DE918B009B2F72 /* PushWebViewEntryCell.xib */,
 				A026075215DE918B009B2F72 /* DefaultHeaderInSection.xib */,
-				A026075315DE918B009B2F72 /* MailDataEntryCell.xib */,
-				A026075415DE918B009B2F72 /* PushFormDataEntryCell.xib */,
-				A026075515DE918B009B2F72 /* SwitchDataEntryCell.xib */,
-				A026075615DE918B009B2F72 /* TextDataEntryCell.xib */,
-				5F8BD84D13B2569400A33B0A /* back24x24.png */,
-				5F777C2E1359DC1D003AFC9E /* edit32x32.png */,
-				5F777C2F1359DC1D003AFC9E /* write32x32.png */,
 				5FF78F7A12E7A005008EA886 /* chevron.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		5FA7E2391296F228000F493B /* CustomCells */ = {
+		A025091C15E53B1C009F2C59 /* PushWebViewCell */ = {
 			isa = PBXGroup;
 			children = (
 				5F062F6913774CBE00FAC388 /* PushWebViewEntryCell.h */,
 				5F062F6A13774CBE00FAC388 /* PushWebViewEntryCell.m */,
-				5F30ABCB1297F96700540544 /* SwitchDataEntryCell.h */,
-				5F30ABCC1297F96700540544 /* SwitchDataEntryCell.m */,
-				5FA7E23A1296F264000F493B /* BaseDataEntryCell.h */,
-				5FA7E23B1296F264000F493B /* BaseDataEntryCell.m */,
-				5FA7E23C1296F264000F493B /* TextDataEntryCell.h */,
-				5FA7E23D1296F264000F493B /* TextDataEntryCell.m */,
-				A0BB5C8712D5E87600F7E563 /* SegmentedDataEntryCell.h */,
-				A0BB5C8812D5E87600F7E563 /* SegmentedDataEntryCell.m */,
-				A01671D912AE80920056F855 /* PushControllerDataEntryCell.h */,
-				A01671DA12AE80920056F855 /* PushControllerDataEntryCell.m */,
-				A01671DD12AE80A90056F855 /* PushFormDataEntryCell.h */,
-				A01671DE12AE80A90056F855 /* PushFormDataEntryCell.m */,
+				A026075115DE918B009B2F72 /* PushWebViewEntryCell.xib */,
+				A026074E15DE918B009B2F72 /* confirm24x24.png */,
+				5F8BD84D13B2569400A33B0A /* back24x24.png */,
+			);
+			name = PushWebViewCell;
+			sourceTree = "<group>";
+		};
+		A025091D15E53C54009F2C59 /* PushDateCell */ = {
+			isa = PBXGroup;
+			children = (
 				A065363D12D3A52F0001D660 /* PushDateEntryCell.h */,
 				A065363E12D3A52F0001D660 /* PushDateEntryCell.m */,
+				A026075015DE918B009B2F72 /* PushDateEntryCell.xib */,
+			);
+			name = PushDateCell;
+			sourceTree = "<group>";
+		};
+		A025092615E53D49009F2C59 /* SwitchCell */ = {
+			isa = PBXGroup;
+			children = (
+				5F30ABCB1297F96700540544 /* SwitchDataEntryCell.h */,
+				5F30ABCC1297F96700540544 /* SwitchDataEntryCell.m */,
+				A026075515DE918B009B2F72 /* SwitchDataEntryCell.xib */,
+			);
+			name = SwitchCell;
+			sourceTree = "<group>";
+		};
+		A025092715E53D62009F2C59 /* SegmentedCell */ = {
+			isa = PBXGroup;
+			children = (
+				A0BB5C8712D5E87600F7E563 /* SegmentedDataEntryCell.h */,
+				A0BB5C8812D5E87600F7E563 /* SegmentedDataEntryCell.m */,
+			);
+			name = SegmentedCell;
+			sourceTree = "<group>";
+		};
+		A025092815E53D8A009F2C59 /* TextCell */ = {
+			isa = PBXGroup;
+			children = (
+				5FA7E23C1296F264000F493B /* TextDataEntryCell.h */,
+				5FA7E23D1296F264000F493B /* TextDataEntryCell.m */,
+				A026075615DE918B009B2F72 /* TextDataEntryCell.xib */,
+				A026075315DE918B009B2F72 /* MailDataEntryCell.xib */,
+			);
+			name = TextCell;
+			sourceTree = "<group>";
+		};
+		A025092915E53DE7009F2C59 /* PushFormCell */ = {
+			isa = PBXGroup;
+			children = (
+				A01671DD12AE80A90056F855 /* PushFormDataEntryCell.h */,
+				A01671DE12AE80A90056F855 /* PushFormDataEntryCell.m */,
+				A026075415DE918B009B2F72 /* PushFormDataEntryCell.xib */,
+			);
+			name = PushFormCell;
+			sourceTree = "<group>";
+		};
+		A025092A15E53E15009F2C59 /* PushTextCell */ = {
+			isa = PBXGroup;
+			children = (
 				5FF78F3812E795A8008EA886 /* PushTextEntryCell.h */,
 				5FF78F3912E795A8008EA886 /* PushTextEntryCell.m */,
+				A026074F15DE918B009B2F72 /* PushTextEntryCell.xib */,
+				5F777C2E1359DC1D003AFC9E /* edit32x32.png */,
+				5F777C2F1359DC1D003AFC9E /* write32x32.png */,
 			);
-			name = CustomCells;
+			name = PushTextCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

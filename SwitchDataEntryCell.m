@@ -12,7 +12,6 @@
 @implementation SwitchDataEntryCell
 
 @synthesize switchField;
-//@synthesize textLabel;
 
 
 -(void)valueChanged:(id)sender {
@@ -21,16 +20,12 @@
 	[super postEndEditingNotification];
 }
 
--(id)init:(UIXMLFormViewController*)controller datakey:(NSString *)key label:(NSString*)label cellData:(NSDictionary*)cellData {
+-(void)prepareToAppear:(UIXMLFormViewController*)controller datakey:(NSString *)key label:(NSString*)label cellData:(NSDictionary*)cellData {
 	
-    if ((self = [super init:controller datakey:key label:label cellData:cellData])) {
-        // Initialization code
-		[switchField addTarget:self action:@selector(valueChanged:) forControlEvents:UIControlEventValueChanged];
+    [super prepareToAppear:controller datakey:key label:label cellData:cellData];
+    // Initialization code
+    [switchField addTarget:self action:@selector(valueChanged:) forControlEvents:UIControlEventValueChanged];
 
-    }
-	
-    return self;
-	
 }
 
 /*

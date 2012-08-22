@@ -49,15 +49,14 @@
 @interface PushWebViewEntryCell : PushControllerDataEntryCell {
 	
 @private
-	WebViewController *__UIXML_WEAK viewController;
+	WebViewController *__UIXML_STRONG viewController;
     UITextField *__UIXML_WEAK textValue;
     UILabel *__UIXML_WEAK textLabel_;
     
 }
 
-//@property (nonatomic, retain) IBOutlet UILabel *textLabel;
+@property (UIXML_STRONG,nonatomic) IBOutlet WebViewController *viewController;
 @property (UIXML_WEAK,nonatomic) IBOutlet UITextField *textValue;
-@property (UIXML_WEAK,nonatomic) IBOutlet WebViewController *viewController;
 @property (UIXML_WEAK,nonatomic) IBOutlet UILabel *textLabel;
 
 @end

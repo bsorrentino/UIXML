@@ -17,6 +17,10 @@
 		5F37C21C15DE403500A3F7AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F37C20315DE403500A3F7AE /* Foundation.framework */; };
 		5F37C22415DE403500A3F7AE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5F37C22215DE403500A3F7AE /* InfoPlist.strings */; };
 		5F37C22715DE403500A3F7AE /* UIXMLSamplesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F37C22615DE403500A3F7AE /* UIXMLSamplesTests.m */; };
+		A025092215E53CF2009F2C59 /* back24x24.png in Resources */ = {isa = PBXBuildFile; fileRef = A025091E15E53CF2009F2C59 /* back24x24.png */; };
+		A025092315E53CF2009F2C59 /* confirm24x24.png in Resources */ = {isa = PBXBuildFile; fileRef = A025091F15E53CF2009F2C59 /* confirm24x24.png */; };
+		A025092415E53CF2009F2C59 /* edit32x32.png in Resources */ = {isa = PBXBuildFile; fileRef = A025092015E53CF2009F2C59 /* edit32x32.png */; };
+		A025092515E53CF2009F2C59 /* write32x32.png in Resources */ = {isa = PBXBuildFile; fileRef = A025092115E53CF2009F2C59 /* write32x32.png */; };
 		A026075F15DE921D009B2F72 /* PushTextEntryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A026075715DE921D009B2F72 /* PushTextEntryCell.xib */; };
 		A026076015DE921D009B2F72 /* PushDateEntryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A026075815DE921D009B2F72 /* PushDateEntryCell.xib */; };
 		A026076115DE921D009B2F72 /* PushWebViewEntryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A026075915DE921D009B2F72 /* PushWebViewEntryCell.xib */; };
@@ -82,6 +86,10 @@
 		5F37C22315DE403500A3F7AE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5F37C22515DE403500A3F7AE /* UIXMLSamplesTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIXMLSamplesTests.h; sourceTree = "<group>"; };
 		5F37C22615DE403500A3F7AE /* UIXMLSamplesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIXMLSamplesTests.m; sourceTree = "<group>"; };
+		A025091E15E53CF2009F2C59 /* back24x24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = back24x24.png; path = ../back24x24.png; sourceTree = "<group>"; };
+		A025091F15E53CF2009F2C59 /* confirm24x24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = confirm24x24.png; path = ../confirm24x24.png; sourceTree = "<group>"; };
+		A025092015E53CF2009F2C59 /* edit32x32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = edit32x32.png; path = ../edit32x32.png; sourceTree = "<group>"; };
+		A025092115E53CF2009F2C59 /* write32x32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = write32x32.png; path = ../write32x32.png; sourceTree = "<group>"; };
 		A026075715DE921D009B2F72 /* PushTextEntryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PushTextEntryCell.xib; path = ../PushTextEntryCell.xib; sourceTree = "<group>"; };
 		A026075815DE921D009B2F72 /* PushDateEntryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PushDateEntryCell.xib; path = ../PushDateEntryCell.xib; sourceTree = "<group>"; };
 		A026075915DE921D009B2F72 /* PushWebViewEntryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PushWebViewEntryCell.xib; path = ../PushWebViewEntryCell.xib; sourceTree = "<group>"; };
@@ -239,6 +247,10 @@
 		A082BB8615DE47B5004C37BC /* UIXML */ = {
 			isa = PBXGroup;
 			children = (
+				A025091E15E53CF2009F2C59 /* back24x24.png */,
+				A025091F15E53CF2009F2C59 /* confirm24x24.png */,
+				A025092015E53CF2009F2C59 /* edit32x32.png */,
+				A025092115E53CF2009F2C59 /* write32x32.png */,
 				A026075715DE921D009B2F72 /* PushTextEntryCell.xib */,
 				A026075815DE921D009B2F72 /* PushDateEntryCell.xib */,
 				A026075915DE921D009B2F72 /* PushWebViewEntryCell.xib */,
@@ -367,6 +379,10 @@
 				A026076415DE921D009B2F72 /* PushFormDataEntryCell.xib in Resources */,
 				A026076515DE921D009B2F72 /* SwitchDataEntryCell.xib in Resources */,
 				A026076615DE921D009B2F72 /* TextDataEntryCell.xib in Resources */,
+				A025092215E53CF2009F2C59 /* back24x24.png in Resources */,
+				A025092315E53CF2009F2C59 /* confirm24x24.png in Resources */,
+				A025092415E53CF2009F2C59 /* edit32x32.png in Resources */,
+				A025092515E53CF2009F2C59 /* write32x32.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -38,7 +38,7 @@
 @interface PushDateEntryCell  : PushControllerDataEntryCell {
 	
 @private
-	PushDateViewController *__UIXML_WEAK viewController;
+	PushDateViewController *__UIXML_STRONG viewController;
 	UITextField  *__UIXML_WEAK txtValue;
 	
 	NSDateFormatter * dateFormatter_;
@@ -47,9 +47,8 @@
 - (NSString *) stringFromDate:(NSDate *)value;
 
 @property (UIXML_STRONG,nonatomic, readonly)NSDateFormatter *dateFormatter;
-//@property (nonatomic, retain) IBOutlet UILabel *textLabel;
 @property (UIXML_WEAK,nonatomic) IBOutlet UITextField  * txtValue;
-@property (UIXML_WEAK,nonatomic) IBOutlet PushDateViewController *viewController;
+@property (UIXML_STRONG,nonatomic) IBOutlet PushDateViewController *viewController;
 
 
 @end

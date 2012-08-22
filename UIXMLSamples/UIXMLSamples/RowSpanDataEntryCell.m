@@ -47,16 +47,6 @@
 @implementation RowSpanDataEntryCell
 @synthesize form;
 
-- (id)init:(UIXMLFormViewController *)controller datakey:(NSString *)key label:(NSString *)label cellData:(NSDictionary *)cellData
-{
-    if( self = [super init:controller datakey:key label:label cellData:cellData] ) {
-        
-    }
-    
-    return self;
-}
-
-
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

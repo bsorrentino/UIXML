@@ -128,7 +128,9 @@
     
     BaseDataEntryCell *cell = [self tableView:tableView cellFromType:cellType cellData:cellData];
 
-    return [cell init:self datakey:dataKey label:label cellData:cellData];
+    [cell prepareToAppear:self datakey:dataKey label:label cellData:cellData];
+    
+    return cell;
     
 }
 

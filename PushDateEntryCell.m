@@ -45,30 +45,27 @@
 	return viewController;
 }
 
-- (id) init:(UIXMLFormViewController*)controller datakey:(NSString*)key label:(NSString*)label cellData:(NSDictionary*)cellData{
+- (void) prepareToAppear:(UIXMLFormViewController*)controller datakey:(NSString*)key label:(NSString*)label cellData:(NSDictionary*)cellData{
 	
-    if ((self = [super init:controller datakey:key label:label cellData:cellData])) {
-        // Initialization code
-		NSString *placeholder = [cellData objectForKey:@"placeholder"];
-		
-		if( ![self isStringEmpty:placeholder] ) {
-			
-			[txtValue setPlaceholder:placeholder];
-		}
-
-		NSString *format = [cellData objectForKey:@"format"];
-		
-		if( ![self isStringEmpty:format] ) {
-			
-			[self.dateFormatter setDateFormat:format];
-		}
-		else {
-			[self.dateFormatter setDateStyle:kCFDateFormatterMediumStyle];
-		}
-		
+    [super prepareToAppear:controller datakey:key label:label cellData:cellData];
+    // Initialization code
+    NSString *placeholder = [cellData objectForKey:@"placeholder"];
+    
+    if( ![self isStringEmpty:placeholder] ) {
+        
+        [txtValue setPlaceholder:placeholder];
     }
-	
-	return self;
+
+    NSString *format = [cellData objectForKey:@"format"];
+    
+    if( ![self isStringEmpty:format] ) {
+        
+        [self.dateFormatter setDateFormat:format];
+    }
+    else {
+        [self.dateFormatter setDateStyle:kCFDateFormatterMediumStyle];
+    }
+		
 }
 
 // Getter
