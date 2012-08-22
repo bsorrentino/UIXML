@@ -182,22 +182,20 @@
 		5F37C20715DE403500A3F7AE /* UIXMLSamples */ = {
 			isa = PBXGroup;
 			children = (
+				A025092D15E546EE009F2C59 /* PushFormCell */,
+				A025092C15E546CD009F2C59 /* GenderCell */,
+				A025092B15E546A4009F2C59 /* ListDataCell */,
 				A05C6B3615DE415B00362113 /* RowSpanCell */,
-				A05C6B3915DE41FB00362113 /* form-structure.plist */,
-				A05C6B3A15DE41FB00362113 /* form1-structure.plist */,
-				A05C6B3B15DE41FB00362113 /* table-structure.plist */,
-				A05C6B3C15DE41FB00362113 /* GenderDataEntryCell.xib */,
-				A05C6B3D15DE41FB00362113 /* MainWindow.xib */,
 				A05C6B2215DE403F00362113 /* FormData.h */,
 				A05C6B2315DE403F00362113 /* FormData.m */,
-				A05C6B2415DE403F00362113 /* FormViewController.h */,
-				A05C6B2515DE403F00362113 /* FormViewController.m */,
-				A05C6B2615DE403F00362113 /* ListDataEntryCell.h */,
-				A05C6B2715DE403F00362113 /* ListDataEntryCell.m */,
-				A05C6B2815DE403F00362113 /* ListDataEntryCell.xib */,
-				A05C6B2B15DE403F00362113 /* TableViewController.xib */,
 				A05C6B2C15DE403F00362113 /* UIXMLAppDelegate.h */,
 				A05C6B2D15DE403F00362113 /* UIXMLAppDelegate.m */,
+				A05C6B2415DE403F00362113 /* FormViewController.h */,
+				A05C6B2515DE403F00362113 /* FormViewController.m */,
+				A05C6B3915DE41FB00362113 /* form-structure.plist */,
+				A05C6B3B15DE41FB00362113 /* table-structure.plist */,
+				A05C6B3D15DE41FB00362113 /* MainWindow.xib */,
+				A05C6B2B15DE403F00362113 /* TableViewController.xib */,
 				5F37C20815DE403500A3F7AE /* Supporting Files */,
 			);
 			path = UIXMLSamples;
@@ -231,6 +229,32 @@
 				5F37C22215DE403500A3F7AE /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A025092B15E546A4009F2C59 /* ListDataCell */ = {
+			isa = PBXGroup;
+			children = (
+				A05C6B2615DE403F00362113 /* ListDataEntryCell.h */,
+				A05C6B2715DE403F00362113 /* ListDataEntryCell.m */,
+				A05C6B2815DE403F00362113 /* ListDataEntryCell.xib */,
+			);
+			name = ListDataCell;
+			sourceTree = "<group>";
+		};
+		A025092C15E546CD009F2C59 /* GenderCell */ = {
+			isa = PBXGroup;
+			children = (
+				A05C6B3C15DE41FB00362113 /* GenderDataEntryCell.xib */,
+			);
+			name = GenderCell;
+			sourceTree = "<group>";
+		};
+		A025092D15E546EE009F2C59 /* PushFormCell */ = {
+			isa = PBXGroup;
+			children = (
+				A05C6B3A15DE41FB00362113 /* form1-structure.plist */,
+			);
+			name = PushFormCell;
 			sourceTree = "<group>";
 		};
 		A05C6B3615DE415B00362113 /* RowSpanCell */ = {

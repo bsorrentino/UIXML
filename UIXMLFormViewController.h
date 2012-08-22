@@ -50,6 +50,10 @@
 -(NSString*)getStringInSection:(NSInteger)section;
 
 -(BaseDataEntryCell*)cellForIndexPath:(NSUInteger)row section:(NSUInteger)section;
+
+// Cell Factory Method
+- (BaseDataEntryCell *)tableView:(UITableView *)tableView cellFromType:(NSString *)cellType cellData:(NSDictionary*)cellData;
+
 @end
 
 

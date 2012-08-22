@@ -14,9 +14,7 @@
 
 @interface UIXMLFormViewController(Private) 
 
-- (BaseDataEntryCell *)tableView:(UITableView *)tableView cellFromType:(NSString *)cellType cellData:(NSDictionary*)cellData;
-
-- (BaseDataEntryCell *)tableView:(UITableView *)tableView CellFromData:(NSDictionary *)cellData;
+- (BaseDataEntryCell *)tableView:(UITableView *)tableView initCellFromData:(NSDictionary *)cellData;
 
 @end
 
@@ -97,25 +95,12 @@
 
 - (BaseDataEntryCell *)tableView:(UITableView *)tableView cellFromType:(NSString *)cellType cellData:(NSDictionary *)cellData {
     
-    BaseDataEntryCell *cell = (BaseDataEntryCell *)[tableView dequeueReusableCellWithIdentifier:cellType];
-	if (cell == nil) {
-		
-		[[NSBundle mainBundle] loadNibNamed:cellType owner:self options:nil];
-		
-		cell = dataEntryCell;
-		self.dataEntryCell = nil;
-        
-        if ( [self respondsToSelector:@selector(cellControlDidLoad:cellData:)]) {
-            [self cellControlDidLoad:cell cellData:cellData];
-        }
-		//[cell init:self datakey:dataKey label:[cellData objectForKey:@"Label"] cellData:cellData];
-		
-		//cell = [[[NSClassFromString(cellType) alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellType] autorelease];
-        
-		//[self cellControlDidInit:cell];
-		
-	}
+    BaseDataEntryCell *cell = nil;
     
+	[[NSBundle mainBundle] loadNibNamed:cellType owner:self options:nil];
+		
+    cell = self.dataEntryCell;  self.dataEntryCell = nil;
+        
     return cell;
     
 }
@@ -126,8 +111,18 @@
 	NSString *cellType = [cellData objectForKey:@"CellType"];
     NSString * label = [cellData objectForKey:@"Label"];
     
-    BaseDataEntryCell *cell = [self tableView:tableView cellFromType:cellType cellData:cellData];
+    BaseDataEntryCell *cell = (BaseDataEntryCell *)[tableView dequeueReusableCellWithIdentifier:cellType];
+	
+    if (cell == nil) {
+    
+        cell = [self tableView:tableView cellFromType:cellType cellData:cellData];
 
+        if ( [self respondsToSelector:@selector(cellControlDidLoad:cellData:)]) {
+            [self cellControlDidLoad:cell cellData:cellData];
+        }
+        
+    }
+    
     [cell prepareToAppear:self datakey:dataKey label:label cellData:cellData];
     
     return cell;
