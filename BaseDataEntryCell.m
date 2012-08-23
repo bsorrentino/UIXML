@@ -164,12 +164,17 @@
 
 - (void)keyboardWillBeHidden:(NSNotification*)aNotification
 {
-    UITableView * scrollView = (UITableView *)self.superview;
-    
-    UIEdgeInsets contentInsets = UIEdgeInsetsZero;
-    scrollView.contentInset = contentInsets;
-    scrollView.scrollIndicatorInsets = contentInsets;
-    
+
+    [UIView animateWithDuration:0.2 animations:^() {
+        
+        UITableView * scrollView = (UITableView *)self.superview;
+        
+        UIEdgeInsets contentInsets = UIEdgeInsetsZero;
+        scrollView.contentInset = contentInsets;
+        scrollView.scrollIndicatorInsets = contentInsets;
+        
+        
+    }];
 }
 - (void)registerForKeyboardNotifications
 {
