@@ -135,3 +135,107 @@
 
 
 @end
+
+
+
+@interface BaseDataEntryCellWithResponder(Keyboard)
+
+- (void)keyboardWillShown:(NSNotification*)aNotification;
+- (void)keyboardWillBeHidden:(NSNotification*)aNotification;
+- (void)scrollUpToKeyboard:(CGRect)keyboardRect;
+
+@end
+
+@implementation BaseDataEntryCellWithResponder
+@dynamic responder;
+
+#pragma mark - Keyboard notifications
+
+- (void)keyboardWillShown:(NSNotification*)aNotification
+{
+    if( !self.responder.isFirstResponder) return;
+    
+    NSDictionary* info = [aNotification userInfo];
+    
+    id infoKey = [info objectForKey:UIKeyboardFrameBeginUserInfoKey];
+    
+    [self scrollUpToKeyboard:[infoKey CGRectValue]];
+}
+
+- (void)keyboardWillBeHidden:(NSNotification*)aNotification
+{
+    UITableView * scrollView = (UITableView *)self.superview;
+    
+    UIEdgeInsets contentInsets = UIEdgeInsetsZero;
+    scrollView.contentInset = contentInsets;
+    scrollView.scrollIndicatorInsets = contentInsets;
+    
+}
+- (void)registerForKeyboardNotifications
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillShown:)
+                                                 name:UIKeyboardWillShowNotification object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillBeHidden:)
+                                                 name:UIKeyboardWillHideNotification object:nil];
+    
+}
+
+- (void)unregisterForKeyboardNotifications
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:UIKeyboardWillShowNotification object:nil];
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:UIKeyboardWillHideNotification object:nil];
+    
+}
+
+- (void)scrollUpToKeyboard:(CGRect)keyboardRect
+{
+#define MAGIC_NUMBER 18.0
+    
+    UITableView * scrollView = (UITableView *)self.superview;
+    
+    CGSize kbSize = keyboardRect.size;
+    
+    UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, kbSize.height, 0.0);
+    scrollView.contentInset = contentInsets;
+    scrollView.scrollIndicatorInsets = contentInsets;
+    
+    // If active text field is hidden by keyboard, scroll it so it's visible
+    // Your application might not need or want this behavior.
+    
+    CGRect aRect = scrollView.bounds; aRect.size.height -= kbSize.height;
+    
+    CGRect fRect = self.frame ; fRect.origin.y += fRect.size.height + MAGIC_NUMBER; 
+    
+    /*
+    NSLog( @"\nKeyb height=[%f]\ntable rect y=[%f] h=[%f]\ncell  rect y=[%f] h=[%f]\nCONTAINED=[%d]" ,
+          kbSize.height,
+          aRect.origin.y, aRect.size.height,
+          fRect.origin.y, fRect.size.height,
+          CGRectContainsPoint(aRect, fRect.origin)
+          );
+    */
+    
+    if (!CGRectContainsPoint(aRect, fRect.origin) ) {
+        CGPoint scrollPoint = CGPointMake(0.0, fRect.origin.y-kbSize.height );
+        [scrollView setContentOffset:scrollPoint animated:YES];
+    }
+    
+}
+
+- (void) prepareToAppear:(UIXMLFormViewController*)controller datakey:(NSString*)key label:(NSString*)label cellData:(NSDictionary*)cellData {
+
+    [super prepareToAppear:controller datakey:key label:label cellData:cellData];
+    
+    if (![[cellData valueForKey:@"ignoreKeyboard"] boolValue] ) {
+        
+        [self registerForKeyboardNotifications];
+    }
+}
+
+@end

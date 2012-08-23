@@ -53,3 +53,15 @@
 
 @end
 
+
+
+@interface BaseDataEntryCellWithResponder : BaseDataEntryCell {
+
+}
+
+@property (nonatomic, UIXML_WEAK, readonly, getter = getResponder) UIResponder *responder;
+
+- (void)registerForKeyboardNotifications;
+- (void)unregisterForKeyboardNotifications;
+
+@end

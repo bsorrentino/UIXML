@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "BaseDataEntryCell.h"
 
-@interface TextDataEntryCell : BaseDataEntryCell <UITextFieldDelegate> {
+@interface TextDataEntryCell : BaseDataEntryCellWithResponder <UITextFieldDelegate> {
 	UITextField *__UIXML_WEAK textField;
 }
 

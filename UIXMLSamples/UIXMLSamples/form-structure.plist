@@ -8,33 +8,14 @@
 			<string>Personal</string>
 		</dict>
 		<array>
+            
 			<dict>
 				<key>DataKey</key>
 				<string>rospan</string>
 				<key>CellType</key>
 				<string>RowSpanDataEntryCell</string>
 			</dict>
-            <!--
-			<dict>
-				<key>DataKey</key>
-				<string>firstName</string>
-				<key>Label</key>
-				<string>Nome</string>
-				<key>CellType</key>
-				<string>TextDataEntryCell</string>
-			</dict>
-			<dict>
-				<key>DataKey</key>
-				<string>lastName</string>
-				<key>Label</key>
-				<string>Cognome</string>
-				<key>CellType</key>
-				<string>TextDataEntryCell</string>
-                <key>secure</key><false/>
-				<key>placeholder</key>
-				<string>&lt;input cognome &gt;</string>
-			</dict>
-            -->
+            
 			<dict>
 				<key>DataKey</key>
 				<string>email</string>
@@ -83,6 +64,15 @@
 				<string>ListDataEntryCell</string>
 			</dict>
             
+            <dict>
+				<key>DataKey</key>
+				<string>text2</string>
+				<key>Label</key>
+				<string>text field</string>
+				<key>CellType</key>
+				<string>TextDataEntryCell</string>
+			</dict>
+           
 			<dict>
 				<key>DataKey</key>
 				<string>url</string>
@@ -120,6 +110,16 @@
 				<key>controller</key>
 				<string>form1-structure.plist</string>
 			</dict>
+            
+            <dict>
+				<key>DataKey</key>
+				<string>last</string>
+				<key>Label</key>
+				<string>Last Field</string>
+				<key>CellType</key>
+				<string>TextDataEntryCell</string>
+			</dict>
+
 		</array>
 	</array>
 </array>

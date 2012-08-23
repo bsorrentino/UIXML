@@ -18,6 +18,8 @@
 		<string>TextDataEntryCell</string>
 		<key>placeholder</key>
 		<string>first name</string>
+        <key>ignoreKeyboard</key>
+        <true/>
         </dict>
         <dict>
 		<key>DataKey</key>
@@ -28,6 +30,8 @@
 		<string>TextDataEntryCell</string>
 		<key>placeholder</key>
 		<string>last name</string>
+        <key>ignoreKeyboard</key>
+        <true/>
         </dict>
         </array>
     </array>
