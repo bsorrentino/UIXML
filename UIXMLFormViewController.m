@@ -22,7 +22,6 @@
 
 @synthesize resource;
 @synthesize dataEntryCell;
-@synthesize nestedController;
 
 #pragma mark custom methods
 
