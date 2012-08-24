@@ -22,7 +22,6 @@
 
 @synthesize resource;
 @synthesize dataEntryCell;
-@synthesize headerInSection=_headerInSection;
 @synthesize nestedController;
 
 #pragma mark custom methods
@@ -136,8 +135,7 @@
 
 }
 
-#pragma mark -
-#pragma mark Editing control
+#pragma mark - Editing control
 
 -(void)registerControEditingNotification {
 
@@ -156,9 +154,6 @@
 		object:nil];      
 }
 
-
-#pragma mark -
-#pragma mark Editing control
 
 -(void)cellControlDidEndEditingNotify:(NSNotification *)notification
 {
@@ -247,12 +242,6 @@
 	NSArray *sectionData = [sectionInfo objectAtIndex:1];
 	
     return [sectionData count];
-}
-
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {    // fixed font style. use custom view (UILabel) if you want something different
-	
-	return [self getStringInSection:section];
-	
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -406,27 +395,22 @@
 	}
 }
 
+#pragma mark > Header Management
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    // fixed font style. use custom view (UILabel) if you want something different
+	
+	return [self getStringInSection:section];
+	
+}
+
+/*
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-	
-	NSString * text = [self getStringInSection:section];
-	
-	[[NSBundle mainBundle] loadNibNamed:@"DefaultHeaderInSection" owner:self options:nil];
-	
-	UIView *h = _headerInSection; _headerInSection = nil;
 
-	h.backgroundColor = self.view.backgroundColor;
-
-	UILabel * label = (UILabel*)[h viewWithTag:HEADER_IN_SECTION_LABEL_TAG];
-	
-	label.text = text;
-	
-	return h;
 }
 
-- (CGFloat) tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
-{
-	return 40;
-}
+- (CGFloat) tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section;
+*/
 
 #pragma mark -
 #pragma mark Memory management

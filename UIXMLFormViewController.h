@@ -10,8 +10,6 @@
 #import "UIXML.h"
 #import "UIXMLFormViewControllerDelegate.h"
 
-#define HEADER_IN_SECTION_LABEL_TAG 1
-
 @class BaseDataEntryCell;
 
 //
@@ -32,7 +30,6 @@
 
 @property (UIXML_WEAK, nonatomic,readonly) NSString *resource;
 @property (UIXML_WEAK, nonatomic) IBOutlet BaseDataEntryCell *dataEntryCell;
-@property (UIXML_WEAK, nonatomic) IBOutlet UIView *headerInSection;
 
 @property (UIXML_WEAK, nonatomic) UIXMLFormViewController *nestedController;
 

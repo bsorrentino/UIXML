@@ -24,7 +24,6 @@
 		A026075F15DE921D009B2F72 /* PushTextEntryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A026075715DE921D009B2F72 /* PushTextEntryCell.xib */; };
 		A026076015DE921D009B2F72 /* PushDateEntryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A026075815DE921D009B2F72 /* PushDateEntryCell.xib */; };
 		A026076115DE921D009B2F72 /* PushWebViewEntryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A026075915DE921D009B2F72 /* PushWebViewEntryCell.xib */; };
-		A026076215DE921D009B2F72 /* DefaultHeaderInSection.xib in Resources */ = {isa = PBXBuildFile; fileRef = A026075A15DE921D009B2F72 /* DefaultHeaderInSection.xib */; };
 		A026076315DE921D009B2F72 /* MailDataEntryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A026075B15DE921D009B2F72 /* MailDataEntryCell.xib */; };
 		A026076415DE921D009B2F72 /* PushFormDataEntryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A026075C15DE921D009B2F72 /* PushFormDataEntryCell.xib */; };
 		A026076515DE921D009B2F72 /* SwitchDataEntryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A026075D15DE921D009B2F72 /* SwitchDataEntryCell.xib */; };
@@ -93,7 +92,6 @@
 		A026075715DE921D009B2F72 /* PushTextEntryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PushTextEntryCell.xib; path = ../PushTextEntryCell.xib; sourceTree = "<group>"; };
 		A026075815DE921D009B2F72 /* PushDateEntryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PushDateEntryCell.xib; path = ../PushDateEntryCell.xib; sourceTree = "<group>"; };
 		A026075915DE921D009B2F72 /* PushWebViewEntryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PushWebViewEntryCell.xib; path = ../PushWebViewEntryCell.xib; sourceTree = "<group>"; };
-		A026075A15DE921D009B2F72 /* DefaultHeaderInSection.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DefaultHeaderInSection.xib; path = ../DefaultHeaderInSection.xib; sourceTree = "<group>"; };
 		A026075B15DE921D009B2F72 /* MailDataEntryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MailDataEntryCell.xib; path = ../MailDataEntryCell.xib; sourceTree = "<group>"; };
 		A026075C15DE921D009B2F72 /* PushFormDataEntryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PushFormDataEntryCell.xib; path = ../PushFormDataEntryCell.xib; sourceTree = "<group>"; };
 		A026075D15DE921D009B2F72 /* SwitchDataEntryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SwitchDataEntryCell.xib; path = ../SwitchDataEntryCell.xib; sourceTree = "<group>"; };
@@ -278,7 +276,6 @@
 				A026075715DE921D009B2F72 /* PushTextEntryCell.xib */,
 				A026075815DE921D009B2F72 /* PushDateEntryCell.xib */,
 				A026075915DE921D009B2F72 /* PushWebViewEntryCell.xib */,
-				A026075A15DE921D009B2F72 /* DefaultHeaderInSection.xib */,
 				A026075B15DE921D009B2F72 /* MailDataEntryCell.xib */,
 				A026075C15DE921D009B2F72 /* PushFormDataEntryCell.xib */,
 				A026075D15DE921D009B2F72 /* SwitchDataEntryCell.xib */,
@@ -398,7 +395,6 @@
 				A026075F15DE921D009B2F72 /* PushTextEntryCell.xib in Resources */,
 				A026076015DE921D009B2F72 /* PushDateEntryCell.xib in Resources */,
 				A026076115DE921D009B2F72 /* PushWebViewEntryCell.xib in Resources */,
-				A026076215DE921D009B2F72 /* DefaultHeaderInSection.xib in Resources */,
 				A026076315DE921D009B2F72 /* MailDataEntryCell.xib in Resources */,
 				A026076415DE921D009B2F72 /* PushFormDataEntryCell.xib in Resources */,
 				A026076515DE921D009B2F72 /* SwitchDataEntryCell.xib in Resources */,
