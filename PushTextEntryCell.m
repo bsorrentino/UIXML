@@ -18,7 +18,7 @@
     lineColor = 
         [UIColor colorWithRed:202/255.0f green:167/255.0 blue:131/255.0f alpha:1.0];
     //UIColor *lineColor = [UIColor blackColor];
-
+    [super awakeFromNib];
 }
 - (void)drawRect:(CGRect)rect { 
     
@@ -226,10 +226,12 @@
 - (void) viewWillAppear:(BOOL)animated {
 	// Show Keyboard
     [self.txtValue becomeFirstResponder];
+    [super viewWillAppear:animated];
 }
 - (void) viewWillDisappear:(BOOL)animated {
 	// Hide Keyboard
 	[self.view.window endEditing: YES];
+    [super viewWillDisappear:animated];
 
 }
 
