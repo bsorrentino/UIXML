@@ -4,3 +4,4 @@
 
 #import "UIXMLFormViewController.h"
 #import "BaseDataEntryCell.h"
+#import "PushControllerDataEntryCell.h"

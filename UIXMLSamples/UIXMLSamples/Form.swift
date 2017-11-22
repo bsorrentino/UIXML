@@ -45,13 +45,13 @@ class FormViewController : UIXMLFormViewController {
     
         let birthDay = fmt.date( from:"1997-10-03" )
     
-        data.model["birthDay"] = birthDay
-        data.model["gender"] = "M"
-        data.model["enabled"] =  false
-        data.model["firstName"] =  "Simone"
-        data.model["lastName"] = "Sorrentino"
-        data.model["list"] = "list"
-        data.model["url"] = "about:blank"
+        data.model["birthDay"]  = birthDay
+        data.model["gender"]    = "M"
+        data.model["enabled"]   = false
+        data.model["firstName"] = "Simone"
+        data.model["lastName"]  = "Sorrentino"
+        data.model["list"]      = "list"
+        data.model["url"]       = "about:blank"
     
     }
 
@@ -59,14 +59,14 @@ class FormViewController : UIXMLFormViewController {
     
     func cellControlDidEndEditing( cell:BaseDataEntryCell ) {
         
-        print( "FormViewController value \(cell.getControlValue()) for key \(cell.dataKey)")
+        print( "FormViewController value [\(cell.getControlValue())] for key [\(cell.dataKey)]")
     
     }
     
     func cellControlDidInit(cell:BaseDataEntryCell, cellData:Dictionary<String,Any>) {
     
         if let value = data.model[cell.dataKey as String] {
-            print("FormViewController Init cell for key \(cell.dataKey) value \(value)");
+            print("FormViewController Init cell for key [\(cell.dataKey)] value [\(value)]");
 
             cell.setControlValue(value)
         }
