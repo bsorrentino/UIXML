@@ -15,32 +15,32 @@
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" rowHeight="117" id="3" customClass="RowSpanDataEntryCell" customModule="UIXMLSamples">
-            <rect key="frame" x="0.0" y="0.0" width="358" height="117"/>
+        <tableViewCell contentMode="scaleToFill" misplaced="YES" selectionStyle="blue" indentationWidth="10" rowHeight="114" id="3" customClass="RowSpanDataEntryCell" customModule="UIXMLSamples">
+            <rect key="frame" x="0.0" y="0.0" width="363" height="114"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3" id="IQI-TR-JUM">
-                <rect key="frame" x="0.0" y="0.0" width="358" height="116.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="363" height="113.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="5">
-                        <rect key="frame" x="10" y="18" width="80" height="80"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" red="0.66666668653488159" green="0.66666668653488159" blue="0.66666668653488159" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </imageView>
-                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="6">
-                        <rect key="frame" x="98" y="7" width="255" height="101"/>
+                    <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="6">
+                        <rect key="frame" x="95" y="11" width="260" height="95"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <connections>
                             <outlet property="dataSource" destination="tXw-hI-k7I" id="tMU-tS-T6G"/>
                         </connections>
                     </tableView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" id="5">
+                        <rect key="frame" x="0.0" y="9" width="87" height="95"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="0.66666668653488159" green="0.66666668653488159" blue="0.66666668653488159" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </imageView>
                 </subviews>
             </tableViewCellContentView>
             <connections>
                 <outlet property="form" destination="tXw-hI-k7I" id="U1O-td-Muo"/>
             </connections>
-            <point key="canvasLocation" x="-446" y="-421"/>
+            <point key="canvasLocation" x="-443.5" y="-423"/>
         </tableViewCell>
         <tableViewController id="tXw-hI-k7I" customClass="RowSpanViewController" customModule="UIXMLSamples">
             <connections>

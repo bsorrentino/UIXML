@@ -11,11 +11,6 @@
 		5F37C20415DE403500A3F7AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F37C20315DE403500A3F7AE /* Foundation.framework */; };
 		5F37C20615DE403500A3F7AE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F37C20515DE403500A3F7AE /* CoreGraphics.framework */; };
 		5F37C20C15DE403500A3F7AE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5F37C20A15DE403500A3F7AE /* InfoPlist.strings */; };
-		5F37C21A15DE403500A3F7AE /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F37C21915DE403500A3F7AE /* SenTestingKit.framework */; };
-		5F37C21B15DE403500A3F7AE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F37C20115DE403500A3F7AE /* UIKit.framework */; };
-		5F37C21C15DE403500A3F7AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F37C20315DE403500A3F7AE /* Foundation.framework */; };
-		5F37C22415DE403500A3F7AE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5F37C22215DE403500A3F7AE /* InfoPlist.strings */; };
-		5F37C22715DE403500A3F7AE /* UIXMLSamplesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F37C22615DE403500A3F7AE /* UIXMLSamplesTests.m */; };
 		5FA03B9C1FC38AC20099C39B /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FA03B9B1FC38AC20099C39B /* main.storyboard */; };
 		5FA03B9E1FC38C780099C39B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA03B9D1FC38C780099C39B /* AppDelegate.swift */; };
 		5FA03BA01FC4AEE70099C39B /* Form.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA03B9F1FC4AEE70099C39B /* Form.swift */; };
@@ -44,13 +39,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		5F37C21D15DE403500A3F7AE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5F37C1F415DE403500A3F7AE /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5F37C1FC15DE403500A3F7AE;
-			remoteInfo = UIXMLSamples;
-		};
 		A0840A8F15DE440D001C08EC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A0840A8515DE440C001C08EC /* UIXML.xcodeproj */;
@@ -76,12 +64,7 @@
 		5F37C20915DE403500A3F7AE /* UIXMLSamples-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UIXMLSamples-Info.plist"; sourceTree = "<group>"; };
 		5F37C20B15DE403500A3F7AE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5F37C20F15DE403500A3F7AE /* UIXMLSamples-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIXMLSamples-Prefix.pch"; sourceTree = "<group>"; };
-		5F37C21815DE403500A3F7AE /* UIXMLSamplesTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIXMLSamplesTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F37C21915DE403500A3F7AE /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		5F37C22115DE403500A3F7AE /* UIXMLSamplesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UIXMLSamplesTests-Info.plist"; sourceTree = "<group>"; };
-		5F37C22315DE403500A3F7AE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		5F37C22515DE403500A3F7AE /* UIXMLSamplesTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIXMLSamplesTests.h; sourceTree = "<group>"; };
-		5F37C22615DE403500A3F7AE /* UIXMLSamplesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIXMLSamplesTests.m; sourceTree = "<group>"; };
 		5FA03B9B1FC38AC20099C39B /* main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = main.storyboard; sourceTree = "<group>"; };
 		5FA03B9D1FC38C780099C39B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5FA03B9F1FC4AEE70099C39B /* Form.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Form.swift; sourceTree = "<group>"; };
@@ -121,16 +104,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5F37C21415DE403500A3F7AE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5F37C21A15DE403500A3F7AE /* SenTestingKit.framework in Frameworks */,
-				5F37C21B15DE403500A3F7AE /* UIKit.framework in Frameworks */,
-				5F37C21C15DE403500A3F7AE /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -141,7 +114,6 @@
 				A0840A8515DE440C001C08EC /* UIXML.xcodeproj */,
 				A05C6B5415DE434B00362113 /* Localizable.strings */,
 				5F37C20715DE403500A3F7AE /* UIXMLSamples */,
-				5F37C21F15DE403500A3F7AE /* UIXMLSamplesTests */,
 				5F37C20015DE403500A3F7AE /* Frameworks */,
 				5F37C1FE15DE403500A3F7AE /* Products */,
 			);
@@ -151,7 +123,6 @@
 			isa = PBXGroup;
 			children = (
 				5F37C1FD15DE403500A3F7AE /* UIXMLSamples.app */,
-				5F37C21815DE403500A3F7AE /* UIXMLSamplesTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -191,25 +162,6 @@
 				5F37C20915DE403500A3F7AE /* UIXMLSamples-Info.plist */,
 				5F37C20A15DE403500A3F7AE /* InfoPlist.strings */,
 				5F37C20F15DE403500A3F7AE /* UIXMLSamples-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		5F37C21F15DE403500A3F7AE /* UIXMLSamplesTests */ = {
-			isa = PBXGroup;
-			children = (
-				5F37C22515DE403500A3F7AE /* UIXMLSamplesTests.h */,
-				5F37C22615DE403500A3F7AE /* UIXMLSamplesTests.m */,
-				5F37C22015DE403500A3F7AE /* Supporting Files */,
-			);
-			path = UIXMLSamplesTests;
-			sourceTree = "<group>";
-		};
-		5F37C22015DE403500A3F7AE /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				5F37C22115DE403500A3F7AE /* UIXMLSamplesTests-Info.plist */,
-				5F37C22215DE403500A3F7AE /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -296,25 +248,6 @@
 			productReference = 5F37C1FD15DE403500A3F7AE /* UIXMLSamples.app */;
 			productType = "com.apple.product-type.application";
 		};
-		5F37C21715DE403500A3F7AE /* UIXMLSamplesTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5F37C22D15DE403500A3F7AE /* Build configuration list for PBXNativeTarget "UIXMLSamplesTests" */;
-			buildPhases = (
-				5F37C21315DE403500A3F7AE /* Sources */,
-				5F37C21415DE403500A3F7AE /* Frameworks */,
-				5F37C21515DE403500A3F7AE /* Resources */,
-				5F37C21615DE403500A3F7AE /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5F37C21E15DE403500A3F7AE /* PBXTargetDependency */,
-			);
-			name = UIXMLSamplesTests;
-			productName = UIXMLSamplesTests;
-			productReference = 5F37C21815DE403500A3F7AE /* UIXMLSamplesTests.octest */;
-			productType = "com.apple.product-type.bundle";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -350,7 +283,6 @@
 			projectRoot = "";
 			targets = (
 				5F37C1FC15DE403500A3F7AE /* UIXMLSamples */,
-				5F37C21715DE403500A3F7AE /* UIXMLSamplesTests */,
 			);
 		};
 /* End PBXProject section */
@@ -394,31 +326,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5F37C21515DE403500A3F7AE /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5F37C22415DE403500A3F7AE /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		5F37C21615DE403500A3F7AE /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5F37C1F915DE403500A3F7AE /* Sources */ = {
@@ -432,22 +340,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5F37C21315DE403500A3F7AE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5F37C22715DE403500A3F7AE /* UIXMLSamplesTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		5F37C21E15DE403500A3F7AE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5F37C1FC15DE403500A3F7AE /* UIXMLSamples */;
-			targetProxy = 5F37C21D15DE403500A3F7AE /* PBXContainerItemProxy */;
-		};
 		A0840A9315DE4422001C08EC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = UIXML;
@@ -460,14 +355,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				5F37C20B15DE403500A3F7AE /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		5F37C22215DE403500A3F7AE /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5F37C22315DE403500A3F7AE /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -638,42 +525,6 @@
 			};
 			name = Release;
 		};
-		5F37C22E15DE403500A3F7AE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/UIXMLSamples.app/UIXMLSamples";
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "UIXMLSamples/UIXMLSamples-Prefix.pch";
-				INFOPLIST_FILE = "UIXMLSamplesTests/UIXMLSamplesTests-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.bsc.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Debug;
-		};
-		5F37C22F15DE403500A3F7AE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/UIXMLSamples.app/UIXMLSamples";
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "UIXMLSamples/UIXMLSamples-Prefix.pch";
-				INFOPLIST_FILE = "UIXMLSamplesTests/UIXMLSamplesTests-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.bsc.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -691,15 +542,6 @@
 			buildConfigurations = (
 				5F37C22B15DE403500A3F7AE /* Debug */,
 				5F37C22C15DE403500A3F7AE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		5F37C22D15DE403500A3F7AE /* Build configuration list for PBXNativeTarget "UIXMLSamplesTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5F37C22E15DE403500A3F7AE /* Debug */,
-				5F37C22F15DE403500A3F7AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
