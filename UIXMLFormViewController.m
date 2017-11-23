@@ -181,6 +181,7 @@
 	[self unregisterControEditingNotification];
     // Relinquish ownership of anything that can be recreated in viewDidLoad or on demand.
     // For example: self.myOutlet = nil;
+    [super viewDidUnload];
 }
 
 
@@ -249,7 +250,7 @@
        
     //NSDictionary *cellData = [tableStructure objectAtIndex:indexPath.row];
 
-	NSLog( @"section[%d] row [%d]", indexPath.section, indexPath.row );
+    NSLog( @"section[%ld] row [%ld]", (long)indexPath.section, (long)indexPath.row );
 
 	NSArray *sectionInfo = [tableStructure objectAtIndex:indexPath.section];
 
@@ -353,7 +354,7 @@
 	
 	if( self.navigationController == nil ) return;
 	
-	NSLog( @"section[%d] row [%d]", indexPath.section, indexPath.row );
+    NSLog( @"section[%ld] row [%ld]", (long)indexPath.section, (long)indexPath.row );
 	
 	NSArray *sectionInfo = [tableStructure objectAtIndex:indexPath.section];
 

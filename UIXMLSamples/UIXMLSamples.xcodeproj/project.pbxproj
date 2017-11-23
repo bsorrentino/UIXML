@@ -20,6 +20,7 @@
 		5FA03B9E1FC38C780099C39B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA03B9D1FC38C780099C39B /* AppDelegate.swift */; };
 		5FA03BA01FC4AEE70099C39B /* Form.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA03B9F1FC4AEE70099C39B /* Form.swift */; };
 		5FEFB5DF1FC5ECA7009462F0 /* ListDataEntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEFB5DE1FC5ECA7009462F0 /* ListDataEntryCell.swift */; };
+		5FEFB5E11FC6C969009462F0 /* RowSpanCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEFB5E01FC6C969009462F0 /* RowSpanCell.swift */; };
 		A025092215E53CF2009F2C59 /* back24x24.png in Resources */ = {isa = PBXBuildFile; fileRef = A025091E15E53CF2009F2C59 /* back24x24.png */; };
 		A025092315E53CF2009F2C59 /* confirm24x24.png in Resources */ = {isa = PBXBuildFile; fileRef = A025091F15E53CF2009F2C59 /* confirm24x24.png */; };
 		A025092415E53CF2009F2C59 /* edit32x32.png in Resources */ = {isa = PBXBuildFile; fileRef = A025092015E53CF2009F2C59 /* edit32x32.png */; };
@@ -32,7 +33,6 @@
 		A026076515DE921D009B2F72 /* SwitchDataEntryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A026075D15DE921D009B2F72 /* SwitchDataEntryCell.xib */; };
 		A026076615DE921D009B2F72 /* TextDataEntryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A026075E15DE921D009B2F72 /* TextDataEntryCell.xib */; };
 		A05C6B3115DE403F00362113 /* ListDataEntryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A05C6B2815DE403F00362113 /* ListDataEntryCell.xib */; };
-		A05C6B3215DE403F00362113 /* RowSpanDataEntryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A05C6B2A15DE403F00362113 /* RowSpanDataEntryCell.m */; };
 		A05C6B3815DE418000362113 /* RowSpanDataEntryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A05C6B3715DE418000362113 /* RowSpanDataEntryCell.xib */; };
 		A05C6B3E15DE41FB00362113 /* form-structure.plist in Resources */ = {isa = PBXBuildFile; fileRef = A05C6B3915DE41FB00362113 /* form-structure.plist */; };
 		A05C6B3F15DE41FB00362113 /* form1-structure.plist in Resources */ = {isa = PBXBuildFile; fileRef = A05C6B3A15DE41FB00362113 /* form1-structure.plist */; };
@@ -86,6 +86,7 @@
 		5FA03B9D1FC38C780099C39B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5FA03B9F1FC4AEE70099C39B /* Form.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Form.swift; sourceTree = "<group>"; };
 		5FEFB5DE1FC5ECA7009462F0 /* ListDataEntryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDataEntryCell.swift; sourceTree = "<group>"; };
+		5FEFB5E01FC6C969009462F0 /* RowSpanCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowSpanCell.swift; sourceTree = "<group>"; };
 		A025091E15E53CF2009F2C59 /* back24x24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = back24x24.png; path = ../back24x24.png; sourceTree = "<group>"; };
 		A025091F15E53CF2009F2C59 /* confirm24x24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = confirm24x24.png; path = ../confirm24x24.png; sourceTree = "<group>"; };
 		A025092015E53CF2009F2C59 /* edit32x32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = edit32x32.png; path = ../edit32x32.png; sourceTree = "<group>"; };
@@ -98,8 +99,6 @@
 		A026075D15DE921D009B2F72 /* SwitchDataEntryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SwitchDataEntryCell.xib; path = ../SwitchDataEntryCell.xib; sourceTree = "<group>"; };
 		A026075E15DE921D009B2F72 /* TextDataEntryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TextDataEntryCell.xib; path = ../TextDataEntryCell.xib; sourceTree = "<group>"; };
 		A05C6B2815DE403F00362113 /* ListDataEntryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListDataEntryCell.xib; sourceTree = "<group>"; };
-		A05C6B2915DE403F00362113 /* RowSpanDataEntryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RowSpanDataEntryCell.h; sourceTree = "<group>"; };
-		A05C6B2A15DE403F00362113 /* RowSpanDataEntryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RowSpanDataEntryCell.m; sourceTree = "<group>"; };
 		A05C6B3715DE418000362113 /* RowSpanDataEntryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RowSpanDataEntryCell.xib; sourceTree = "<group>"; };
 		A05C6B3915DE41FB00362113 /* form-structure.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "form-structure.plist"; sourceTree = "<group>"; };
 		A05C6B3A15DE41FB00362113 /* form1-structure.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "form1-structure.plist"; sourceTree = "<group>"; };
@@ -243,9 +242,8 @@
 		A05C6B3615DE415B00362113 /* RowSpanCell */ = {
 			isa = PBXGroup;
 			children = (
+				5FEFB5E01FC6C969009462F0 /* RowSpanCell.swift */,
 				A082BB8315DE4689004C37BC /* RowSpanForm.plist */,
-				A05C6B2915DE403F00362113 /* RowSpanDataEntryCell.h */,
-				A05C6B2A15DE403F00362113 /* RowSpanDataEntryCell.m */,
 				A05C6B3715DE418000362113 /* RowSpanDataEntryCell.xib */,
 			);
 			name = RowSpanCell;
@@ -428,9 +426,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5FA03B9E1FC38C780099C39B /* AppDelegate.swift in Sources */,
+				5FEFB5E11FC6C969009462F0 /* RowSpanCell.swift in Sources */,
 				5FEFB5DF1FC5ECA7009462F0 /* ListDataEntryCell.swift in Sources */,
 				5FA03BA01FC4AEE70099C39B /* Form.swift in Sources */,
-				A05C6B3215DE403F00362113 /* RowSpanDataEntryCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

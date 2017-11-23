@@ -223,8 +223,10 @@ static /*const*/ NSString * DEFAULT_URL = @"about:blank";
 }
 
 -(void)viewDidDisappear:(BOOL)animated {
+    
     [self endEdit:editButton_ hideTextURL:YES];
     
+    [super viewDidDisappear:animated];
 }
 
 

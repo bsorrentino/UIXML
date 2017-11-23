@@ -168,7 +168,7 @@
 {
 
     [UIView animateWithDuration:0.2 animations:^() {
-        
+        /*
         UITableView * scrollView = nil;;
         
         if( SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0") ) {
@@ -181,7 +181,7 @@
         UIEdgeInsets contentInsets = UIEdgeInsetsZero;
         scrollView.contentInset = contentInsets;
         scrollView.scrollIndicatorInsets = contentInsets;
-        
+        */
         
     }];
 }
@@ -239,10 +239,11 @@
     */
     
     if (!CGRectContainsPoint(aRect, fRect.origin) ) {
+        
         UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, kbSize.height, 0.0);
         scrollView.contentInset = contentInsets;
         scrollView.scrollIndicatorInsets = contentInsets;
-        
+
         CGPoint scrollPoint = CGPointMake(0.0, fRect.origin.y-kbSize.height );
         [scrollView setContentOffset:scrollPoint animated:YES];
     }
