@@ -59,14 +59,14 @@ class FormViewController : UIXMLFormViewController {
     
     func cellControlDidEndEditing( cell:BaseDataEntryCell ) {
         
-        print( "FormViewController value [\(cell.getControlValue())] for key [\(cell.dataKey)]")
+        print( "FormViewController value [\(String(describing: cell.getControlValue()))] for key [\(String(describing: cell.dataKey))]")
     
     }
     
     func cellControlDidInit(cell:BaseDataEntryCell, cellData:Dictionary<String,Any>) {
     
-        if let value = data.model[cell.dataKey as String] {
-            print("FormViewController Init cell for key [\(cell.dataKey)] value [\(value)]");
+        if let key = cell.dataKey, let value = data.model[key as String] {
+            print("FormViewController Init cell for key [\(String(describing: cell.dataKey))] value [\(value)]");
 
             cell.setControlValue(value)
         }

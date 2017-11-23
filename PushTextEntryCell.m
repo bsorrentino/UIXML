@@ -68,7 +68,7 @@
 	contentHeight += offset; 
 	
     // Draw ruled lines CGContextSetRGBStrokeColor(ctx, .8, .8, .8, 1); 
-	for(int i=offset;i < contentHeight;i+=height) { 
+	for(long i=offset;i < contentHeight;i+=height) { 
 		CGPoint lpoints[2] = { CGPointMake(0, i), CGPointMake(rect.size.width, i) };
 		CGContextSetLineWidth(context, .5);
 		CGContextStrokeLineSegments(context, lpoints, 1); 

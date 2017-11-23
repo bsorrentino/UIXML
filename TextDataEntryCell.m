@@ -46,9 +46,9 @@ NSString *const TextDataEntryCellNotification = @"TextDataEntryCell.scrollUpToKe
 
 #pragma mark Inherit from BaseDataEntryCell
 
-- (void) prepareToAppear:(UIXMLFormViewController*)controller datakey:(NSString*)key label:(NSString*)label cellData:(NSDictionary*)cellData{
+- (void) prepareToAppear:(UIXMLFormViewController*)controller datakey:(NSString*)key cellData:(NSDictionary*)cellData{
 	
-    [super prepareToAppear:controller datakey:key label:label cellData:cellData];
+    [super prepareToAppear:controller datakey:key cellData:cellData];
     // Initialization code
 	
     NSString *placeholder = [cellData objectForKey:@"placeholder"];

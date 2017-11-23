@@ -97,7 +97,8 @@
     
 	[[NSBundle mainBundle] loadNibNamed:cellType owner:self options:nil];
 		
-    cell = self.dataEntryCell;  self.dataEntryCell = nil;
+    cell = self.dataEntryCell;
+    self.dataEntryCell = nil;
         
     return cell;
     
@@ -107,7 +108,6 @@
 
     NSString *dataKey = [cellData objectForKey:@"DataKey"];
 	NSString *cellType = [cellData objectForKey:@"CellType"];
-    NSString * label = [cellData objectForKey:@"Label"];
     
     BaseDataEntryCell *cell = (BaseDataEntryCell *)[tableView dequeueReusableCellWithIdentifier:cellType];
 	
@@ -121,7 +121,7 @@
         
     }
     
-    [cell prepareToAppear:self datakey:dataKey label:label cellData:cellData];
+    [cell prepareToAppear:self datakey:dataKey cellData:cellData];
     
     return cell;
     

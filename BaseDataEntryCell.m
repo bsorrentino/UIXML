@@ -37,16 +37,29 @@
     return self;
 }
 
-- (void) prepareToAppear:(UIXMLFormViewController*)controller datakey:(NSString*)key label:(NSString*)label cellData:(NSDictionary*)cellData {
+-(void)prepareLabel:(NSDictionary*_Nonnull)cellData {
+    [self getCDValue:cellData key:@"Label" action:^(NSString * _Nonnull value) {
+        self.textLabel.text = value;
+    }];
+    
+    [self getCDValue:cellData key:@"Label.font" action:^(NSString * _Nonnull value) {
+        NSArray *array = [value componentsSeparatedByString:@":"];
+        if( array.count == 1 )
+            self.textLabel.font = [UIFont fontWithName:value size:15.0];
+        else if( array.count > 1 ) {
+            NSString *fName = array[0];
+            NSString *fSize = array[1];
+            self.textLabel.font = [UIFont fontWithName:fName size:fSize.floatValue ];
+        }
+    }];
+}
+
+
+- (void) prepareToAppear:(UIXMLFormViewController*)controller datakey:(NSString*)key cellData:(NSDictionary*)cellData {
 	self.selectionStyle = UITableViewCellSelectionStyleNone;
 	self.dataKey = key;
     
-    if (![self isStringEmpty:label] ) {
-        self.textLabel.text = label;
-        self.textLabel.font = [UIFont fontWithName:@"Helvetica" size:15.0];
-
-    }
-	
+    [self prepareLabel:cellData];
 }
 
 
@@ -86,6 +99,21 @@
 -(BOOL)enabled {
 	return YES;
 }
+
+-(NSString *_Nullable)getCDValue:(NSDictionary*_Nonnull)cellData
+                             key:(NSString *_Nonnull)key
+                          action:(void (^ _Nullable )(NSString * _Nonnull value))action
+{
+    NSString *value = [cellData objectForKey:key];
+    
+    if( value != nil && action != nil && ![self isStringEmpty:value]) {
+        
+        action( value );
+    }
+    
+    return nil;
+}
+
 
 #pragma mark inherit from NSObject
 
@@ -250,9 +278,10 @@
     
 }
 
+
 - (void) prepareToAppear:(UIXMLFormViewController*)controller datakey:(NSString*)key label:(NSString*)label cellData:(NSDictionary*)cellData {
 
-    [super prepareToAppear:controller datakey:key label:label cellData:cellData];
+    [super prepareToAppear:controller datakey:key cellData:cellData];
     
     if (![[cellData valueForKey:@"ignoreKeyboard"] boolValue] ) {
         

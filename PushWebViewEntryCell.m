@@ -384,7 +384,7 @@ static /*const*/ NSString * DEFAULT_URL = @"about:blank";
 
 - (void) prepareToAppear:(UIXMLFormViewController*)controller datakey:(NSString*)key label:(NSString*)label cellData:(NSDictionary*)cellData{
 	
-    [super prepareToAppear:controller datakey:key label:label cellData:cellData];
+    [super prepareToAppear:controller datakey:key cellData:cellData];
         
     // initialization
     NSString *placeholder = [cellData objectForKey:@"placeholder"];
