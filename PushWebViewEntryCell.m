@@ -389,7 +389,7 @@ static /*const*/ NSString * DEFAULT_URL = @"about:blank";
     // initialization
     NSString *placeholder = [cellData objectForKey:@"placeholder"];
     
-    if( ![self isStringEmpty:placeholder] ) {
+    if( ![self.class isNullOrEmpty:placeholder] ) {
         
         [self.textValue setPlaceholder:placeholder];
     }

@@ -92,7 +92,7 @@
 
 - (void)updateEditIcon:(NSString*)value {
 
-	if ([self isStringEmpty:value]) {
+	if ([self.class isNullOrEmpty:value]) {
         self.editIcon.image = self.imgWrite;
 	}
 	else {
@@ -140,7 +140,7 @@
 	
     [self updateEditIcon:value];
     
-	if ([self isStringEmpty:value]) {
+	if ([self.class isNullOrEmpty:value]) {
 		result = @"";
 	}
 	else {

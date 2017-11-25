@@ -38,20 +38,10 @@
 }
 
 -(void)prepareLabel:(NSDictionary*_Nonnull)cellData {
-    [self getCDValue:cellData key:@"Label" action:^(NSString * _Nonnull value) {
+    [cellData getStringForKey:@"Label" next:^(NSString * _Nonnull value) {
         self.textLabel.text = value;
     }];
     
-    [self getCDValue:cellData key:@"Label.font" action:^(NSString * _Nonnull value) {
-        NSArray *array = [value componentsSeparatedByString:@":"];
-        if( array.count == 1 )
-            self.textLabel.font = [UIFont fontWithName:value size:15.0];
-        else if( array.count > 1 ) {
-            NSString *fName = array[0];
-            NSString *fSize = array[1];
-            self.textLabel.font = [UIFont fontWithName:fName size:fSize.floatValue ];
-        }
-    }];
 }
 
 
@@ -63,8 +53,8 @@
 }
 
 
--(BOOL)isStringEmpty:(NSString*)value {
-	return ( value==nil ||
++(BOOL)isNullOrEmpty:(NSString*)value {
+    return ( value==nil ||
             [[value stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] length] == 0 );
 }
 
@@ -99,21 +89,6 @@
 -(BOOL)enabled {
 	return YES;
 }
-
--(NSString *_Nullable)getCDValue:(NSDictionary*_Nonnull)cellData
-                             key:(NSString *_Nonnull)key
-                          action:(void (^ _Nullable )(NSString * _Nonnull value))action
-{
-    NSString *value = [cellData objectForKey:key];
-    
-    if( value != nil && action != nil && ![self isStringEmpty:value]) {
-        
-        action( value );
-    }
-    
-    return nil;
-}
-
 
 #pragma mark inherit from NSObject
 
@@ -288,5 +263,51 @@
         [self registerForKeyboardNotifications];
     }
 }
+
+@end
+
+@implementation NSDictionary (CellData)
+
+-(void)getStringForKey:(NSString *_Nonnull)key
+                          next:(void (^ _Nonnull )(NSString * _Nonnull value))next
+{
+
+    NSString *value = [self objectForKey:key];
+    
+    if( value != nil && ![BaseDataEntryCell isNullOrEmpty:value]) {
+        
+        next( value );
+    }
+}
+
+-(void)getStringForKey:(NSString *_Nonnull)key
+                   next:(void (^ _Nonnull )(NSString * _Nonnull value))next
+               complete:(void (^ _Nonnull )(void))complete
+{
+    NSString *value = [self objectForKey:key];
+    
+    if( value != nil && ![BaseDataEntryCell isNullOrEmpty:value]) {
+        
+        next( value );
+    }
+    else {
+        complete();
+        
+    }
+
+}
+
+-(void)getArrayForKey:(NSString *_Nonnull)key
+                 next:(void (^ _Nonnull )(NSArray * _Nonnull value))next
+{
+    id value = [self objectForKey:key];
+    
+    if( value != nil && [value isKindOfClass:[NSArray class] ] ) {
+        next( value );
+    }
+
+    
+}
+
 
 @end

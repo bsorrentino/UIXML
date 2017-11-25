@@ -49,22 +49,16 @@
 	
     [super prepareToAppear:controller datakey:key cellData:cellData];
     // Initialization code
-    NSString *placeholder = [cellData objectForKey:@"placeholder"];
     
-    if( ![self isStringEmpty:placeholder] ) {
-        
-        [txtValue setPlaceholder:placeholder];
-    }
+    [cellData getStringForKey:@"placeholder" next:^(NSString * _Nonnull value) {
+        [txtValue setPlaceholder:value];
+    }];
 
-    NSString *format = [cellData objectForKey:@"format"];
-    
-    if( ![self isStringEmpty:format] ) {
-        
-        [self.dateFormatter setDateFormat:format];
-    }
-    else {
+    [cellData getStringForKey:@"format" next:^(NSString * _Nonnull value) {
+        [self.dateFormatter setDateFormat:value];
+    } complete:^{
         [self.dateFormatter setDateStyle:kCFDateFormatterMediumStyle];
-    }
+    }];
 		
 }
 

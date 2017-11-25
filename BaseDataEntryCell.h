@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "UIXML.h"
+#import "NSDictionary+CellData.h"
 
 // cell controls padding
 #define LABEL_CONTROL_PADDING 5
@@ -46,13 +47,11 @@
 -(id _Nullable ) getControlValue;
 
 // helper for check string
--(BOOL)isStringEmpty:(NSString*_Nullable)value;
++(BOOL)isNullOrEmpty:(NSString*_Nullable)value;
 
 -(CGRect) getRectRelativeToLabel: (CGRect)controlFrame padding:(NSInteger)padding rpadding:(NSInteger)rpadding;
 
--(NSString *_Nullable)getCDValue:(NSDictionary*_Nonnull)cellData
-                             key:(NSString *_Nonnull)key
-                          action:(void (^ _Nullable )(NSString * _Nonnull value))action;
+
 
 -(void)prepareLabel:(NSDictionary*_Nonnull)cellData;
 

@@ -25,8 +25,10 @@
 	
     [super prepareToAppear:controller datakey:key cellData:cellData];
     // Initialization code
-		
-    _segmentKeys = [cellData valueForKey:@"segmentKeys"];
+	
+    [cellData getArrayForKey:@"segmentKeys" next:^(NSArray * _Nonnull value) {
+        self->_segmentKeys = value;
+    }];
 	
 }
 
