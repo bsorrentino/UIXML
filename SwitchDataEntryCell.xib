@@ -23,11 +23,11 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="20">
-                        <rect key="frame" x="261" y="6" width="51" height="31"/>
+                        <rect key="frame" x="256" y="6" width="51" height="31"/>
                     </switch>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="20" secondAttribute="trailing" constant="10" id="b49-Oo-IjY"/>
+                    <constraint firstAttribute="trailing" secondItem="20" secondAttribute="trailing" constant="15" id="b49-Oo-IjY"/>
                     <constraint firstItem="20" firstAttribute="centerY" secondItem="E08-pl-onO" secondAttribute="centerY" id="kNa-Ne-piS"/>
                 </constraints>
             </tableViewCellContentView>

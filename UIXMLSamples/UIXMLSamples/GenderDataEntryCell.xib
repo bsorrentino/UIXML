@@ -26,12 +26,12 @@
                         <rect key="frame" x="20" y="11" width="87" height="22"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="23">
-                        <rect key="frame" x="193" y="7.5" width="117" height="29"/>
+                        <rect key="frame" x="188" y="7.5" width="117" height="29"/>
                         <segments>
                             <segment title="Male"/>
                             <segment title="Female"/>
@@ -42,7 +42,7 @@
                     </segmentedControl>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="23" secondAttribute="trailing" constant="10" id="JuE-MC-maB"/>
+                    <constraint firstAttribute="trailing" secondItem="23" secondAttribute="trailing" constant="15" id="JuE-MC-maB"/>
                     <constraint firstItem="23" firstAttribute="centerY" secondItem="auo-sx-YQ6" secondAttribute="centerY" id="UyH-oo-bdC"/>
                 </constraints>
             </tableViewCellContentView>
