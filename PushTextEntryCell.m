@@ -212,8 +212,11 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
     
-    self.txtValue.backgroundColor = 
-        [UIColor colorWithRed:251/255.0f green:248/255.0f blue:148/255.0f alpha:1.0];
+    UIColor *color = [UIColor colorWithRed:251/255.0f green:248/255.0f blue:148/255.0f alpha:1.0];
+    self.view.backgroundColor = color;
+
+    self.txtValue.backgroundColor = color;
+    
 	//[self.txtValue.layer setCornerRadius:20.0f];
 	[self.txtValue.layer setMasksToBounds:YES];
 	self.txtValue.delegate = self;
