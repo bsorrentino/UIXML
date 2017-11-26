@@ -25,15 +25,15 @@ Generate Form based upon UITableView from .plist file(s)
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'bsorrentino' => 'bartolomeo.sorrentino@gmail.com' }
-  s.source           = { :git => 'https://github.com/bsorrentino/UIXML.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/bsorrentino/UIXML.git', :branch => "feature/swift" }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'UIXML/Classes/**/*'
-  
+  s.source_files = '*.{h,m}'
+
   s.resource_bundles = {
-     'UIXML' => ['UIXML/Classes/*.png', 'UIXML/Classes/*.xib']
+     'UIXML' => ['*.png', '*.xib']
   }
   s.frameworks = 'UIKit'
 
