@@ -28,27 +28,27 @@
     //NSMutableDictionary *__UIXML_STRONG dataEntryCells;
 }
 
-@property (UIXML_WEAK, nonatomic,readonly) NSString *resource;
-@property (UIXML_WEAK, nonatomic) IBOutlet BaseDataEntryCell *dataEntryCell;
+@property (UIXML_WEAK, nonatomic,readonly) NSString * _Nullable resource;
+@property (UIXML_WEAK, nonatomic) IBOutlet BaseDataEntryCell * _Nullable dataEntryCell;
 
 
 
-- (id)initFromFile:(NSString*)resource registerNotification:(BOOL)registerNotification;
+- (id _Nonnull )initFromFile:(NSString*_Nonnull)resource registerNotification:(BOOL)registerNotification;
 
-- (void)loadFromFile:(NSString*)resource;
-- (void)loadFromArray:(NSArray *)array;
+- (void)loadFromFile:(NSString*_Nonnull)resource;
+- (void)loadFromArray:(NSArray *_Nonnull)array;
 
 -(void)registerControEditingNotification;
 -(void)unregisterControEditingNotification;
 
--(void)cellControlDidEndEditingNotify:(NSNotification *)notification;
+-(void)cellControlDidEndEditingNotify:(NSNotification *_Nonnull)notification;
 
--(NSString*)getStringInSection:(NSInteger)section;
+-(NSString*_Nonnull)getStringInSection:(NSInteger)section;
 
--(BaseDataEntryCell*)cellForIndexPath:(NSUInteger)row section:(NSUInteger)section;
+-(BaseDataEntryCell*_Nullable)cellForIndexPath:(NSUInteger)row section:(NSUInteger)section;
 
 // Cell Factory Method
-- (BaseDataEntryCell *)tableView:(UITableView *)tableView cellFromType:(NSString *)cellType cellData:(NSDictionary*)cellData;
+- (BaseDataEntryCell * _Nullable)tableView:(UITableView *_Nonnull)tableView cellFromType:(NSString *_Nonnull)cellType cellData:(NSDictionary*_Nonnull)cellData;
 
 @end
 
