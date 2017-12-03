@@ -35,11 +35,18 @@
 -(void)processLabelConfig:(NSDictionary*_Nonnull)cellData dataView:(UIView *_Nullable)view
 {
     if( self.textLabel == nil ) return;
-    
+
     [cellData getStringForKey:@"Label" next:^(NSString * _Nonnull value) {
         self.textLabel.translatesAutoresizingMaskIntoConstraints = NO;
         
         self.textLabel.text = value;
+        
+        CGFloat width = 0.25;
+        
+        NSNumber *lw = cellData[@"Label.Width%"];
+        if( lw!=nil ) {
+            width = [lw floatValue]/100;
+        }
         
         NSLayoutConstraint *label_width =
         [NSLayoutConstraint constraintWithItem:self.textLabel
@@ -47,7 +54,7 @@
                                      relatedBy:NSLayoutRelationEqual
                                         toItem:self.contentView
                                      attribute:NSLayoutAttributeWidth
-                                    multiplier:0.25 // 25%
+                                    multiplier:width
                                       constant:0.0];
         [self.contentView addConstraint:label_width];
         /*
