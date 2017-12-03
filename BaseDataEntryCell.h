@@ -35,6 +35,7 @@
 
 }
 
+@property (nonatomic, UIXML_WEAK) IBOutlet UILabel *_Nullable textLabel;
 @property (nonatomic, UIXML_WEAK) NSString * _Nullable dataKey;
 @property (nonatomic) BOOL enabled;
 
@@ -49,12 +50,10 @@
 // helper for check string
 +(BOOL)isNullOrEmpty:(NSString*_Nullable)value;
 
--(CGRect) getRectRelativeToLabel: (CGRect)controlFrame padding:(NSInteger)padding rpadding:(NSInteger)rpadding;
+-(void)prepareLabelToAppear:(NSDictionary*_Nonnull)cellData;
 
-
-
--(void)prepareLabel:(NSDictionary*_Nonnull)cellData;
-
+-(void)processLabelConfig:(NSDictionary*_Nonnull)cellData
+                   dataView:(UIView *_Nullable)view;
 @end
 
 

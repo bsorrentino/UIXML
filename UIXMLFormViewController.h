@@ -66,7 +66,7 @@
 	
 }
 
-@property (nonatomic,UIXML_WEAK)  id<UIXMLFormViewControllerDelegate> delegate;
+@property (nonatomic,UIXML_WEAK)  id<UIXMLFormViewControllerDelegate> _Nullable delegate;
 
 @end
 

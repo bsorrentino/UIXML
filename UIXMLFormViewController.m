@@ -44,7 +44,7 @@
 	}
 
     
-    NSString *language = [[NSLocale preferredLanguages] objectAtIndex:0];
+    NSString *language = [NSLocale preferredLanguages][0];
     NSLog(@"default language [%@]", language );
     
     resource = [[NSBundle mainBundle] pathForResource:file
@@ -72,11 +72,11 @@
 
 -(NSString*)getStringInSection:(NSInteger)section {
 	
-	NSArray *sectionInfo = [tableStructure objectAtIndex:section];
+	NSArray *sectionInfo = tableStructure[section];
 	
-	NSDictionary *sectionInfoData = [sectionInfo objectAtIndex:0];
+	NSDictionary *sectionInfoData = sectionInfo[0];
 	
-	return [sectionInfoData objectForKey:@"label"];
+	return sectionInfoData[@"label"];
 	
 }
 
@@ -127,8 +127,8 @@
 
 - (BaseDataEntryCell *_Nullable)tableView:(UITableView *_Nonnull)tableView initCellFromData:(NSDictionary *_Nonnull)cellData {
 
-    NSString *dataKey = [cellData objectForKey:@"DataKey"];
-	NSString *cellType = [cellData objectForKey:@"CellType"];
+    NSString *dataKey = cellData[@"DataKey"];
+	NSString *cellType = cellData[@"CellType"];
     
     BaseDataEntryCell *cell = (BaseDataEntryCell *)[tableView dequeueReusableCellWithIdentifier:cellType];
 	
@@ -143,10 +143,10 @@
         if ( [self respondsToSelector:@selector(cellControlDidLoad:cellData:)]) {
             [self cellControlDidLoad:cell cellData:cellData];
         }
+
+        [cell prepareToAppear:self datakey:dataKey cellData:cellData];
         
     }
-    
-    [cell prepareToAppear:self datakey:dataKey cellData:cellData];
     
     return cell;
     
@@ -263,33 +263,29 @@
 		return 0;
 	}
 	
-	NSArray *sectionInfo = [tableStructure objectAtIndex:section];
-	NSArray *sectionData = [sectionInfo objectAtIndex:1];
+	NSArray *sectionInfo = tableStructure[section];
+	NSArray *sectionData = sectionInfo[1];
 	
     return [sectionData count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    //static NSString *CellIdentifier = @"Cell";
-       
-    //NSDictionary *cellData = [tableStructure objectAtIndex:indexPath.row];
-
     NSLog( @"section[%ld] row [%ld]", (long)indexPath.section, (long)indexPath.row );
 
-	NSArray *sectionInfo = [tableStructure objectAtIndex:indexPath.section];
+	NSArray *sectionInfo = tableStructure[indexPath.section];
 
 #ifdef _TRACE	
 	NSLog( @"sectionInfo [%@]", sectionInfo );
 #endif
 
-	NSArray *sectionData = [sectionInfo objectAtIndex:1];
+	NSArray *sectionData = sectionInfo[1];
 	
 #ifdef _TRACE	
 	NSLog( @"sectionData [%@]", sectionData );
 #endif
 	
-	NSDictionary *cellData = [sectionData objectAtIndex:indexPath.row];
+	NSDictionary *cellData = sectionData[indexPath.row];
 	
 #ifdef _TRACE	
 	NSLog( @"cellData [%@]", cellData );
@@ -353,13 +349,13 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    NSArray *sectionInfo = [tableStructure objectAtIndex:indexPath.section];
+    NSArray *sectionInfo = tableStructure[indexPath.section];
  
-    NSArray *sectionData = [sectionInfo objectAtIndex:1];
+    NSArray *sectionData = sectionInfo[1];
  
-    NSDictionary *cellData = [sectionData objectAtIndex:indexPath.row];
+    NSDictionary *cellData = sectionData[indexPath.row];
  
-    NSString *cellType = [cellData objectForKey:@"CellType"];
+    NSString *cellType = cellData[@"CellType"];
  
     BaseDataEntryCell *cell = [self tableView:tableView cellFromType:cellType cellData:cellData];
     
@@ -374,26 +370,26 @@
 	
     NSLog( @"section[%ld] row [%ld]", (long)indexPath.section, (long)indexPath.row );
 	
-	NSArray *sectionInfo = [tableStructure objectAtIndex:indexPath.section];
+	NSArray *sectionInfo = tableStructure[indexPath.section];
 
 #ifdef _TRACE		
 	NSLog( @"sectionInfo [%@]", sectionInfo );
 #endif
 	
-	NSArray *sectionData = [sectionInfo objectAtIndex:1];
+	NSArray *sectionData = sectionInfo[1];
 	
 #ifdef _TRACE		
 	NSLog( @"sectionData [%@]", sectionData );
 #endif
 	
-	NSDictionary *cellData = [sectionData objectAtIndex:indexPath.row];
+	NSDictionary *cellData = sectionData[indexPath.row];
 	
 #ifdef _TRACE	
 	NSLog( @"cellData [%@]", cellData );
 #endif
 	
-	NSString *dataKey = [cellData objectForKey:@"DataKey"];
-	NSString *cellType = [cellData objectForKey:@"CellType"];
+	NSString *dataKey = cellData[@"DataKey"];
+	NSString *cellType = cellData[@"CellType"];
 
 	NSLog( @"DataKey[%@] CellType [%@]", dataKey, cellType );
 
@@ -451,7 +447,8 @@
 @synthesize delegate;
 
 -(void)cellControlDidEndEditing:(BaseDataEntryCell *)cell {
-	if( delegate!=nil && [delegate respondsToSelector:@selector(cellControlDidEndEditing:cellData:)] ) {
+    if( delegate!=nil && [delegate respondsToSelector:@selector(cellControlDidEndEditing:cell:)] )
+    {
 		[delegate cellControlDidEndEditing:cell];
 	}
 	

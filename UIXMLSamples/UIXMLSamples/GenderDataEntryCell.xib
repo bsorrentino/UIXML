@@ -15,23 +15,25 @@
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clearsContextBeforeDrawing="NO" contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="SegmentedDataEntryCell" id="2" customClass="SegmentedDataEntryCell">
+        <tableViewCell clearsContextBeforeDrawing="NO" contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="GenderDataEntryCell" id="2" customClass="SegmentedDataEntryCell">
             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2" id="auo-sx-YQ6">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label clipsSubviews="YES" userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="3">
-                        <rect key="frame" x="20" y="11" width="87" height="22"/>
-                        <autoresizingMask key="autoresizingMask"/>
+                    <label clipsSubviews="YES" userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" text="Label" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="3">
+                        <rect key="frame" x="20" y="0.5" width="87" height="43.5"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="87" id="Mev-LU-BzS"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="23">
-                        <rect key="frame" x="188" y="7.5" width="117" height="29"/>
+                        <rect key="frame" x="183" y="8" width="117" height="29"/>
                         <segments>
                             <segment title="Male"/>
                             <segment title="Female"/>
@@ -42,8 +44,11 @@
                     </segmentedControl>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="23" secondAttribute="trailing" constant="15" id="JuE-MC-maB"/>
+                    <constraint firstAttribute="trailing" secondItem="23" secondAttribute="trailing" constant="20" symbolic="YES" id="JuE-MC-maB"/>
+                    <constraint firstItem="3" firstAttribute="centerY" secondItem="23" secondAttribute="centerY" id="KLd-XQ-fjM"/>
                     <constraint firstItem="23" firstAttribute="centerY" secondItem="auo-sx-YQ6" secondAttribute="centerY" id="UyH-oo-bdC"/>
+                    <constraint firstItem="3" firstAttribute="leading" secondItem="auo-sx-YQ6" secondAttribute="leading" constant="20" symbolic="YES" id="Yln-XP-h5N"/>
+                    <constraint firstItem="3" firstAttribute="height" secondItem="auo-sx-YQ6" secondAttribute="height" id="top-BE-QSu"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

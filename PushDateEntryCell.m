@@ -21,8 +21,6 @@
 - (void)layoutSubviews {
 	[super layoutSubviews];
 	
-	CGRect rect = [super getRectRelativeToLabel:txtValue.frame padding:LABEL_CONTROL_PADDING rpadding:RIGHT_PADDING];
-	[self.txtValue setFrame:rect];
 }
 
 
