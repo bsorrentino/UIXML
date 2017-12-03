@@ -17,6 +17,7 @@ NSString *const TextDataEntryCellNotification = @"TextDataEntryCell.scrollUpToKe
 @implementation TextDataEntryCell
 
 @synthesize textField;
+@synthesize textLabel;
 
 #pragma mark - BaseDataEntryCellWithResponder implementation
 
@@ -32,27 +33,23 @@ NSString *const TextDataEntryCellNotification = @"TextDataEntryCell.scrollUpToKe
 - (void)layoutSubviews {
 	[super layoutSubviews];
 	
-	// Rect area del textbox
-	/*
-	CGRect rect = CGRectMake(self.textLabel.frame.origin.x + self.textLabel.frame.size.width  + LABEL_CONTROL_PADDING, 
-							 12.0, 
-							 self.contentView.frame.size.width-(self.textLabel.frame.size.width + LABEL_CONTROL_PADDING + self.textLabel.frame.origin.x)-RIGHT_PADDING, 
-							 25.0);
-	*/
-	
-	CGRect rect = [super getRectRelativeToLabel:textField.frame padding:LABEL_CONTROL_PADDING rpadding:RIGHT_PADDING];
-	[textField setFrame:rect];
 }
 
 #pragma mark Inherit from BaseDataEntryCell
+
+-(void)prepareLabelToAppear:(NSDictionary*_Nonnull)cellData
+{
+    [self processLabelConfig:cellData dataView:self.textField];
+}
 
 - (void) prepareToAppear:(UIXMLFormViewController*)controller datakey:(NSString*)key cellData:(NSDictionary*)cellData{
 	
     [super prepareToAppear:controller datakey:key cellData:cellData];
     
-    // Initialization codex
     [cellData getStringForKey:@"placeholder" next:^(NSString * _Nonnull value) {
         [textField setPlaceholder:value];
+    } complete:^{
+        [textField setPlaceholder:@""];
     }];
     [cellData getStringForKey:@"secure" next:^(NSString * _Nonnull value) {
         textField.secureTextEntry = [value boolValue];

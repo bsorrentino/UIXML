@@ -127,8 +127,8 @@
 
 - (BaseDataEntryCell *_Nullable)tableView:(UITableView *_Nonnull)tableView initCellFromData:(NSDictionary *_Nonnull)cellData {
 
-    NSString *dataKey = [cellData objectForKey:@"DataKey"];
-	NSString *cellType = [cellData objectForKey:@"CellType"];
+    NSString *dataKey = cellData[@"DataKey"];
+	NSString *cellType = cellData[@"CellType"];
     
     BaseDataEntryCell *cell = (BaseDataEntryCell *)[tableView dequeueReusableCellWithIdentifier:cellType];
 	
@@ -143,10 +143,10 @@
         if ( [self respondsToSelector:@selector(cellControlDidLoad:cellData:)]) {
             [self cellControlDidLoad:cell cellData:cellData];
         }
+
+        [cell prepareToAppear:self datakey:dataKey cellData:cellData];
         
     }
-    
-    [cell prepareToAppear:self datakey:dataKey cellData:cellData];
     
     return cell;
     
@@ -451,7 +451,8 @@
 @synthesize delegate;
 
 -(void)cellControlDidEndEditing:(BaseDataEntryCell *)cell {
-	if( delegate!=nil && [delegate respondsToSelector:@selector(cellControlDidEndEditing:cellData:)] ) {
+    if( delegate!=nil && [delegate respondsToSelector:@selector(cellControlDidEndEditing:cell:)] )
+    {
 		[delegate cellControlDidEndEditing:cell];
 	}
 	

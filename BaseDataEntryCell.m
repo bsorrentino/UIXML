@@ -13,7 +13,6 @@
 
 @interface BaseDataEntryCell()
 
--(BOOL)isLabelSupported;
 @end
 
 @implementation BaseDataEntryCell
@@ -22,10 +21,6 @@
 
 #pragma - private implementation
 
--(BOOL)isLabelSupported
-{
-    return self.textLabel.text!=nil;
-}
 
 #pragma - public implementation
 
@@ -37,19 +32,68 @@
     return self;
 }
 
--(void)prepareLabel:(NSDictionary*_Nonnull)cellData {
-    [cellData getStringForKey:@"Label" next:^(NSString * _Nonnull value) {
-        self.textLabel.text = value;
-    }];
+-(void)processLabelConfig:(NSDictionary*_Nonnull)cellData dataView:(UIView *_Nullable)view
+{
+    if( self.textLabel == nil ) return;
     
+    [cellData getStringForKey:@"Label" next:^(NSString * _Nonnull value) {
+        self.textLabel.translatesAutoresizingMaskIntoConstraints = NO;
+        
+        self.textLabel.text = value;
+        
+        NSLayoutConstraint *label_width =
+        [NSLayoutConstraint constraintWithItem:self.textLabel
+                                     attribute:NSLayoutAttributeWidth
+                                     relatedBy:NSLayoutRelationEqual
+                                        toItem:self.contentView
+                                     attribute:NSLayoutAttributeWidth
+                                    multiplier:0.25 // 25%
+                                      constant:0.0];
+        [self.contentView addConstraint:label_width];
+        /*
+         NSLayoutConstraint *text_width =
+         [NSLayoutConstraint constraintWithItem:view
+                                      attribute:NSLayoutAttributeWidth
+                                      relatedBy:NSLayoutRelationEqual
+                                      toItem:self.contentView
+                                      attribute:NSLayoutAttributeWidth
+                                     multiplier:(1 - multiplier)
+                                       constant:0.0];
+         [self.contentView addConstraint:text_width];
+         */
+    } complete:^{
+        
+        self.textLabel.text = @"";
+        
+        if( view == nil ) return;
+        
+        view.translatesAutoresizingMaskIntoConstraints = NO;
+        
+        NSLayoutConstraint *text_width =
+        [NSLayoutConstraint constraintWithItem:view
+                                     attribute:NSLayoutAttributeWidth
+                                     relatedBy:NSLayoutRelationEqual
+                                        toItem:self.contentView
+                                     attribute:NSLayoutAttributeWidth
+                                    multiplier:1.0 // 100%
+                                      constant:0.0];
+        [self.contentView addConstraint:text_width];
+        
+    }];
+
 }
 
+-(void)prepareLabelToAppear:(NSDictionary*_Nonnull)cellData
+{
+    [self processLabelConfig:cellData dataView:nil];
+}
 
-- (void) prepareToAppear:(UIXMLFormViewController*)controller datakey:(NSString*)key cellData:(NSDictionary*)cellData {
+- (void) prepareToAppear:(UIXMLFormViewController*)controller datakey:(NSString*)key cellData:(NSDictionary*)cellData
+{
 	self.selectionStyle = UITableViewCellSelectionStyleNone;
 	self.dataKey = key;
     
-    [self prepareLabel:cellData];
+    [self prepareLabelToAppear:cellData];
 }
 
 
@@ -112,32 +156,7 @@
 
 - (void)layoutSubviews {
 	[super layoutSubviews];
-	
-    if( [self isLabelSupported] ) {
-        CGFloat size_percentage = .25;
-        CGFloat x = 10.0; // self.textLabel.frame.origin.x ;
-    
-        // The label size is the 35% of container
-        CGRect labelRect = CGRectMake(x,
-								  self.textLabel.frame.origin.y, 
-								  self.contentView.frame.size.width * size_percentage, 
-								  self.textLabel.frame.size.height);
-        [self.textLabel setFrame:labelRect];
-    }
-	
 }
-
--(CGRect) getRectRelativeToLabel:(CGRect)controlFrame padding:(NSInteger)padding rpadding:(NSInteger)rpadding {
-
-    //if( [self isLabelSupported] ) return CGRectMake( padding, controlFrame.origin.y, 0.0, controlFrame.size.height );
-    
-	return CGRectMake(  self.textLabel.frame.origin.x + self.textLabel.frame.size.width  + padding, 
-						controlFrame.origin.y, 
-						self.contentView.frame.size.width-(self.textLabel.frame.size.width + padding + self.textLabel.frame.origin.x)-rpadding, 
-						controlFrame.size.height);
-}
-
-
 
 @end
 
