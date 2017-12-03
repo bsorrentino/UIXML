@@ -11,12 +11,12 @@
 		5F37C20415DE403500A3F7AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F37C20315DE403500A3F7AE /* Foundation.framework */; };
 		5F37C20615DE403500A3F7AE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F37C20515DE403500A3F7AE /* CoreGraphics.framework */; };
 		5F37C20C15DE403500A3F7AE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5F37C20A15DE403500A3F7AE /* InfoPlist.strings */; };
-		5F37C20E15DE403500A3F7AE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F37C20D15DE403500A3F7AE /* main.m */; };
-		5F37C21A15DE403500A3F7AE /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F37C21915DE403500A3F7AE /* SenTestingKit.framework */; };
-		5F37C21B15DE403500A3F7AE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F37C20115DE403500A3F7AE /* UIKit.framework */; };
-		5F37C21C15DE403500A3F7AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F37C20315DE403500A3F7AE /* Foundation.framework */; };
-		5F37C22415DE403500A3F7AE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5F37C22215DE403500A3F7AE /* InfoPlist.strings */; };
-		5F37C22715DE403500A3F7AE /* UIXMLSamplesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F37C22615DE403500A3F7AE /* UIXMLSamplesTests.m */; };
+		5F9705E31FD41E9E00E1E5DF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F9705E21FD41E9E00E1E5DF /* Default-568h@2x.png */; };
+		5FA03B9C1FC38AC20099C39B /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FA03B9B1FC38AC20099C39B /* main.storyboard */; };
+		5FA03B9E1FC38C780099C39B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA03B9D1FC38C780099C39B /* AppDelegate.swift */; };
+		5FA03BA01FC4AEE70099C39B /* Form.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA03B9F1FC4AEE70099C39B /* Form.swift */; };
+		5FEFB5DF1FC5ECA7009462F0 /* ListDataEntryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEFB5DE1FC5ECA7009462F0 /* ListDataEntryCell.swift */; };
+		5FEFB5E11FC6C969009462F0 /* RowSpanCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEFB5E01FC6C969009462F0 /* RowSpanCell.swift */; };
 		A025092215E53CF2009F2C59 /* back24x24.png in Resources */ = {isa = PBXBuildFile; fileRef = A025091E15E53CF2009F2C59 /* back24x24.png */; };
 		A025092315E53CF2009F2C59 /* confirm24x24.png in Resources */ = {isa = PBXBuildFile; fileRef = A025091F15E53CF2009F2C59 /* confirm24x24.png */; };
 		A025092415E53CF2009F2C59 /* edit32x32.png in Resources */ = {isa = PBXBuildFile; fileRef = A025092015E53CF2009F2C59 /* edit32x32.png */; };
@@ -28,32 +28,18 @@
 		A026076415DE921D009B2F72 /* PushFormDataEntryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A026075C15DE921D009B2F72 /* PushFormDataEntryCell.xib */; };
 		A026076515DE921D009B2F72 /* SwitchDataEntryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A026075D15DE921D009B2F72 /* SwitchDataEntryCell.xib */; };
 		A026076615DE921D009B2F72 /* TextDataEntryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A026075E15DE921D009B2F72 /* TextDataEntryCell.xib */; };
-		A05C6B2E15DE403F00362113 /* FormData.m in Sources */ = {isa = PBXBuildFile; fileRef = A05C6B2315DE403F00362113 /* FormData.m */; };
-		A05C6B2F15DE403F00362113 /* FormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A05C6B2515DE403F00362113 /* FormViewController.m */; };
-		A05C6B3015DE403F00362113 /* ListDataEntryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A05C6B2715DE403F00362113 /* ListDataEntryCell.m */; };
 		A05C6B3115DE403F00362113 /* ListDataEntryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A05C6B2815DE403F00362113 /* ListDataEntryCell.xib */; };
-		A05C6B3215DE403F00362113 /* RowSpanDataEntryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A05C6B2A15DE403F00362113 /* RowSpanDataEntryCell.m */; };
-		A05C6B3315DE403F00362113 /* TableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A05C6B2B15DE403F00362113 /* TableViewController.xib */; };
-		A05C6B3415DE403F00362113 /* UIXMLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A05C6B2D15DE403F00362113 /* UIXMLAppDelegate.m */; };
 		A05C6B3815DE418000362113 /* RowSpanDataEntryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A05C6B3715DE418000362113 /* RowSpanDataEntryCell.xib */; };
 		A05C6B3E15DE41FB00362113 /* form-structure.plist in Resources */ = {isa = PBXBuildFile; fileRef = A05C6B3915DE41FB00362113 /* form-structure.plist */; };
 		A05C6B3F15DE41FB00362113 /* form1-structure.plist in Resources */ = {isa = PBXBuildFile; fileRef = A05C6B3A15DE41FB00362113 /* form1-structure.plist */; };
 		A05C6B4015DE41FB00362113 /* table-structure.plist in Resources */ = {isa = PBXBuildFile; fileRef = A05C6B3B15DE41FB00362113 /* table-structure.plist */; };
 		A05C6B4115DE41FB00362113 /* GenderDataEntryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A05C6B3C15DE41FB00362113 /* GenderDataEntryCell.xib */; };
-		A05C6B4215DE41FB00362113 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = A05C6B3D15DE41FB00362113 /* MainWindow.xib */; };
 		A05C6B5715DE434B00362113 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A05C6B5415DE434B00362113 /* Localizable.strings */; };
 		A082BB8515DE4689004C37BC /* RowSpanForm.plist in Resources */ = {isa = PBXBuildFile; fileRef = A082BB8315DE4689004C37BC /* RowSpanForm.plist */; };
 		A0840A9415DE4450001C08EC /* libUIXML.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A0840A9015DE440D001C08EC /* libUIXML.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		5F37C21D15DE403500A3F7AE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5F37C1F415DE403500A3F7AE /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5F37C1FC15DE403500A3F7AE;
-			remoteInfo = UIXMLSamples;
-		};
 		A0840A8F15DE440D001C08EC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A0840A8515DE440C001C08EC /* UIXML.xcodeproj */;
@@ -71,20 +57,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5F26E07C1FC3890E00BE94DB /* UIXMLSamples-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIXMLSamples-Bridging-Header.h"; sourceTree = "<group>"; };
 		5F37C1FD15DE403500A3F7AE /* UIXMLSamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIXMLSamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F37C20115DE403500A3F7AE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5F37C20315DE403500A3F7AE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5F37C20515DE403500A3F7AE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		5F37C20915DE403500A3F7AE /* UIXMLSamples-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UIXMLSamples-Info.plist"; sourceTree = "<group>"; };
 		5F37C20B15DE403500A3F7AE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		5F37C20D15DE403500A3F7AE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5F37C20F15DE403500A3F7AE /* UIXMLSamples-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIXMLSamples-Prefix.pch"; sourceTree = "<group>"; };
-		5F37C21815DE403500A3F7AE /* UIXMLSamplesTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIXMLSamplesTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F37C21915DE403500A3F7AE /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		5F37C22115DE403500A3F7AE /* UIXMLSamplesTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UIXMLSamplesTests-Info.plist"; sourceTree = "<group>"; };
-		5F37C22315DE403500A3F7AE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		5F37C22515DE403500A3F7AE /* UIXMLSamplesTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIXMLSamplesTests.h; sourceTree = "<group>"; };
-		5F37C22615DE403500A3F7AE /* UIXMLSamplesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIXMLSamplesTests.m; sourceTree = "<group>"; };
+		5F9705E21FD41E9E00E1E5DF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		5FA03B9B1FC38AC20099C39B /* main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = main.storyboard; sourceTree = "<group>"; };
+		5FA03B9D1FC38C780099C39B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5FA03B9F1FC4AEE70099C39B /* Form.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Form.swift; sourceTree = "<group>"; };
+		5FEFB5DE1FC5ECA7009462F0 /* ListDataEntryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDataEntryCell.swift; sourceTree = "<group>"; };
+		5FEFB5E01FC6C969009462F0 /* RowSpanCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowSpanCell.swift; sourceTree = "<group>"; };
 		A025091E15E53CF2009F2C59 /* back24x24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = back24x24.png; path = ../back24x24.png; sourceTree = "<group>"; };
 		A025091F15E53CF2009F2C59 /* confirm24x24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = confirm24x24.png; path = ../confirm24x24.png; sourceTree = "<group>"; };
 		A025092015E53CF2009F2C59 /* edit32x32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = edit32x32.png; path = ../edit32x32.png; sourceTree = "<group>"; };
@@ -96,24 +83,12 @@
 		A026075C15DE921D009B2F72 /* PushFormDataEntryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PushFormDataEntryCell.xib; path = ../PushFormDataEntryCell.xib; sourceTree = "<group>"; };
 		A026075D15DE921D009B2F72 /* SwitchDataEntryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SwitchDataEntryCell.xib; path = ../SwitchDataEntryCell.xib; sourceTree = "<group>"; };
 		A026075E15DE921D009B2F72 /* TextDataEntryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TextDataEntryCell.xib; path = ../TextDataEntryCell.xib; sourceTree = "<group>"; };
-		A05C6B2215DE403F00362113 /* FormData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormData.h; sourceTree = "<group>"; };
-		A05C6B2315DE403F00362113 /* FormData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormData.m; sourceTree = "<group>"; };
-		A05C6B2415DE403F00362113 /* FormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormViewController.h; sourceTree = "<group>"; };
-		A05C6B2515DE403F00362113 /* FormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormViewController.m; sourceTree = "<group>"; };
-		A05C6B2615DE403F00362113 /* ListDataEntryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListDataEntryCell.h; sourceTree = "<group>"; };
-		A05C6B2715DE403F00362113 /* ListDataEntryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListDataEntryCell.m; sourceTree = "<group>"; };
 		A05C6B2815DE403F00362113 /* ListDataEntryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListDataEntryCell.xib; sourceTree = "<group>"; };
-		A05C6B2915DE403F00362113 /* RowSpanDataEntryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RowSpanDataEntryCell.h; sourceTree = "<group>"; };
-		A05C6B2A15DE403F00362113 /* RowSpanDataEntryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RowSpanDataEntryCell.m; sourceTree = "<group>"; };
-		A05C6B2B15DE403F00362113 /* TableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewController.xib; sourceTree = "<group>"; };
-		A05C6B2C15DE403F00362113 /* UIXMLAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIXMLAppDelegate.h; sourceTree = "<group>"; };
-		A05C6B2D15DE403F00362113 /* UIXMLAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIXMLAppDelegate.m; sourceTree = "<group>"; };
 		A05C6B3715DE418000362113 /* RowSpanDataEntryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RowSpanDataEntryCell.xib; sourceTree = "<group>"; };
 		A05C6B3915DE41FB00362113 /* form-structure.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "form-structure.plist"; sourceTree = "<group>"; };
 		A05C6B3A15DE41FB00362113 /* form1-structure.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "form1-structure.plist"; sourceTree = "<group>"; };
 		A05C6B3B15DE41FB00362113 /* table-structure.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "table-structure.plist"; sourceTree = "<group>"; };
 		A05C6B3C15DE41FB00362113 /* GenderDataEntryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GenderDataEntryCell.xib; sourceTree = "<group>"; };
-		A05C6B3D15DE41FB00362113 /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		A05C6B5515DE434B00362113 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = UIXMLSamples/en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A082BB8415DE4689004C37BC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = en; path = en.lproj/RowSpanForm.plist; sourceTree = "<group>"; };
 		A0840A8515DE440C001C08EC /* UIXML.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = UIXML.xcodeproj; path = ../UIXML.xcodeproj; sourceTree = "<group>"; };
@@ -131,27 +106,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5F37C21415DE403500A3F7AE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5F37C21A15DE403500A3F7AE /* SenTestingKit.framework in Frameworks */,
-				5F37C21B15DE403500A3F7AE /* UIKit.framework in Frameworks */,
-				5F37C21C15DE403500A3F7AE /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		5F37C1F215DE403500A3F7AE = {
 			isa = PBXGroup;
 			children = (
+				5F9705E21FD41E9E00E1E5DF /* Default-568h@2x.png */,
 				A082BB8615DE47B5004C37BC /* UIXML */,
 				A0840A8515DE440C001C08EC /* UIXML.xcodeproj */,
 				A05C6B5415DE434B00362113 /* Localizable.strings */,
 				5F37C20715DE403500A3F7AE /* UIXMLSamples */,
-				5F37C21F15DE403500A3F7AE /* UIXMLSamplesTests */,
 				5F37C20015DE403500A3F7AE /* Frameworks */,
 				5F37C1FE15DE403500A3F7AE /* Products */,
 			);
@@ -161,7 +126,6 @@
 			isa = PBXGroup;
 			children = (
 				5F37C1FD15DE403500A3F7AE /* UIXMLSamples.app */,
-				5F37C21815DE403500A3F7AE /* UIXMLSamplesTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -184,16 +148,12 @@
 				A025092C15E546CD009F2C59 /* GenderCell */,
 				A025092B15E546A4009F2C59 /* ListDataCell */,
 				A05C6B3615DE415B00362113 /* RowSpanCell */,
-				A05C6B2215DE403F00362113 /* FormData.h */,
-				A05C6B2315DE403F00362113 /* FormData.m */,
-				A05C6B2C15DE403F00362113 /* UIXMLAppDelegate.h */,
-				A05C6B2D15DE403F00362113 /* UIXMLAppDelegate.m */,
-				A05C6B2415DE403F00362113 /* FormViewController.h */,
-				A05C6B2515DE403F00362113 /* FormViewController.m */,
+				5FA03B9B1FC38AC20099C39B /* main.storyboard */,
 				A05C6B3915DE41FB00362113 /* form-structure.plist */,
 				A05C6B3B15DE41FB00362113 /* table-structure.plist */,
-				A05C6B3D15DE41FB00362113 /* MainWindow.xib */,
-				A05C6B2B15DE403F00362113 /* TableViewController.xib */,
+				5FA03B9D1FC38C780099C39B /* AppDelegate.swift */,
+				5FA03B9F1FC4AEE70099C39B /* Form.swift */,
+				5F26E07C1FC3890E00BE94DB /* UIXMLSamples-Bridging-Header.h */,
 				5F37C20815DE403500A3F7AE /* Supporting Files */,
 			);
 			path = UIXMLSamples;
@@ -204,27 +164,7 @@
 			children = (
 				5F37C20915DE403500A3F7AE /* UIXMLSamples-Info.plist */,
 				5F37C20A15DE403500A3F7AE /* InfoPlist.strings */,
-				5F37C20D15DE403500A3F7AE /* main.m */,
 				5F37C20F15DE403500A3F7AE /* UIXMLSamples-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		5F37C21F15DE403500A3F7AE /* UIXMLSamplesTests */ = {
-			isa = PBXGroup;
-			children = (
-				5F37C22515DE403500A3F7AE /* UIXMLSamplesTests.h */,
-				5F37C22615DE403500A3F7AE /* UIXMLSamplesTests.m */,
-				5F37C22015DE403500A3F7AE /* Supporting Files */,
-			);
-			path = UIXMLSamplesTests;
-			sourceTree = "<group>";
-		};
-		5F37C22015DE403500A3F7AE /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				5F37C22115DE403500A3F7AE /* UIXMLSamplesTests-Info.plist */,
-				5F37C22215DE403500A3F7AE /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -232,9 +172,8 @@
 		A025092B15E546A4009F2C59 /* ListDataCell */ = {
 			isa = PBXGroup;
 			children = (
-				A05C6B2615DE403F00362113 /* ListDataEntryCell.h */,
-				A05C6B2715DE403F00362113 /* ListDataEntryCell.m */,
 				A05C6B2815DE403F00362113 /* ListDataEntryCell.xib */,
+				5FEFB5DE1FC5ECA7009462F0 /* ListDataEntryCell.swift */,
 			);
 			name = ListDataCell;
 			sourceTree = "<group>";
@@ -258,9 +197,8 @@
 		A05C6B3615DE415B00362113 /* RowSpanCell */ = {
 			isa = PBXGroup;
 			children = (
+				5FEFB5E01FC6C969009462F0 /* RowSpanCell.swift */,
 				A082BB8315DE4689004C37BC /* RowSpanForm.plist */,
-				A05C6B2915DE403F00362113 /* RowSpanDataEntryCell.h */,
-				A05C6B2A15DE403F00362113 /* RowSpanDataEntryCell.m */,
 				A05C6B3715DE418000362113 /* RowSpanDataEntryCell.xib */,
 			);
 			name = RowSpanCell;
@@ -313,25 +251,6 @@
 			productReference = 5F37C1FD15DE403500A3F7AE /* UIXMLSamples.app */;
 			productType = "com.apple.product-type.application";
 		};
-		5F37C21715DE403500A3F7AE /* UIXMLSamplesTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5F37C22D15DE403500A3F7AE /* Build configuration list for PBXNativeTarget "UIXMLSamplesTests" */;
-			buildPhases = (
-				5F37C21315DE403500A3F7AE /* Sources */,
-				5F37C21415DE403500A3F7AE /* Frameworks */,
-				5F37C21515DE403500A3F7AE /* Resources */,
-				5F37C21615DE403500A3F7AE /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5F37C21E15DE403500A3F7AE /* PBXTargetDependency */,
-			);
-			name = UIXMLSamplesTests;
-			productName = UIXMLSamplesTests;
-			productReference = 5F37C21815DE403500A3F7AE /* UIXMLSamplesTests.octest */;
-			productType = "com.apple.product-type.bundle";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -339,8 +258,14 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = UIXML;
-				LastUpgradeCheck = 0440;
+				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = soulsoftware;
+				TargetAttributes = {
+					5F37C1FC15DE403500A3F7AE = {
+						DevelopmentTeam = 48J595L9BX;
+						LastSwiftMigration = 0910;
+					};
+				};
 			};
 			buildConfigurationList = 5F37C1F715DE403500A3F7AE /* Build configuration list for PBXProject "UIXMLSamples" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -361,7 +286,6 @@
 			projectRoot = "";
 			targets = (
 				5F37C1FC15DE403500A3F7AE /* UIXMLSamples */,
-				5F37C21715DE403500A3F7AE /* UIXMLSamplesTests */,
 			);
 		};
 /* End PBXProject section */
@@ -382,14 +306,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F37C20C15DE403500A3F7AE /* InfoPlist.strings in Resources */,
+				5F9705E31FD41E9E00E1E5DF /* Default-568h@2x.png in Resources */,
 				A05C6B3115DE403F00362113 /* ListDataEntryCell.xib in Resources */,
-				A05C6B3315DE403F00362113 /* TableViewController.xib in Resources */,
 				A05C6B3815DE418000362113 /* RowSpanDataEntryCell.xib in Resources */,
 				A05C6B3E15DE41FB00362113 /* form-structure.plist in Resources */,
 				A05C6B3F15DE41FB00362113 /* form1-structure.plist in Resources */,
 				A05C6B4015DE41FB00362113 /* table-structure.plist in Resources */,
 				A05C6B4115DE41FB00362113 /* GenderDataEntryCell.xib in Resources */,
-				A05C6B4215DE41FB00362113 /* MainWindow.xib in Resources */,
 				A05C6B5715DE434B00362113 /* Localizable.strings in Resources */,
 				A082BB8515DE4689004C37BC /* RowSpanForm.plist in Resources */,
 				A026075F15DE921D009B2F72 /* PushTextEntryCell.xib in Resources */,
@@ -398,6 +321,7 @@
 				A026076315DE921D009B2F72 /* MailDataEntryCell.xib in Resources */,
 				A026076415DE921D009B2F72 /* PushFormDataEntryCell.xib in Resources */,
 				A026076515DE921D009B2F72 /* SwitchDataEntryCell.xib in Resources */,
+				5FA03B9C1FC38AC20099C39B /* main.storyboard in Resources */,
 				A026076615DE921D009B2F72 /* TextDataEntryCell.xib in Resources */,
 				A025092215E53CF2009F2C59 /* back24x24.png in Resources */,
 				A025092315E53CF2009F2C59 /* confirm24x24.png in Resources */,
@@ -406,62 +330,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5F37C21515DE403500A3F7AE /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5F37C22415DE403500A3F7AE /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		5F37C21615DE403500A3F7AE /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5F37C1F915DE403500A3F7AE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F37C20E15DE403500A3F7AE /* main.m in Sources */,
-				A05C6B2E15DE403F00362113 /* FormData.m in Sources */,
-				A05C6B2F15DE403F00362113 /* FormViewController.m in Sources */,
-				A05C6B3015DE403F00362113 /* ListDataEntryCell.m in Sources */,
-				A05C6B3215DE403F00362113 /* RowSpanDataEntryCell.m in Sources */,
-				A05C6B3415DE403F00362113 /* UIXMLAppDelegate.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5F37C21315DE403500A3F7AE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5F37C22715DE403500A3F7AE /* UIXMLSamplesTests.m in Sources */,
+				5FA03B9E1FC38C780099C39B /* AppDelegate.swift in Sources */,
+				5FEFB5E11FC6C969009462F0 /* RowSpanCell.swift in Sources */,
+				5FEFB5DF1FC5ECA7009462F0 /* ListDataEntryCell.swift in Sources */,
+				5FA03BA01FC4AEE70099C39B /* Form.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		5F37C21E15DE403500A3F7AE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5F37C1FC15DE403500A3F7AE /* UIXMLSamples */;
-			targetProxy = 5F37C21D15DE403500A3F7AE /* PBXContainerItemProxy */;
-		};
 		A0840A9315DE4422001C08EC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = UIXML;
@@ -474,14 +359,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				5F37C20B15DE403500A3F7AE /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		5F37C22215DE403500A3F7AE /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5F37C22315DE403500A3F7AE /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -509,14 +386,30 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -524,11 +417,15 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = ..;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",
@@ -542,25 +439,44 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = ..;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",
 				);
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -569,14 +485,23 @@
 		5F37C22B15DE403500A3F7AE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 48J595L9BX;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UIXMLSamples/UIXMLSamples-Prefix.pch";
 				INFOPLIST_FILE = "UIXMLSamples/UIXMLSamples-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.bsc.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "UIXMLSamples/UIXMLSamples-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -584,49 +509,23 @@
 		5F37C22C15DE403500A3F7AE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 48J595L9BX;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UIXMLSamples/UIXMLSamples-Prefix.pch";
 				INFOPLIST_FILE = "UIXMLSamples/UIXMLSamples-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "org.bsc.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "UIXMLSamples/UIXMLSamples-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		5F37C22E15DE403500A3F7AE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/UIXMLSamples.app/UIXMLSamples";
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "UIXMLSamples/UIXMLSamples-Prefix.pch";
-				INFOPLIST_FILE = "UIXMLSamplesTests/UIXMLSamplesTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Debug;
-		};
-		5F37C22F15DE403500A3F7AE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/UIXMLSamples.app/UIXMLSamples";
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "UIXMLSamples/UIXMLSamples-Prefix.pch";
-				INFOPLIST_FILE = "UIXMLSamplesTests/UIXMLSamplesTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};
@@ -647,15 +546,6 @@
 			buildConfigurations = (
 				5F37C22B15DE403500A3F7AE /* Debug */,
 				5F37C22C15DE403500A3F7AE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		5F37C22D15DE403500A3F7AE /* Build configuration list for PBXNativeTarget "UIXMLSamplesTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5F37C22E15DE403500A3F7AE /* Debug */,
-				5F37C22F15DE403500A3F7AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

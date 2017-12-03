@@ -1,7 +1,8 @@
 build.sh
 # Xcode
 .DS_Store
-build/*
+build/
+index/
 *.pbxuser
 !default.pbxuser
 *.mode1v3

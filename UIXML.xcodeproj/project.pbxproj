@@ -20,6 +20,7 @@
 		5FA7E2411296F264000F493B /* TextDataEntryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FA7E23D1296F264000F493B /* TextDataEntryCell.m */; };
 		5FA7E2441296F2AE000F493B /* UIXMLFormViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FA7E2421296F2AD000F493B /* UIXMLFormViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5FA7E2451296F2AE000F493B /* UIXMLFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FA7E2431296F2AE000F493B /* UIXMLFormViewController.m */; };
+		5FEFB5E61FC9B424009462F0 /* NSDictionary+CellData.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FEFB5E51FC9B424009462F0 /* NSDictionary+CellData.h */; };
 		5FF78F3A12E795A8008EA886 /* PushTextEntryCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FF78F3812E795A8008EA886 /* PushTextEntryCell.h */; };
 		5FF78F3B12E795A8008EA886 /* PushTextEntryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FF78F3912E795A8008EA886 /* PushTextEntryCell.m */; };
 		A01671DB12AE80920056F855 /* PushControllerDataEntryCell.h in Headers */ = {isa = PBXBuildFile; fileRef = A01671D912AE80920056F855 /* PushControllerDataEntryCell.h */; };
@@ -42,6 +43,7 @@
 		5F062F6A13774CBE00FAC388 /* PushWebViewEntryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushWebViewEntryCell.m; sourceTree = "<group>"; };
 		5F30ABCB1297F96700540544 /* SwitchDataEntryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwitchDataEntryCell.h; sourceTree = "<group>"; };
 		5F30ABCC1297F96700540544 /* SwitchDataEntryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwitchDataEntryCell.m; sourceTree = "<group>"; };
+		5F6133CB1FC0518A00F346AF /* UIXML-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIXML-Bridging-Header.h"; sourceTree = "<group>"; };
 		5F777C2E1359DC1D003AFC9E /* edit32x32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = edit32x32.png; sourceTree = "<group>"; };
 		5F777C2F1359DC1D003AFC9E /* write32x32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = write32x32.png; sourceTree = "<group>"; };
 		5F8BD84D13B2569400A33B0A /* back24x24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back24x24.png; sourceTree = "<group>"; };
@@ -51,6 +53,8 @@
 		5FA7E23D1296F264000F493B /* TextDataEntryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextDataEntryCell.m; sourceTree = "<group>"; };
 		5FA7E2421296F2AD000F493B /* UIXMLFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIXMLFormViewController.h; sourceTree = "<group>"; };
 		5FA7E2431296F2AE000F493B /* UIXMLFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIXMLFormViewController.m; sourceTree = "<group>"; };
+		5FEFB5E31FC7216D009462F0 /* UIXML.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UIXML.podspec; sourceTree = "<group>"; };
+		5FEFB5E51FC9B424009462F0 /* NSDictionary+CellData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+CellData.h"; sourceTree = "<group>"; };
 		5FF78F3812E795A8008EA886 /* PushTextEntryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushTextEntryCell.h; sourceTree = "<group>"; };
 		5FF78F3912E795A8008EA886 /* PushTextEntryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushTextEntryCell.m; sourceTree = "<group>"; };
 		5FF78F7A12E7A005008EA886 /* chevron.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chevron.png; sourceTree = "<group>"; };
@@ -100,6 +104,7 @@
 		0867D691FE84028FC02AAC07 /* UIXML */ = {
 			isa = PBXGroup;
 			children = (
+				5FEFB5E31FC7216D009462F0 /* UIXML.podspec */,
 				A025092A15E53E15009F2C59 /* PushTextCell */,
 				A025092815E53D8A009F2C59 /* TextCell */,
 				A025092715E53D62009F2C59 /* SegmentedCell */,
@@ -133,12 +138,14 @@
 				A01671DA12AE80920056F855 /* PushControllerDataEntryCell.m */,
 				5FA7E23A1296F264000F493B /* BaseDataEntryCell.h */,
 				5FA7E23B1296F264000F493B /* BaseDataEntryCell.m */,
+				5FEFB5E51FC9B424009462F0 /* NSDictionary+CellData.h */,
 				5F052D9615CBEB5300330214 /* WaitMaskController.h */,
 				5F052D9715CBEB5300330214 /* WaitMaskController.m */,
 				A01671DF12AE80A90056F855 /* UIXMLFormViewControllerDelegate.h */,
 				5FA7E2421296F2AD000F493B /* UIXMLFormViewController.h */,
 				5FA7E2431296F2AE000F493B /* UIXMLFormViewController.m */,
 				5F03208515D56A0F004F2EA4 /* UIXML.h */,
+				5F6133CB1FC0518A00F346AF /* UIXML-Bridging-Header.h */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -242,6 +249,7 @@
 				5FA7E23E1296F264000F493B /* BaseDataEntryCell.h in Headers */,
 				5FA7E2401296F264000F493B /* TextDataEntryCell.h in Headers */,
 				5FA7E2441296F2AE000F493B /* UIXMLFormViewController.h in Headers */,
+				5FEFB5E61FC9B424009462F0 /* NSDictionary+CellData.h in Headers */,
 				5F30ABCD1297F96700540544 /* SwitchDataEntryCell.h in Headers */,
 				A01671DB12AE80920056F855 /* PushControllerDataEntryCell.h in Headers */,
 				A01671E012AE80A90056F855 /* PushFormDataEntryCell.h in Headers */,
@@ -281,8 +289,13 @@
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0440;
+				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = SOUL;
+				TargetAttributes = {
+					D2AAC07D0554694100DB518D = {
+						LastSwiftMigration = 0910;
+					};
+				};
 			};
 			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "UIXML" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -331,7 +344,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_OBJCPP_ARC_ABI = YES;
 				COPY_PHASE_STRIP = NO;
@@ -343,9 +356,14 @@
 				GCC_PREFIX_HEADER = UIXML_Prefix.pch;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INSTALL_PATH = /usr/local/lib;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = UIXML;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "UIXML-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -353,7 +371,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_OBJCPP_ARC_ABI = YES;
 				DSTROOT = /tmp/UIXML.dst;
@@ -362,24 +380,52 @@
 				GCC_PREFIX_HEADER = UIXML_Prefix.pch;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INSTALL_PATH = /usr/local/lib;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = UIXML;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "UIXML-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		1DEB922308733DC00010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
 				CLANG_WARN_OBJCPP_ARC_ABI = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "";
 				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = YES;
 				SDKROOT = iphoneos;
@@ -389,14 +435,36 @@
 		1DEB922408733DC00010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
 				CLANG_WARN_OBJCPP_ARC_ABI = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				OTHER_LDFLAGS = "";
 				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = YES;
 				SDKROOT = iphoneos;

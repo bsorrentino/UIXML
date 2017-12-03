@@ -13,7 +13,6 @@
 
 @interface BaseDataEntryCell()
 
--(BOOL)isLabelSupported;
 @end
 
 @implementation BaseDataEntryCell
@@ -22,10 +21,6 @@
 
 #pragma - private implementation
 
--(BOOL)isLabelSupported
-{
-    return self.textLabel.text!=nil;
-}
 
 #pragma - public implementation
 
@@ -37,21 +32,80 @@
     return self;
 }
 
-- (void) prepareToAppear:(UIXMLFormViewController*)controller datakey:(NSString*)key label:(NSString*)label cellData:(NSDictionary*)cellData {
+-(void)processLabelConfig:(NSDictionary*_Nonnull)cellData dataView:(UIView *_Nullable)view
+{
+    if( self.textLabel == nil ) return;
+
+    [cellData getStringForKey:@"Label" next:^(NSString * _Nonnull value) {
+        self.textLabel.translatesAutoresizingMaskIntoConstraints = NO;
+        
+        self.textLabel.text = value;
+        
+        CGFloat width = 0.25;
+        
+        NSNumber *lw = cellData[@"Label.Width%"];
+        if( lw!=nil ) {
+            width = [lw floatValue]/100;
+        }
+        
+        NSLayoutConstraint *label_width =
+        [NSLayoutConstraint constraintWithItem:self.textLabel
+                                     attribute:NSLayoutAttributeWidth
+                                     relatedBy:NSLayoutRelationEqual
+                                        toItem:self.contentView
+                                     attribute:NSLayoutAttributeWidth
+                                    multiplier:width
+                                      constant:0.0];
+        [self.contentView addConstraint:label_width];
+        /*
+         NSLayoutConstraint *text_width =
+         [NSLayoutConstraint constraintWithItem:view
+                                      attribute:NSLayoutAttributeWidth
+                                      relatedBy:NSLayoutRelationEqual
+                                      toItem:self.contentView
+                                      attribute:NSLayoutAttributeWidth
+                                     multiplier:(1 - multiplier)
+                                       constant:0.0];
+         [self.contentView addConstraint:text_width];
+         */
+    } complete:^{
+        
+        self.textLabel.text = @"";
+        
+        if( view == nil ) return;
+        
+        view.translatesAutoresizingMaskIntoConstraints = NO;
+        
+        NSLayoutConstraint *text_width =
+        [NSLayoutConstraint constraintWithItem:view
+                                     attribute:NSLayoutAttributeWidth
+                                     relatedBy:NSLayoutRelationEqual
+                                        toItem:self.contentView
+                                     attribute:NSLayoutAttributeWidth
+                                    multiplier:1.0 // 100%
+                                      constant:0.0];
+        [self.contentView addConstraint:text_width];
+        
+    }];
+
+}
+
+-(void)prepareLabelToAppear:(NSDictionary*_Nonnull)cellData
+{
+    [self processLabelConfig:cellData dataView:nil];
+}
+
+- (void) prepareToAppear:(UIXMLFormViewController*)controller datakey:(NSString*)key cellData:(NSDictionary*)cellData
+{
 	self.selectionStyle = UITableViewCellSelectionStyleNone;
 	self.dataKey = key;
     
-    if (![self isStringEmpty:label] ) {
-        self.textLabel.text = label;
-        self.textLabel.font = [UIFont fontWithName:@"Helvetica" size:15.0];
-
-    }
-	
+    [self prepareLabelToAppear:cellData];
 }
 
 
--(BOOL)isStringEmpty:(NSString*)value {
-	return ( value==nil ||
++(BOOL)isNullOrEmpty:(NSString*)value {
+    return ( value==nil ||
             [[value stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] length] == 0 );
 }
 
@@ -109,32 +163,7 @@
 
 - (void)layoutSubviews {
 	[super layoutSubviews];
-	
-    if( [self isLabelSupported] ) {
-        CGFloat size_percentage = .25;
-        CGFloat x = 10.0; // self.textLabel.frame.origin.x ;
-    
-        // The label size is the 35% of container
-        CGRect labelRect = CGRectMake(x,
-								  self.textLabel.frame.origin.y, 
-								  self.contentView.frame.size.width * size_percentage, 
-								  self.textLabel.frame.size.height);
-        [self.textLabel setFrame:labelRect];
-    }
-	
 }
-
--(CGRect) getRectRelativeToLabel:(CGRect)controlFrame padding:(NSInteger)padding rpadding:(NSInteger)rpadding {
-
-    //if( [self isLabelSupported] ) return CGRectMake( padding, controlFrame.origin.y, 0.0, controlFrame.size.height );
-    
-	return CGRectMake(  self.textLabel.frame.origin.x + self.textLabel.frame.size.width  + padding, 
-						controlFrame.origin.y, 
-						self.contentView.frame.size.width-(self.textLabel.frame.size.width + padding + self.textLabel.frame.origin.x)-rpadding, 
-						controlFrame.size.height);
-}
-
-
 
 @end
 
@@ -168,7 +197,7 @@
 {
 
     [UIView animateWithDuration:0.2 animations:^() {
-        
+        /*
         UITableView * scrollView = nil;;
         
         if( SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0") ) {
@@ -181,7 +210,7 @@
         UIEdgeInsets contentInsets = UIEdgeInsetsZero;
         scrollView.contentInset = contentInsets;
         scrollView.scrollIndicatorInsets = contentInsets;
-        
+        */
         
     }];
 }
@@ -239,24 +268,72 @@
     */
     
     if (!CGRectContainsPoint(aRect, fRect.origin) ) {
+        
         UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, kbSize.height, 0.0);
         scrollView.contentInset = contentInsets;
         scrollView.scrollIndicatorInsets = contentInsets;
-        
+
         CGPoint scrollPoint = CGPointMake(0.0, fRect.origin.y-kbSize.height );
         [scrollView setContentOffset:scrollPoint animated:YES];
     }
     
 }
 
+
 - (void) prepareToAppear:(UIXMLFormViewController*)controller datakey:(NSString*)key label:(NSString*)label cellData:(NSDictionary*)cellData {
 
-    [super prepareToAppear:controller datakey:key label:label cellData:cellData];
+    [super prepareToAppear:controller datakey:key cellData:cellData];
     
     if (![[cellData valueForKey:@"ignoreKeyboard"] boolValue] ) {
         
         [self registerForKeyboardNotifications];
     }
 }
+
+@end
+
+@implementation NSDictionary (CellData)
+
+-(void)getStringForKey:(NSString *_Nonnull)key
+                          next:(void (^ _Nonnull )(NSString * _Nonnull value))next
+{
+
+    NSString *value = [self objectForKey:key];
+    
+    if( value != nil && ![BaseDataEntryCell isNullOrEmpty:value]) {
+        
+        next( value );
+    }
+}
+
+-(void)getStringForKey:(NSString *_Nonnull)key
+                   next:(void (^ _Nonnull )(NSString * _Nonnull value))next
+               complete:(void (^ _Nonnull )(void))complete
+{
+    NSString *value = [self objectForKey:key];
+    
+    if( value != nil && ![BaseDataEntryCell isNullOrEmpty:value]) {
+        
+        next( value );
+    }
+    else {
+        complete();
+        
+    }
+
+}
+
+-(void)getArrayForKey:(NSString *_Nonnull)key
+                 next:(void (^ _Nonnull )(NSArray * _Nonnull value))next
+{
+    id value = [self objectForKey:key];
+    
+    if( value != nil && [value isKindOfClass:[NSArray class] ] ) {
+        next( value );
+    }
+
+    
+}
+
 
 @end

@@ -8,14 +8,12 @@
 			<string>Personal</string>
 		</dict>
 		<array>
-            
 			<dict>
 				<key>DataKey</key>
 				<string>rospan</string>
 				<key>CellType</key>
 				<string>RowSpanDataEntryCell</string>
 			</dict>
-            
 			<dict>
 				<key>DataKey</key>
 				<string>email</string>
@@ -28,7 +26,7 @@
 				<key>DataKey</key>
 				<string>gender</string>
 				<key>Label</key>
-				<string>Sesso</string>
+				<string>Sex</string>
 				<key>CellType</key>
 				<string>GenderDataEntryCell</string>
 				<key>segmentKeys</key>
@@ -41,7 +39,9 @@
 				<key>DataKey</key>
 				<string>birthDay</string>
 				<key>Label</key>
-				<string>Nato il</string>
+				<string>Date of Born</string>
+				<key>Label.Width%</key>
+				<integer>40</integer>
 				<key>CellType</key>
 				<string>PushDateEntryCell</string>
 				<key>_format</key>
@@ -63,25 +63,22 @@
 				<key>CellType</key>
 				<string>ListDataEntryCell</string>
 			</dict>
-            
-            <dict>
+			<dict>
 				<key>DataKey</key>
 				<string>text2</string>
 				<key>Label</key>
-				<string>text field</string>
+				<string>Text Field</string>
 				<key>CellType</key>
 				<string>TextDataEntryCell</string>
 			</dict>
-           
 			<dict>
 				<key>DataKey</key>
 				<string>url</string>
 				<key>Label</key>
-				<string>url</string>
+				<string>Url</string>
 				<key>CellType</key>
 				<string>PushWebViewEntryCell</string>
 			</dict>
-             
 			<dict>
 				<key>DataKey</key>
 				<string>enabled</string>
@@ -90,16 +87,14 @@
 				<key>CellType</key>
 				<string>SwitchDataEntryCell</string>
 			</dict>
-             
-             <dict>
-             <key>DataKey</key>
-             <string>note</string>
-             <key>Label</key>
-             <string>Note</string>
-             <key>CellType</key>
-             <string>PushTextEntryCell</string>
-             </dict>
-             
+			<dict>
+				<key>DataKey</key>
+				<string>note</string>
+				<key>Label</key>
+				<string>Note</string>
+				<key>CellType</key>
+				<string>PushTextEntryCell</string>
+			</dict>
 			<dict>
 				<key>DataKey</key>
 				<string>customField</string>
@@ -110,8 +105,7 @@
 				<key>controller</key>
 				<string>form1-structure.plist</string>
 			</dict>
-            
-            <dict>
+			<dict>
 				<key>DataKey</key>
 				<string>last</string>
 				<key>Label</key>
@@ -119,7 +113,6 @@
 				<key>CellType</key>
 				<string>TextDataEntryCell</string>
 			</dict>
-
 		</array>
 	</array>
 </array>
