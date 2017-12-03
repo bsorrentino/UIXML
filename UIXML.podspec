@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'UIXML'
-  s.version          = '1.1.0'
+  s.version          = '1.2.0'
   s.summary          = 'Generate Form based upon UITableView from .plist file(s)'
 
 # This description is used to generate tags and improve search results.
@@ -25,13 +25,13 @@ Generate Form based upon UITableView from .plist file(s)
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'bsorrentino' => 'bartolomeo.sorrentino@gmail.com' }
-  s.source           = { :git => 'https://github.com/bsorrentino/UIXML.git', :branch => "feature/swift" }
+  s.source           = { :git => 'https://github.com/bsorrentino/UIXML.git', :tag => s.version }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
 
   s.source_files = '*.{h,m}'
-
+  s.requires_arc = true
   s.resource_bundles = {
      'UIXML' => ['*.png', '*.xib']
   }
