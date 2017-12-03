@@ -14,8 +14,7 @@
 
 @interface UIXMLFormViewController(Private) 
 
-- (BaseDataEntryCell *)tableView:(UITableView *)tableView initCellFromData:(NSDictionary *)cellData;
-
+- (BaseDataEntryCell *_Nullable)tableView:(UITableView *_Nonnull)tableView initCellFromData:(NSDictionary *_Nonnull)cellData;
 @end
 
 @implementation UIXMLFormViewController
@@ -90,38 +89,64 @@
 	return cell;
 }
 
-
-- (BaseDataEntryCell *)tableView:(UITableView *)tableView cellFromType:(NSString *)cellType cellData:(NSDictionary *)cellData {
-    
+- (BaseDataEntryCell *_Nullable)tableView:(UITableView *_Nonnull)tableView
+                              cellFromType:(NSString *_Nonnull)cellType
+                                 cellData:(NSDictionary *_Nonnull)cellData
+{
     BaseDataEntryCell *cell = nil;
+
+    NSBundle *mainBundle = [NSBundle mainBundle];
     
-	[[NSBundle mainBundle] loadNibNamed:cellType owner:self options:nil];
-		
-    cell = self.dataEntryCell;  self.dataEntryCell = nil;
+    @try {
+        [mainBundle loadNibNamed:cellType owner:self options:nil];
+    }
+    @catch (NSException *exception) {
         
+        @try {
+            NSBundle *moduleBundle = [NSBundle bundleWithIdentifier:@"org.cocoapods.UIXML"];
+            
+            NSBundle *bundle =
+            [NSBundle bundleWithURL:
+             [moduleBundle URLForResource:@"UIXML" withExtension:@"bundle"]];
+            
+            if( bundle != nil ) {
+                [bundle loadNibNamed:cellType owner:self options:nil];
+            }
+        }
+        @catch (NSException *exception) {
+            
+        }
+    }
+    
+    cell = self.dataEntryCell;
+    self.dataEntryCell = nil;
+
     return cell;
     
 }
 
-- (BaseDataEntryCell *)tableView:(UITableView *)tableView initCellFromData:(NSDictionary *)cellData {
+- (BaseDataEntryCell *_Nullable)tableView:(UITableView *_Nonnull)tableView initCellFromData:(NSDictionary *_Nonnull)cellData {
 
     NSString *dataKey = [cellData objectForKey:@"DataKey"];
 	NSString *cellType = [cellData objectForKey:@"CellType"];
-    NSString * label = [cellData objectForKey:@"Label"];
     
     BaseDataEntryCell *cell = (BaseDataEntryCell *)[tableView dequeueReusableCellWithIdentifier:cellType];
 	
     if (cell == nil) {
     
         cell = [self tableView:tableView cellFromType:cellType cellData:cellData];
-
+        
+        if( cell == nil ) {
+            return nil;
+        }
+        
         if ( [self respondsToSelector:@selector(cellControlDidLoad:cellData:)]) {
             [self cellControlDidLoad:cell cellData:cellData];
         }
         
     }
     
-    [cell prepareToAppear:self datakey:dataKey label:label cellData:cellData];
+    [cell prepareToAppear:self datakey:dataKey cellData:cellData];
     
     return cell;
     
@@ -181,6 +206,7 @@
 	[self unregisterControEditingNotification];
     // Relinquish ownership of anything that can be recreated in viewDidLoad or on demand.
     // For example: self.myOutlet = nil;
+    [super viewDidUnload];
 }
 
 
@@ -249,7 +275,7 @@
        
     //NSDictionary *cellData = [tableStructure objectAtIndex:indexPath.row];
 
-	NSLog( @"section[%d] row [%d]", indexPath.section, indexPath.row );
+    NSLog( @"section[%ld] row [%ld]", (long)indexPath.section, (long)indexPath.row );
 
 	NSArray *sectionInfo = [tableStructure objectAtIndex:indexPath.section];
 
@@ -271,20 +297,13 @@
 	
 	BaseDataEntryCell *cell = [self tableView:tableView initCellFromData:cellData];
 	
-    if ([self respondsToSelector:@selector(cellControlDidInit:cellData:)]) {
-        [self cellControlDidInit:cell cellData:cellData];
+    if( cell != nil ) {
+        
+        if ([self respondsToSelector:@selector(cellControlDidInit:cellData:)]) {
+            [self cellControlDidInit:cell cellData:cellData];
+        }
     }
 
-	/*
-	cell.selectionStyle = UITableViewCellSelectionStyleNone;
-	
-	// Impostiamo la datakey della cella
-	cell.dataKey = dataKey;
-	
-	cell.textLabel.text = [cellData objectForKey:@"Label"];
-	*/	
-	
-	
     return cell;
 }
 
@@ -353,7 +372,7 @@
 	
 	if( self.navigationController == nil ) return;
 	
-	NSLog( @"section[%d] row [%d]", indexPath.section, indexPath.row );
+    NSLog( @"section[%ld] row [%ld]", (long)indexPath.section, (long)indexPath.row );
 	
 	NSArray *sectionInfo = [tableStructure objectAtIndex:indexPath.section];
 

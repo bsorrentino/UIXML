@@ -20,6 +20,7 @@
 		5FA7E2411296F264000F493B /* TextDataEntryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FA7E23D1296F264000F493B /* TextDataEntryCell.m */; };
 		5FA7E2441296F2AE000F493B /* UIXMLFormViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FA7E2421296F2AD000F493B /* UIXMLFormViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5FA7E2451296F2AE000F493B /* UIXMLFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FA7E2431296F2AE000F493B /* UIXMLFormViewController.m */; };
+		5FEFB5E61FC9B424009462F0 /* NSDictionary+CellData.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FEFB5E51FC9B424009462F0 /* NSDictionary+CellData.h */; };
 		5FF78F3A12E795A8008EA886 /* PushTextEntryCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FF78F3812E795A8008EA886 /* PushTextEntryCell.h */; };
 		5FF78F3B12E795A8008EA886 /* PushTextEntryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FF78F3912E795A8008EA886 /* PushTextEntryCell.m */; };
 		A01671DB12AE80920056F855 /* PushControllerDataEntryCell.h in Headers */ = {isa = PBXBuildFile; fileRef = A01671D912AE80920056F855 /* PushControllerDataEntryCell.h */; };
@@ -42,6 +43,7 @@
 		5F062F6A13774CBE00FAC388 /* PushWebViewEntryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushWebViewEntryCell.m; sourceTree = "<group>"; };
 		5F30ABCB1297F96700540544 /* SwitchDataEntryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwitchDataEntryCell.h; sourceTree = "<group>"; };
 		5F30ABCC1297F96700540544 /* SwitchDataEntryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwitchDataEntryCell.m; sourceTree = "<group>"; };
+		5F6133CB1FC0518A00F346AF /* UIXML-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIXML-Bridging-Header.h"; sourceTree = "<group>"; };
 		5F777C2E1359DC1D003AFC9E /* edit32x32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = edit32x32.png; sourceTree = "<group>"; };
 		5F777C2F1359DC1D003AFC9E /* write32x32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = write32x32.png; sourceTree = "<group>"; };
 		5F8BD84D13B2569400A33B0A /* back24x24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back24x24.png; sourceTree = "<group>"; };
@@ -51,6 +53,8 @@
 		5FA7E23D1296F264000F493B /* TextDataEntryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextDataEntryCell.m; sourceTree = "<group>"; };
 		5FA7E2421296F2AD000F493B /* UIXMLFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIXMLFormViewController.h; sourceTree = "<group>"; };
 		5FA7E2431296F2AE000F493B /* UIXMLFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIXMLFormViewController.m; sourceTree = "<group>"; };
+		5FEFB5E31FC7216D009462F0 /* UIXML.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UIXML.podspec; sourceTree = "<group>"; };
+		5FEFB5E51FC9B424009462F0 /* NSDictionary+CellData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+CellData.h"; sourceTree = "<group>"; };
 		5FF78F3812E795A8008EA886 /* PushTextEntryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushTextEntryCell.h; sourceTree = "<group>"; };
 		5FF78F3912E795A8008EA886 /* PushTextEntryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushTextEntryCell.m; sourceTree = "<group>"; };
 		5FF78F7A12E7A005008EA886 /* chevron.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chevron.png; sourceTree = "<group>"; };
@@ -100,6 +104,7 @@
 		0867D691FE84028FC02AAC07 /* UIXML */ = {
 			isa = PBXGroup;
 			children = (
+				5FEFB5E31FC7216D009462F0 /* UIXML.podspec */,
 				A025092A15E53E15009F2C59 /* PushTextCell */,
 				A025092815E53D8A009F2C59 /* TextCell */,
 				A025092715E53D62009F2C59 /* SegmentedCell */,
@@ -132,6 +137,7 @@
 				A01671D912AE80920056F855 /* PushControllerDataEntryCell.h */,
 				A01671DA12AE80920056F855 /* PushControllerDataEntryCell.m */,
 				5FA7E23A1296F264000F493B /* BaseDataEntryCell.h */,
+				5FEFB5E51FC9B424009462F0 /* NSDictionary+CellData.h */,
 				5FA7E23B1296F264000F493B /* BaseDataEntryCell.m */,
 				5F052D9615CBEB5300330214 /* WaitMaskController.h */,
 				5F052D9715CBEB5300330214 /* WaitMaskController.m */,
@@ -139,6 +145,7 @@
 				5FA7E2421296F2AD000F493B /* UIXMLFormViewController.h */,
 				5FA7E2431296F2AE000F493B /* UIXMLFormViewController.m */,
 				5F03208515D56A0F004F2EA4 /* UIXML.h */,
+				5F6133CB1FC0518A00F346AF /* UIXML-Bridging-Header.h */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -242,6 +249,7 @@
 				5FA7E23E1296F264000F493B /* BaseDataEntryCell.h in Headers */,
 				5FA7E2401296F264000F493B /* TextDataEntryCell.h in Headers */,
 				5FA7E2441296F2AE000F493B /* UIXMLFormViewController.h in Headers */,
+				5FEFB5E61FC9B424009462F0 /* NSDictionary+CellData.h in Headers */,
 				5F30ABCD1297F96700540544 /* SwitchDataEntryCell.h in Headers */,
 				A01671DB12AE80920056F855 /* PushControllerDataEntryCell.h in Headers */,
 				A01671E012AE80A90056F855 /* PushFormDataEntryCell.h in Headers */,
@@ -283,6 +291,11 @@
 			attributes = {
 				LastUpgradeCheck = 0440;
 				ORGANIZATIONNAME = SOUL;
+				TargetAttributes = {
+					D2AAC07D0554694100DB518D = {
+						LastSwiftMigration = 0910;
+					};
+				};
 			};
 			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "UIXML" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -331,7 +344,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_OBJCPP_ARC_ABI = YES;
 				COPY_PHASE_STRIP = NO;
@@ -343,9 +357,14 @@
 				GCC_PREFIX_HEADER = UIXML_Prefix.pch;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INSTALL_PATH = /usr/local/lib;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = UIXML;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "UIXML-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -353,7 +372,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_OBJCPP_ARC_ABI = YES;
 				DSTROOT = /tmp/UIXML.dst;
@@ -362,9 +382,13 @@
 				GCC_PREFIX_HEADER = UIXML_Prefix.pch;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INSTALL_PATH = /usr/local/lib;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = UIXML;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "UIXML-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

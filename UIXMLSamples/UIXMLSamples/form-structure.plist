@@ -28,7 +28,7 @@
 				<key>DataKey</key>
 				<string>gender</string>
 				<key>Label</key>
-				<string>Sesso</string>
+				<string>Sex</string>
 				<key>CellType</key>
 				<string>GenderDataEntryCell</string>
 				<key>segmentKeys</key>

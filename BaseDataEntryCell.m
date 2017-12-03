@@ -37,21 +37,24 @@
     return self;
 }
 
-- (void) prepareToAppear:(UIXMLFormViewController*)controller datakey:(NSString*)key label:(NSString*)label cellData:(NSDictionary*)cellData {
-	self.selectionStyle = UITableViewCellSelectionStyleNone;
-	self.dataKey = key;
+-(void)prepareLabel:(NSDictionary*_Nonnull)cellData {
+    [cellData getStringForKey:@"Label" next:^(NSString * _Nonnull value) {
+        self.textLabel.text = value;
+    }];
     
-    if (![self isStringEmpty:label] ) {
-        self.textLabel.text = label;
-        self.textLabel.font = [UIFont fontWithName:@"Helvetica" size:15.0];
-
-    }
-	
 }
 
 
--(BOOL)isStringEmpty:(NSString*)value {
-	return ( value==nil ||
+- (void) prepareToAppear:(UIXMLFormViewController*)controller datakey:(NSString*)key cellData:(NSDictionary*)cellData {
+	self.selectionStyle = UITableViewCellSelectionStyleNone;
+	self.dataKey = key;
+    
+    [self prepareLabel:cellData];
+}
+
+
++(BOOL)isNullOrEmpty:(NSString*)value {
+    return ( value==nil ||
             [[value stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] length] == 0 );
 }
 
@@ -168,7 +171,7 @@
 {
 
     [UIView animateWithDuration:0.2 animations:^() {
-        
+        /*
         UITableView * scrollView = nil;;
         
         if( SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0") ) {
@@ -181,7 +184,7 @@
         UIEdgeInsets contentInsets = UIEdgeInsetsZero;
         scrollView.contentInset = contentInsets;
         scrollView.scrollIndicatorInsets = contentInsets;
-        
+        */
         
     }];
 }
@@ -239,24 +242,72 @@
     */
     
     if (!CGRectContainsPoint(aRect, fRect.origin) ) {
+        
         UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, kbSize.height, 0.0);
         scrollView.contentInset = contentInsets;
         scrollView.scrollIndicatorInsets = contentInsets;
-        
+
         CGPoint scrollPoint = CGPointMake(0.0, fRect.origin.y-kbSize.height );
         [scrollView setContentOffset:scrollPoint animated:YES];
     }
     
 }
 
+
 - (void) prepareToAppear:(UIXMLFormViewController*)controller datakey:(NSString*)key label:(NSString*)label cellData:(NSDictionary*)cellData {
 
-    [super prepareToAppear:controller datakey:key label:label cellData:cellData];
+    [super prepareToAppear:controller datakey:key cellData:cellData];
     
     if (![[cellData valueForKey:@"ignoreKeyboard"] boolValue] ) {
         
         [self registerForKeyboardNotifications];
     }
 }
+
+@end
+
+@implementation NSDictionary (CellData)
+
+-(void)getStringForKey:(NSString *_Nonnull)key
+                          next:(void (^ _Nonnull )(NSString * _Nonnull value))next
+{
+
+    NSString *value = [self objectForKey:key];
+    
+    if( value != nil && ![BaseDataEntryCell isNullOrEmpty:value]) {
+        
+        next( value );
+    }
+}
+
+-(void)getStringForKey:(NSString *_Nonnull)key
+                   next:(void (^ _Nonnull )(NSString * _Nonnull value))next
+               complete:(void (^ _Nonnull )(void))complete
+{
+    NSString *value = [self objectForKey:key];
+    
+    if( value != nil && ![BaseDataEntryCell isNullOrEmpty:value]) {
+        
+        next( value );
+    }
+    else {
+        complete();
+        
+    }
+
+}
+
+-(void)getArrayForKey:(NSString *_Nonnull)key
+                 next:(void (^ _Nonnull )(NSArray * _Nonnull value))next
+{
+    id value = [self objectForKey:key];
+    
+    if( value != nil && [value isKindOfClass:[NSArray class] ] ) {
+        next( value );
+    }
+
+    
+}
+
 
 @end
