@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'UIXML'
-  s.version          = '1.2.0'
+  s.version          = '1.2.1'
   s.summary          = 'Generate Form based upon UITableView from .plist file(s)'
 
 # This description is used to generate tags and improve search results.
