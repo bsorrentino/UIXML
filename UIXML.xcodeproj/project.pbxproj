@@ -12,6 +12,7 @@
 		5F052D9915CBEB5300330214 /* WaitMaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F052D9715CBEB5300330214 /* WaitMaskController.m */; };
 		5F062F6B13774CBE00FAC388 /* PushWebViewEntryCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F062F6913774CBE00FAC388 /* PushWebViewEntryCell.h */; };
 		5F062F6C13774CBE00FAC388 /* PushWebViewEntryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F062F6A13774CBE00FAC388 /* PushWebViewEntryCell.m */; };
+		5F27A0C61FE17CE000608C4D /* NSBundle+UIXML.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F27A0C51FE17CE000608C4D /* NSBundle+UIXML.h */; };
 		5F30ABCD1297F96700540544 /* SwitchDataEntryCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F30ABCB1297F96700540544 /* SwitchDataEntryCell.h */; };
 		5F30ABCE1297F96700540544 /* SwitchDataEntryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F30ABCC1297F96700540544 /* SwitchDataEntryCell.m */; };
 		5FA7E23E1296F264000F493B /* BaseDataEntryCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FA7E23A1296F264000F493B /* BaseDataEntryCell.h */; };
@@ -41,6 +42,7 @@
 		5F052D9715CBEB5300330214 /* WaitMaskController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaitMaskController.m; sourceTree = "<group>"; };
 		5F062F6913774CBE00FAC388 /* PushWebViewEntryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushWebViewEntryCell.h; sourceTree = "<group>"; };
 		5F062F6A13774CBE00FAC388 /* PushWebViewEntryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushWebViewEntryCell.m; sourceTree = "<group>"; };
+		5F27A0C51FE17CE000608C4D /* NSBundle+UIXML.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSBundle+UIXML.h"; sourceTree = "<group>"; };
 		5F30ABCB1297F96700540544 /* SwitchDataEntryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwitchDataEntryCell.h; sourceTree = "<group>"; };
 		5F30ABCC1297F96700540544 /* SwitchDataEntryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwitchDataEntryCell.m; sourceTree = "<group>"; };
 		5F6133CB1FC0518A00F346AF /* UIXML-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIXML-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 				5FA7E2431296F2AE000F493B /* UIXMLFormViewController.m */,
 				5F03208515D56A0F004F2EA4 /* UIXML.h */,
 				5F6133CB1FC0518A00F346AF /* UIXML-Bridging-Header.h */,
+				5F27A0C51FE17CE000608C4D /* NSBundle+UIXML.h */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 			files = (
 				5FA7E23E1296F264000F493B /* BaseDataEntryCell.h in Headers */,
 				5FA7E2401296F264000F493B /* TextDataEntryCell.h in Headers */,
+				5F27A0C61FE17CE000608C4D /* NSBundle+UIXML.h in Headers */,
 				5FA7E2441296F2AE000F493B /* UIXMLFormViewController.h in Headers */,
 				5FEFB5E61FC9B424009462F0 /* NSDictionary+CellData.h in Headers */,
 				5F30ABCD1297F96700540544 /* SwitchDataEntryCell.h in Headers */,
