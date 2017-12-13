@@ -66,6 +66,8 @@
 			<dict>
 				<key>DataKey</key>
 				<string>text2</string>
+                <key>autocorrectionType</key>
+                <true/>
 				<key>Label</key>
 				<string>Text Field</string>
 				<key>CellType</key>
