@@ -11,6 +11,8 @@
 		5F37C20415DE403500A3F7AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F37C20315DE403500A3F7AE /* Foundation.framework */; };
 		5F37C20615DE403500A3F7AE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F37C20515DE403500A3F7AE /* CoreGraphics.framework */; };
 		5F37C20C15DE403500A3F7AE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5F37C20A15DE403500A3F7AE /* InfoPlist.strings */; };
+		5F93424D20D10A9B005CFE04 /* ActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F93424B20D10A9B005CFE04 /* ActionCell.swift */; };
+		5F93424E20D10A9B005CFE04 /* ActionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F93424C20D10A9B005CFE04 /* ActionCell.xib */; };
 		5F9705E31FD41E9E00E1E5DF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F9705E21FD41E9E00E1E5DF /* Default-568h@2x.png */; };
 		5FA03B9C1FC38AC20099C39B /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FA03B9B1FC38AC20099C39B /* main.storyboard */; };
 		5FA03B9E1FC38C780099C39B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA03B9D1FC38C780099C39B /* AppDelegate.swift */; };
@@ -66,6 +68,8 @@
 		5F37C20B15DE403500A3F7AE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5F37C20F15DE403500A3F7AE /* UIXMLSamples-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIXMLSamples-Prefix.pch"; sourceTree = "<group>"; };
 		5F37C21915DE403500A3F7AE /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		5F93424B20D10A9B005CFE04 /* ActionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionCell.swift; sourceTree = "<group>"; };
+		5F93424C20D10A9B005CFE04 /* ActionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActionCell.xib; sourceTree = "<group>"; };
 		5F9705E21FD41E9E00E1E5DF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		5FA03B9B1FC38AC20099C39B /* main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = main.storyboard; sourceTree = "<group>"; };
 		5FA03B9D1FC38C780099C39B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -144,6 +148,7 @@
 		5F37C20715DE403500A3F7AE /* UIXMLSamples */ = {
 			isa = PBXGroup;
 			children = (
+				5F93424A20D10A67005CFE04 /* ActionCell */,
 				A025092D15E546EE009F2C59 /* PushFormCell */,
 				A025092C15E546CD009F2C59 /* GenderCell */,
 				A025092B15E546A4009F2C59 /* ListDataCell */,
@@ -167,6 +172,15 @@
 				5F37C20F15DE403500A3F7AE /* UIXMLSamples-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5F93424A20D10A67005CFE04 /* ActionCell */ = {
+			isa = PBXGroup;
+			children = (
+				5F93424B20D10A9B005CFE04 /* ActionCell.swift */,
+				5F93424C20D10A9B005CFE04 /* ActionCell.xib */,
+			);
+			name = ActionCell;
 			sourceTree = "<group>";
 		};
 		A025092B15E546A4009F2C59 /* ListDataCell */ = {
@@ -258,7 +272,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = UIXML;
-				LastUpgradeCheck = 0910;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = soulsoftware;
 				TargetAttributes = {
 					5F37C1FC15DE403500A3F7AE = {
@@ -310,6 +324,7 @@
 				A05C6B3115DE403F00362113 /* ListDataEntryCell.xib in Resources */,
 				A05C6B3815DE418000362113 /* RowSpanDataEntryCell.xib in Resources */,
 				A05C6B3E15DE41FB00362113 /* form-structure.plist in Resources */,
+				5F93424E20D10A9B005CFE04 /* ActionCell.xib in Resources */,
 				A05C6B3F15DE41FB00362113 /* form1-structure.plist in Resources */,
 				A05C6B4015DE41FB00362113 /* table-structure.plist in Resources */,
 				A05C6B4115DE41FB00362113 /* GenderDataEntryCell.xib in Resources */,
@@ -339,6 +354,7 @@
 			files = (
 				5FA03B9E1FC38C780099C39B /* AppDelegate.swift in Sources */,
 				5FEFB5E11FC6C969009462F0 /* RowSpanCell.swift in Sources */,
+				5F93424D20D10A9B005CFE04 /* ActionCell.swift in Sources */,
 				5FEFB5DF1FC5ECA7009462F0 /* ListDataEntryCell.swift in Sources */,
 				5FA03BA01FC4AEE70099C39B /* Form.swift in Sources */,
 			);
@@ -392,11 +408,13 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
@@ -424,7 +442,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = ..;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"-all_load",
@@ -445,11 +463,13 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
@@ -469,7 +489,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = ..;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = (
 					"-all_load",
