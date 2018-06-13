@@ -115,6 +115,14 @@
 				<key>CellType</key>
 				<string>TextDataEntryCell</string>
 			</dict>
+            <dict>
+                <key>DataKey</key>
+                <string>action</string>
+                <key>Label</key>
+                <string>Show notification</string>
+                <key>CellType</key>
+                <string>ActionCell</string>
+            </dict>
 		</array>
 	</array>
 </array>
